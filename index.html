@@ -11,15 +11,15 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --cream: #FAF8F4;
-    --cream-mid: #F2EFE8;
-    --cream-deep: #E8E3D9;
-    --sage: #8A9E8C;
-    --sage-light: #C4D4C5;
-    --dark: #2A2620;
-    --mid: #6B6560;
-    --light: #A09890;
-    --accent: #7A8F6E;
+    --cream: #F4F6F0;
+    --cream-mid: #E8EDE1;
+    --cream-deep: #D8E0CE;
+    --sage: #6B8C5F;
+    --sage-light: #A8BF9B;
+    --dark: #252C1E;
+    --mid: #556048;
+    --light: #8A9E80;
+    --accent: #5C7A4E;
     --serif: 'Cormorant Garamond', Georgia, serif;
     --sans: 'DM Sans', system-ui, sans-serif;
   }
@@ -82,16 +82,40 @@
   .hero::before {
     content: '';
     position: absolute; top: 0; right: 0;
-    width: 45%; height: 100%;
+    width: 50%; height: 100%;
     background: var(--cream-mid);
-    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
     z-index: 0;
+  }
+
+  .hero-inner {
+    position: relative; z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
   }
 
   .hero-content {
     position: relative; z-index: 1;
-    max-width: 680px;
   }
+
+  .hero-logo-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .hero-logo {
+    width: 100%;
+    max-width: 320px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.9s ease 0.4s, transform 0.9s ease 0.4s;
+  }
+  .hero-logo.visible { opacity: 1; transform: none; }
 
   .hero-eyebrow {
     font-size: 0.78rem;
@@ -574,7 +598,26 @@
     letter-spacing: 0.05em;
   }
 
-  /* ANIMATIONS */
+  .hero-logo {
+    width: clamp(120px, 18vw, 200px);
+    flex-shrink: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.9s ease 0.3s, transform 0.9s ease 0.3s;
+  }
+  .hero-logo.visible { opacity: 1; transform: none; }
+
+  .hero-name-wrap {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 900px) {
+    .hero-name-wrap { gap: 1.2rem; }
+    .hero-logo { width: clamp(80px, 18vw, 120px); }
+  }
   .fade-in {
     opacity: 0; transform: translateY(20px);
     transition: opacity 0.7s ease, transform 0.7s ease;
@@ -635,7 +678,12 @@
 
     .hero { padding: 7rem 1.5rem 3rem; min-height: 90vh; }
     .hero::before { display: none; }
-    .hero-name { font-size: clamp(3rem, 14vw, 5rem); }
+    .hero-inner { grid-template-columns: 1fr 1fr; gap: 1rem; align-items: center; }
+    .hero-logo-wrap { display: flex; padding: 0; }
+    .hero-logo { max-width: 100%; }
+    .hero-name { font-size: clamp(1.8rem, 8vw, 2.8rem); margin-bottom: 0.75rem; }
+    .hero-tagline { font-size: 0.95rem; margin-bottom: 1.5rem; }
+    .hero-eyebrow { margin-bottom: 0.75rem; }
     .hero-tagline { font-size: 1.1rem; }
     .hero-sub { font-size: 0.88rem; }
 
@@ -660,7 +708,8 @@
   }
 
   @media (max-width: 480px) {
-    .hero-name { font-size: clamp(2.8rem, 16vw, 4rem); }
+    .hero-name { font-size: clamp(1.5rem, 9vw, 2.2rem); }
+    .hero-tagline { font-size: 0.88rem; }
     .section-title { font-size: 1.8rem; }
     .service-name { font-size: 1.2rem; }
     .writing-item { grid-template-columns: 1fr; gap: 0.3rem; }
@@ -692,25 +741,55 @@
 
 <!-- HERO -->
 <section class="hero" id="inicio">
-  <div class="hero-content">
-    <p class="hero-eyebrow fade-in">Psicoterapia Humanista · Barcelona</p>
-    <h1 class="hero-name fade-in">
-      Mihai<br>
-      <em>Flaviu</em><br>
-      Sirb
-    </h1>
-    <p class="hero-tagline fade-in">
-      Me siento contigo como alguien que ha atravesado el colapso de sus propias estructuras y conoce la libertad de empezar a habitar la propia piel.
-    </p>
-    <p class="hero-sub fade-in">
-      Acompaño a personas en procesos de reconstrucción personal y crisis de identidad. Un espacio de seguridad en Barcelona para volver a empezar desde la autenticidad.
-    </p>
-    <a href="#sobre-mi" class="hero-cta fade-in">
-      Conoce mi enfoque
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <p class="hero-eyebrow fade-in">Psicoterapia Humanista · Barcelona</p>
+      <h1 class="hero-name fade-in">
+        Mihai<br>
+        <em>Flaviu</em><br>
+        Sirb
+      </h1>
+      <p class="hero-tagline fade-in">
+        Me siento contigo como alguien que ha atravesado el colapso de sus propias estructuras y conoce la libertad de empezar a habitar la propia piel.
+      </p>
+      <p class="hero-sub fade-in">
+        Acompaño a personas en procesos de reconstrucción personal y crisis de identidad. Un espacio de seguridad en Barcelona para volver a empezar desde la autenticidad.
+      </p>
+      <a href="#sobre-mi" class="hero-cta fade-in">
+        Conoce mi enfoque
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+    <div class="hero-logo-wrap">
+      <svg class="hero-logo" viewBox="0 0 340 420" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(170, 240)">
+          <ellipse cx="0" cy="42" rx="90" ry="44" fill="#4A6640"/>
+          <path d="M 0,-168 C -44,-160 -76,-116 -76,-66 C -76,-16 -52,-4 0,-4 C 52,-4 76,-16 76,-66 C 76,-116 44,-160 0,-168 Z" fill="#4A6640"/>
+          <circle cx="0" cy="-204" r="36" fill="#4A6640"/>
+          <line x1="0" y1="-156" x2="0" y2="-72" stroke="#3A5630" stroke-width="3" stroke-linecap="round"/>
+          <line x1="-94" y1="80" x2="94" y2="80" stroke="#4A6640" stroke-width="3" stroke-linecap="round"/>
+          <g transform="translate(0, -82) scale(0.42)">
+            <ellipse cx="0" cy="42" rx="90" ry="44" fill="#D8E0CE" stroke="#5C7A4E" stroke-width="2.5"/>
+            <path d="M 0,-168 C -44,-160 -76,-116 -76,-66 C -76,-16 -52,-4 0,-4 C 52,-4 76,-16 76,-66 C 76,-116 44,-160 0,-168 Z" fill="#D8E0CE" stroke="#5C7A4E" stroke-width="2.5"/>
+            <circle cx="0" cy="-204" r="36" fill="#D8E0CE" stroke="#5C7A4E" stroke-width="2.5"/>
+            <line x1="0" y1="-156" x2="0" y2="-72" stroke="#5C7A4E" stroke-width="3" stroke-linecap="round"/>
+            <g transform="translate(0, -82) scale(0.42)">
+              <ellipse cx="0" cy="42" rx="90" ry="44" fill="#5C7A4E"/>
+              <path d="M 0,-168 C -44,-160 -76,-116 -76,-66 C -76,-16 -52,-4 0,-4 C 52,-4 76,-16 76,-66 C 76,-116 44,-160 0,-168 Z" fill="#5C7A4E"/>
+              <circle cx="0" cy="-204" r="36" fill="#5C7A4E"/>
+              <line x1="0" y1="-156" x2="0" y2="-72" stroke="#4A6640" stroke-width="3" stroke-linecap="round"/>
+              <g transform="translate(0, -82) scale(0.42)">
+                <ellipse cx="0" cy="42" rx="90" ry="44" fill="#A8BF9B"/>
+                <path d="M 0,-168 C -44,-160 -76,-116 -76,-66 C -76,-16 -52,-4 0,-4 C 52,-4 76,-16 76,-66 C 76,-116 44,-160 0,-168 Z" fill="#A8BF9B"/>
+                <circle cx="0" cy="-204" r="36" fill="#A8BF9B"/>
+              </g>
+            </g>
+          </g>
+        </g>
       </svg>
-    </a>
+    </div>
   </div>
   <div class="hero-scroll-line">Scroll</div>
 </section>
@@ -1027,6 +1106,7 @@
   }, { threshold: 0.12 });
 
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  document.querySelectorAll('.hero-logo').forEach(el => observer.observe(el));
 
   function sendToWhatsApp(e) {
     e.preventDefault();
