@@ -678,14 +678,34 @@
 
     .hero { padding: 7rem 1.5rem 3rem; min-height: 90vh; }
     .hero::before { display: none; }
-    .hero-inner { grid-template-columns: 1fr 1fr; gap: 1rem; align-items: center; }
-    .hero-logo-wrap { display: flex; padding: 0; }
-    .hero-logo { max-width: 100%; }
-    .hero-name { font-size: clamp(1.8rem, 8vw, 2.8rem); margin-bottom: 0.75rem; }
-    .hero-tagline { font-size: 0.95rem; margin-bottom: 1.5rem; }
-    .hero-eyebrow { margin-bottom: 0.75rem; }
-    .hero-tagline { font-size: 1.1rem; }
-    .hero-sub { font-size: 0.88rem; }
+    .hero-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0;
+    }
+    .hero-content { display: contents; }
+    .hero-eyebrow { order: 1; margin-bottom: 0.75rem; }
+    .hero-name { order: 2; font-size: clamp(1.8rem, 8vw, 2.8rem); margin-bottom: 1.25rem; }
+    .hero-logo-wrap { order: 3; display: flex; padding: 0; margin-bottom: 1.5rem; }
+    .hero-tagline {
+      order: 4;
+      font-size: 1.05rem;
+      margin-bottom: 1.5rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-sub {
+      order: 5;
+      font-size: 0.88rem;
+      margin-bottom: 2rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-cta { order: 6; align-self: center; }
+    .hero-logo { max-width: 180px; }
+    .hero-scroll-line { display: none; }
 
     .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
     .about-image-placeholder { aspect-ratio: 4/3; max-height: 280px; }
@@ -753,7 +773,7 @@
         Me siento contigo como alguien que ha atravesado el colapso de sus propias estructuras y conoce la libertad de empezar a habitar la propia piel.
       </p>
       <p class="hero-sub fade-in">
-        Acompaño a personas en procesos de reconstrucción personal y crisis de identidad. Un espacio de seguridad en Barcelona para volver a empezar desde la autenticidad.
+        Acompaño a personas en procesos de reconstrucción personal y crisis de identidad. Mi intención es que reencuentres tus propios recursos para vivir con autenticidad, escucharte de verdad y aprender a cuidarte sin perderte en los demás. De ahí nace una manera de vivir más creativa y espontánea.
       </p>
       <a href="#sobre-mi" class="hero-cta fade-in">
         Conoce mi enfoque
@@ -810,7 +830,7 @@
         Durante muchos años luché por parecer hábil y suelto en el mundo mientras por dentro zumbaba una ansiedad que rara vez nombraba. Las sustancias fueron durante un tiempo la única tregua con mi sistema nervioso. A los treinta y uno, mi vida es la práctica diaria de la integración: aprender a quedarme en el cuerpo cuando el viejo impulso de salir aparece.
       </p>
       <p>
-        Me siento con personas hoy como alguien que ha navegado el colapso de sus propias estructuras. Mi trabajo parte de una convicción: <strong>fuimos heridos en relación y en relación podemos sanar</strong>. Ofrezco un espacio donde la lógica de la mente analítica deja paso a la memoria más antigua de la piel.
+        Llego a este trabajo como alguien que ha navegado el colapso de sus propias estructuras. Mi trabajo parte de una convicción: <strong>fuimos heridos en relación y en relación podemos sanar</strong>. Por eso ofrezco un espacio donde la mente y el cuerpo trabajan juntos, dentro de un vínculo seguro.
       </p>
 
       <ul class="formation-list">
@@ -834,7 +854,7 @@
         <h2 class="section-title">Lo que trae<br><em>la gente aquí</em></h2>
       </div>
       <p class="services-intro fade-in">
-        Me siento con las partes del self que empujamos hacia los márgenes para seguir funcionando. Con la tensión acumulada en el cuerpo, con el impulso visceral de esconderse, con el cansancio de mantener una fortaleza cuando los cimientos tiemblan.
+        Acompaño las partes de nosotros mismos más auténticas que empujamos hacia los márgenes para seguir funcionando. La tensión acumulada en el cuerpo, el impulso visceral de esconderse, el cansancio de mantener una fortaleza cuando los cimientos tiemblan.
       </p>
     </div>
 
@@ -1030,7 +1050,7 @@
       <p class="section-label">Contacto</p>
       <h2 class="section-title">Da el<br><em>primer paso</em></h2>
       <p class="contact-tagline">
-        Mi trabajo es sentarme en la sombra de tus muros hasta que el aire se sienta lo bastante seguro para que salgas. Si sientes que ha llegado ese momento, escríbeme.
+        Sé lo que cuesta escribir el primer mensaje. No hace falta tenerlo todo claro ni encontrar las palabras exactas. Si sientes que ha llegado ese momento, escríbeme.
       </p>
       <div class="contact-details">
         <a href="tel:+34671894458" class="contact-item">
