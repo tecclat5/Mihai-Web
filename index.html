@@ -9,24 +9,29 @@
 
 <!-- SEO básico -->
 <title>Psicoterapeuta Humanista en Barcelona | Mihai Flaviu Sirb</title>
-<meta name="description" content="Psicoterapia humanista en Barcelona. Acompañamiento en procesos de reconstrucción personal y crisis de identidad. Sesiones presenciales y online en castellano, catalán, inglés y rumano.">
+<meta name="description" content="Psicoterapeuta humanista en Barcelona (Eixample). Terapia gestalt, transpersonal y somática para trauma, vínculos, ansiedad e integración psicodélica.">
 <meta name="author" content="Mihai Flaviu Sirb">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://mihaiflaviusirb.com/">
+
+<!-- Hreflang -->
+<link rel="alternate" hreflang="es" href="https://mihaiflaviusirb.com/" />
+<link rel="alternate" hreflang="en" href="https://mihaiflaviusirb.com/en/" />
+<link rel="alternate" hreflang="x-default" href="https://mihaiflaviusirb.com/" />
 
 <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_ES">
 <meta property="og:url" content="https://mihaiflaviusirb.com/">
 <meta property="og:title" content="Psicoterapeuta Humanista en Barcelona | Mihai Flaviu Sirb">
-<meta property="og:description" content="Acompañamiento en procesos de reconstrucción personal y crisis de identidad. Un espacio donde la mente y el cuerpo trabajan juntos, dentro de un vínculo seguro.">
+<meta property="og:description" content="Psicoterapeuta humanista en Barcelona. Terapia gestalt, transpersonal y somática para trauma, vínculos, ansiedad, burnout, crisis de identidad e integración psicodélica.">
 <meta property="og:site_name" content="Mihai Flaviu Sirb — Psicoterapia Humanista">
 <meta property="og:image" content="https://mihaiflaviusirb.com/og-image.jpg">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Psicoterapeuta Humanista en Barcelona | Mihai Flaviu Sirb">
-<meta name="twitter:description" content="Acompañamiento en procesos de reconstrucción personal y crisis de identidad. Un espacio donde la mente y el cuerpo trabajan juntos, dentro de un vínculo seguro.">
+<meta name="twitter:description" content="Psicoterapeuta humanista en Barcelona. Terapia gestalt, transpersonal y somática para trauma, vínculos, ansiedad, burnout, crisis de identidad e integración psicodélica.">
 <meta name="twitter:image" content="https://mihaiflaviusirb.com/og-image.jpg">
 
 <!-- Schema.org structured data -->
@@ -42,7 +47,7 @@
   "email": "mihaibcn@gmail.com",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Calle Muntaner 217",
+    "streetAddress": "Calle Muntaner 215",
     "addressLocality": "Barcelona",
     "postalCode": "08036",
     "addressRegion": "Cataluña",
@@ -50,7 +55,27 @@
   },
   "areaServed": [
     { "@type": "City", "name": "Barcelona" },
+    { "@type": "Place", "name": "Eixample" },
+    { "@type": "Place", "name": "Sant Gervasi" },
+    { "@type": "Place", "name": "Gràcia" },
     { "@type": "AdministrativeArea", "name": "Cataluña" }
+  ],
+  "knowsAbout": [
+    "Psicoterapia humanista",
+    "Terapia gestalt",
+    "Psicoterapia transpersonal",
+    "Psicoterapia corporal somatosensorial",
+    "Trauma relacional",
+    "Trauma del desarrollo",
+    "Autorregulación del sistema nervioso",
+    "Integración psicodélica",
+    "Ansiedad",
+    "Depresión",
+    "Burnout",
+    "Crisis de identidad",
+    "Vínculos y apego",
+    "Personas Altamente Sensibles (PAS)",
+    "Procesos de duelo"
   ],
   "availableLanguage": ["es", "ca", "en", "ro"],
   "openingHoursSpecification": {
@@ -134,6 +159,11 @@
     transition: color 0.2s;
   }
   .nav-links a:hover { color: var(--dark); }
+
+  .nav-right { display: flex; align-items: center; gap: 2rem; }
+  .lang-switch { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mid); text-decoration: none; border: 1px solid var(--cream-deep); padding: 0.35rem 0.7rem; border-radius: 2px; transition: all 0.2s; }
+  .lang-switch:hover { color: var(--dark); border-color: var(--sage); }
+  @media (max-width: 900px) { .nav-right { gap: 1rem; } }
 
   /* HERO */
   .hero {
@@ -806,15 +836,18 @@
 
 <nav id="nav">
   <a href="#inicio" class="nav-logo">Mihai Flaviu Sirb</a>
-  <ul class="nav-links">
-    <li><a href="#sobre-mi">Sobre mí</a></li>
-    <li><a href="#servicios">Servicios</a></li>
-    <li><a href="#escritos">Escritos</a></li>
-    <li><a href="#contacto">Contacto</a></li>
-  </ul>
-  <button class="nav-hamburger" id="hamburger" aria-label="Menú" onclick="toggleMenu()">
-    <span></span><span></span><span></span>
-  </button>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#escritos">Escritos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <a href="/en/" class="lang-switch" title="English version">EN</a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menú" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
 
 <div class="nav-mobile" id="mobileMenu">
@@ -822,6 +855,7 @@
   <a href="#servicios" onclick="toggleMenu()">Servicios</a>
   <a href="#escritos" onclick="toggleMenu()">Escritos</a>
   <a href="#contacto" onclick="toggleMenu()">Contacto</a>
+  <a href="/en/" class="lang-switch" style="font-family: var(--sans); font-size: 0.75rem;">English version</a>
 </div>
 
 <!-- HERO -->
@@ -1130,7 +1164,7 @@
         </a>
         <div class="contact-item">
           <span>Lugar</span>
-          <span>Calle Muntaner 217, Barcelona 08036</span>
+          <span>Calle Muntaner 215, Barcelona 08036</span>
         </div>
       </div>
     </div>
