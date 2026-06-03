@@ -1,22 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Home ES -->
   <url>
     <loc>https://mihaiflaviusirb.com/</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://mihaiflaviusirb.com/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://mihaiflaviusirb.com/en/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mihaiflaviusirb.com/" />
   </url>
+
+  <!-- Home EN -->
   <url>
     <loc>https://mihaiflaviusirb.com/en/</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://mihaiflaviusirb.com/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://mihaiflaviusirb.com/en/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mihaiflaviusirb.com/" />
   </url>
+
+  <!-- Blog: Integración psicodélica -->
+  <url>
+    <loc>https://mihaiflaviusirb.com/blog/integracion-psicodelica/</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mihaiflaviusirb.com/blog/integracion-psicodelica/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mihaiflaviusirb.com/blog/integracion-psicodelica/" />
+  </url>
+
+  <!-- Blog: Veredicto del pájaro Dodo -->
+  <url>
+    <loc>https://mihaiflaviusirb.com/blog/dodo-todos-ganan/</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mihaiflaviusirb.com/blog/dodo-todos-ganan/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mihaiflaviusirb.com/blog/dodo-todos-ganan/" />
+  </url>
+
+  <!-- Blog: Neurobiología y regulación -->
+  <url>
+    <loc>https://mihaiflaviusirb.com/blog/neurobiologia-regulacion/</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mihaiflaviusirb.com/blog/neurobiologia-regulacion/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mihaiflaviusirb.com/blog/neurobiologia-regulacion/" />
+  </url>
+
+  <!-- Blog: Teatro terapéutico y trauma -->
+  <url>
+    <loc>https://mihaiflaviusirb.com/blog/teatro-terapeutico-trauma/</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mihaiflaviusirb.com/blog/teatro-terapeutico-trauma/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mihaiflaviusirb.com/blog/teatro-terapeutico-trauma/" />
+  </url>
+
+  <!-- Blog: Psicoterapia corporal -->
+  <url>
+    <loc>https://mihaiflaviusirb.com/blog/psicoterapia-corporal/</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mihaiflaviusirb.com/blog/psicoterapia-corporal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mihaiflaviusirb.com/blog/psicoterapia-corporal/" />
+  </url>
+
 </urlset>
