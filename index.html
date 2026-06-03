@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Google Search Console verification -->
@@ -36,62 +37,65 @@
 
 <!-- Schema.org structured data -->
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "ProfessionalService"],
-  "name": "Mihai Flaviu Sirb — Psicoterapia Humanista",
-  "description": "Psicoterapia humanista en Barcelona. Acompañamiento en procesos de reconstrucción personal y crisis de identidad. Sesiones presenciales y online.",
-  "url": "https://mihaiflaviusirb.com/",
-  "image": "https://mihaiflaviusirb.com/og-image.jpg",
-  "telephone": "+34671894458",
-  "email": "mihaibcn@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Calle Muntaner 215",
-    "addressLocality": "Barcelona",
-    "postalCode": "08036",
-    "addressRegion": "Cataluña",
-    "addressCountry": "ES"
+[
+  {
+    "@context": "https://schema.org",
+    "@type": ["MedicalBusiness", "LocalBusiness", "ProfessionalService"],
+    "@id": "https://mihaiflaviusirb.com/#business",
+    "name": "Mihai Flaviu Sirb — Psicoterapia Humanista",
+    "description": "Psicoterapia humanista en Barcelona. Terapia gestalt, transpersonal y somática para trauma, vínculos, ansiedad e integración psicodélica.",
+    "url": "https://mihaiflaviusirb.com/",
+    "image": "https://mihaiflaviusirb.com/og-image.jpg",
+    "telephone": "+34671894458",
+    "email": "mihaibcn@gmail.com",
+    "priceRange": "€€",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle Muntaner 215",
+      "addressLocality": "Barcelona",
+      "postalCode": "08036",
+      "addressRegion": "Cataluña",
+      "addressCountry": "ES"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 41.3925, "longitude": 2.1535 },
+    "areaServed": [
+      { "@type": "City", "name": "Barcelona" },
+      { "@type": "Place", "name": "Eixample" },
+      { "@type": "Place", "name": "Sant Gervasi" },
+      { "@type": "Place", "name": "Gràcia" },
+      { "@type": "AdministrativeArea", "name": "Cataluña" }
+    ],
+    "knowsAbout": [
+      "Psicoterapia humanista", "Terapia gestalt", "Psicoterapia transpersonal",
+      "Psicoterapia corporal somatosensorial", "Trauma relacional", "Trauma del desarrollo",
+      "Autorregulación del sistema nervioso", "Integración psicodélica",
+      "Ansiedad", "Depresión", "Burnout", "Crisis de identidad",
+      "Vínculos y apego", "Personas Altamente Sensibles (PAS)", "Procesos de duelo"
+    ],
+    "availableLanguage": ["es", "ca", "en", "ro"],
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "20:00"
+    }
   },
-  "areaServed": [
-    { "@type": "City", "name": "Barcelona" },
-    { "@type": "Place", "name": "Eixample" },
-    { "@type": "Place", "name": "Sant Gervasi" },
-    { "@type": "Place", "name": "Gràcia" },
-    { "@type": "AdministrativeArea", "name": "Cataluña" }
-  ],
-  "knowsAbout": [
-    "Psicoterapia humanista",
-    "Terapia gestalt",
-    "Psicoterapia transpersonal",
-    "Psicoterapia corporal somatosensorial",
-    "Trauma relacional",
-    "Trauma del desarrollo",
-    "Autorregulación del sistema nervioso",
-    "Integración psicodélica",
-    "Ansiedad",
-    "Depresión",
-    "Burnout",
-    "Crisis de identidad",
-    "Vínculos y apego",
-    "Personas Altamente Sensibles (PAS)",
-    "Procesos de duelo"
-  ],
-  "availableLanguage": ["es", "ca", "en", "ro"],
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-    "opens": "09:00",
-    "closes": "20:00"
-  },
-  "founder": {
+  {
+    "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://mihaiflaviusirb.com/#person",
     "name": "Mihai Flaviu Sirb",
     "jobTitle": "Psicoterapeuta humanista",
+    "url": "https://mihaiflaviusirb.com/",
+    "image": "https://mihaiflaviusirb.com/og-image.jpg",
+    "worksFor": { "@id": "https://mihaiflaviusirb.com/#business" },
+    "knowsAbout": [
+      "Psicoterapia humanista", "Terapia gestalt",
+      "Trauma relacional", "Integración psicodélica", "Burnout", "Ansiedad"
+    ],
     "knowsLanguage": ["es", "ca", "en", "ro"]
-  },
-  "sameAs": []
-}
+  }
+]
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -114,6 +118,15 @@
     --sans: 'DM Sans', system-ui, sans-serif;
   }
 
+
+  /* SEO: keyword in H1 — visually hidden, semantically present */
+  .hero-seo-title {
+    position: absolute;
+    width: 1px; height: 1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+  }
   html { scroll-behavior: smooth; }
 
   body {
@@ -864,6 +877,7 @@
     <div class="hero-content">
       <p class="hero-eyebrow fade-in">Psicoterapia Humanista · Barcelona</p>
       <h1 class="hero-name fade-in">
+        <span class="hero-seo-title">Psicoterapeuta Humanista en Barcelona</span>
         Mihai<br>
         <em>Flaviu</em><br>
         Sirb
@@ -1120,27 +1134,27 @@
     </div>
 
     <div class="writings-list fade-in">
-      <a class="writing-item" href="#" onclick="openArticle('art5'); return false;">
+      <a class="writing-item" href="/blog/integracion-psicodelica/">
         <span class="writing-date">Junio 2026</span>
         <span class="writing-title">Integración psicodélica: el espacio terapéutico después de la experiencia</span>
         <span class="writing-tag">Integración</span>
       </a>
-      <a class="writing-item" href="#" onclick="openArticle('art1'); return false;">
+      <a class="writing-item" href="/blog/dodo-todos-ganan/">
         <span class="writing-date">Mayo 2026</span>
         <span class="writing-title">Todos ganan: el veredicto del pájaro Dodo y lo que la ciencia nos dice sobre por qué funciona la psicoterapia</span>
         <span class="writing-tag">Evidencia</span>
       </a>
-      <a class="writing-item" href="#" onclick="openArticle('art2'); return false;">
+      <a class="writing-item" href="/blog/neurobiologia-regulacion/">
         <span class="writing-date">Abril 2026</span>
         <span class="writing-title">Aprender a regularse: Allan Schore y la neurobiología de por qué nos transformamos en relación</span>
         <span class="writing-tag">Neurobiología</span>
       </a>
-      <a class="writing-item" href="#" onclick="openArticle('art3'); return false;">
+      <a class="writing-item" href="/blog/teatro-terapeutico-trauma/">
         <span class="writing-date">Marzo 2026</span>
         <span class="writing-title">El cuerpo en escena: teatro terapéutico, trauma y la ciencia de sanar en relación</span>
         <span class="writing-tag">Trauma</span>
       </a>
-      <a class="writing-item" href="#" onclick="openArticle('art4'); return false;">
+      <a class="writing-item" href="/blog/psicoterapia-corporal/">
         <span class="writing-date">Febrero 2026</span>
         <span class="writing-title">Cuando el cuerpo también necesita ser escuchado: psicoterapia corporal y contacto físico en el tratamiento del trauma</span>
         <span class="writing-tag">Cuerpo</span>
