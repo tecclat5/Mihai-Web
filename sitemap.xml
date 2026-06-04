@@ -147,4 +147,60 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mihaiflaviusirb.com/blog/psicoterapia-corporal/" />
   </url>
 
+
+  <!-- Blog RO: Verdictul păsării Dodo -->
+  <url>
+    <loc>https://mihaiflaviusirb.com/ro/blog/verdictul-pasarii-dodo-psiherapie/</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://mihaiflaviusirb.com/ro/blog/verdictul-pasarii-dodo-psiherapie/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://mihaiflaviusirb.com/blog/dodo-todos-ganan/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mihaiflaviusirb.com/en/blog/dodo-bird-verdict-why-psychotherapy-works/" />
+  </url>
+
+  <!-- Blog RO: Neurobiologie și reglare -->
+  <url>
+    <loc>https://mihaiflaviusirb.com/ro/blog/neurobiologie-reglare-atasament-schore/</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://mihaiflaviusirb.com/ro/blog/neurobiologie-reglare-atasament-schore/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://mihaiflaviusirb.com/blog/neurobiologia-regulacion/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mihaiflaviusirb.com/en/blog/neurobiology-regulation-attachment-schore/" />
+  </url>
+
+  <!-- Blog RO: Teatru terapeutic -->
+  <url>
+    <loc>https://mihaiflaviusirb.com/ro/blog/teatru-terapeutic-trauma-corp/</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://mihaiflaviusirb.com/ro/blog/teatru-terapeutic-trauma-corp/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://mihaiflaviusirb.com/blog/teatro-terapeutico-trauma/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mihaiflaviusirb.com/en/blog/therapeutic-theatre-trauma-body/" />
+  </url>
+
+  <!-- Blog RO: Terapie somatică -->
+  <url>
+    <loc>https://mihaiflaviusirb.com/ro/blog/terapie-somatica-barcelona-psiherapie-corporala/</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://mihaiflaviusirb.com/ro/blog/terapie-somatica-barcelona-psiherapie-corporala/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://mihaiflaviusirb.com/blog/psicoterapia-corporal/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mihaiflaviusirb.com/en/blog/somatic-therapy-barcelona-body-psychotherapy-trauma/" />
+  </url>
+
+  <!-- Blog RO: Integrare psihedelic -->
+  <url>
+    <loc>https://mihaiflaviusirb.com/ro/blog/integrare-psihedelic-barcelona/</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://mihaiflaviusirb.com/ro/blog/integrare-psihedelic-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://mihaiflaviusirb.com/blog/integracion-psicodelica/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mihaiflaviusirb.com/en/blog/psychedelic-integration-barcelona/" />
+  </url>
+
 </urlset>
