@@ -867,7 +867,7 @@
       </a>
     </div>
     <div class="hero-logo-wrap">
-      <svg class="hero-logo visible" viewBox="0 0 340 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logotipo de Mihai Flaviu Sirb - Psicoterapia Humanista">
+      <svg class="hero-logo" viewBox="0 0 340 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logotipo de Mihai Flaviu Sirb - Psicoterapia Humanista">
         <title>Mihai Flaviu Sirb — Psicoterapia Humanista en Barcelona</title>
         <desc>Logotipo simbólico que representa el proceso de reconstrucción personal y la conexión entre figuras en relación.</desc>
         <g transform="translate(170, 240)">
@@ -904,7 +904,7 @@
 <section class="about" id="despre-mine">
   <div class="about-grid">
     <div>
-      <div class="about-image-placeholder" style="background:none"><svg class="hero-logo visible" viewBox="0 0 340 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logotipo de Mihai Flaviu Sirb - Psicoterapia Humanista">
+      <div class="about-image-placeholder" style="background:none"><svg class="hero-logo" viewBox="0 0 340 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logotipo de Mihai Flaviu Sirb - Psicoterapia Humanista">
         <title>Mihai Flaviu Sirb — Psicoterapia Humanista en Barcelona</title>
         <desc>Logotipo simbólico que representa el proceso de reconstrucción personal y la conexión entre figuras en relación.</desc>
         <g transform="translate(170, 240)">
@@ -1147,6 +1147,18 @@
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 20);
   });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  document.querySelectorAll('.hero-logo').forEach(el => observer.observe(el));
 
   function sendToWhatsApp(e) {
     e.preventDefault();
