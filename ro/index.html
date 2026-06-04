@@ -1160,6 +1160,11 @@
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   document.querySelectorAll('.hero-logo').forEach(el => observer.observe(el));
 
+  // Fallback: force visible after 400ms regardless
+  setTimeout(() => {
+    document.querySelectorAll('.fade-in, .hero-logo').forEach(el => el.classList.add('visible'));
+  }, 400);
+
   function sendToWhatsApp(e) {
     e.preventDefault();
     const name = document.getElementById('name').value;
