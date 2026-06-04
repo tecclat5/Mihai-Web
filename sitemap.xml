@@ -204,13 +204,35 @@
   </url>
 
 
-  <!-- Blog ES: Qué es la psicoterapia humanista -->
+  <!-- Blog ES/EN/RO: Qué es la psicoterapia humanista -->
   <url>
     <loc>https://mihaiflaviusirb.com/blog/que-es-psicoterapia-humanista/</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://mihaiflaviusirb.com/blog/que-es-psicoterapia-humanista/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mihaiflaviusirb.com/en/blog/what-is-humanistic-psychotherapy/" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://mihaiflaviusirb.com/ro/blog/ce-este-psihoterapia-umanista/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mihaiflaviusirb.com/blog/que-es-psicoterapia-humanista/" />
+  </url>
+  <url>
+    <loc>https://mihaiflaviusirb.com/en/blog/what-is-humanistic-psychotherapy/</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mihaiflaviusirb.com/en/blog/what-is-humanistic-psychotherapy/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://mihaiflaviusirb.com/blog/que-es-psicoterapia-humanista/" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://mihaiflaviusirb.com/ro/blog/ce-este-psihoterapia-umanista/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mihaiflaviusirb.com/blog/que-es-psicoterapia-humanista/" />
+  </url>
+  <url>
+    <loc>https://mihaiflaviusirb.com/ro/blog/ce-este-psihoterapia-umanista/</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://mihaiflaviusirb.com/ro/blog/ce-este-psihoterapia-umanista/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://mihaiflaviusirb.com/blog/que-es-psicoterapia-humanista/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mihaiflaviusirb.com/en/blog/what-is-humanistic-psychotherapy/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mihaiflaviusirb.com/blog/que-es-psicoterapia-humanista/" />
   </url>
 </urlset>
