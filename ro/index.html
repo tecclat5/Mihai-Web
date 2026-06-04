@@ -698,7 +698,7 @@
     .hero-name-wrap { gap: 1.2rem; }
     .hero-logo { width: clamp(80px, 18vw, 120px); }
   }
-  .fade-in {
+  .{
     opacity: 0; transform: translateY(20px);
     transition: opacity 0.7s ease, transform 0.7s ease;
   }
@@ -827,7 +827,7 @@
   }
 
   /* Fade-in animation */
-  .fade-in {
+  .{
     opacity: 0;
     transform: translateY(24px);
     transition: opacity 0.8s ease, transform 0.8s ease;
@@ -857,9 +857,9 @@
 <!-- HERO -->
 <section class="hero" id="inceput">
   <div class="hero-inner">
-    <div class="hero-content fade-in">
+    <div class="hero-content">
       <p class="hero-eyebrow">Psihoterapie Umanistă · Barcelona</p>
-      <h1 class="hero-name fade-in">
+      <h1 class="hero-name">
         <span class="hero-seo-title">Psihoterapeut Umanist în Barcelona</span>
         Mihai<br>
         <em>Flaviu</em><br>
@@ -944,7 +944,7 @@
         </g>
       </svg></div>
     </div>
-    <div class="about-text fade-in">
+    <div class="about-text">
       <p class="section-label">Despre mine</p>
       <h2 class="section-title">Însoțesc din interior,<br><em>nu de deasupra</em></h2>
       <p>
@@ -1105,7 +1105,7 @@
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="contact-inner">
-    <div class="fade-in">
+    <div class="">
       <p class="section-label">Contact</p>
       <h2 class="section-title">Fă primul<br><em>pas</em></h2>
       <p class="contact-tagline">
@@ -1131,7 +1131,7 @@
       </div>
     </div>
 
-    <form class="contact-form fade-in" onsubmit="sendToWhatsApp(event)">
+    <form class="contact-form" onsubmit="sendToWhatsApp(event)">
       <div class="form-field">
         <label for="name">Nume</label>
         <input type="text" id="name" placeholder="Numele tău" required>
