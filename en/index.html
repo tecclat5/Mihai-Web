@@ -182,6 +182,34 @@
   .nav-mobile a { font-family: var(--serif); font-size: 2rem; font-weight: 300; color: var(--dark); text-decoration: none; letter-spacing: 0.02em; transition: color 0.2s; }
   .nav-mobile a:hover { color: var(--sage); }
   .nav-mobile .lang-switch { font-family: var(--sans); font-size: 0.75rem; }
+
+  .recognition-section { background: var(--cream); padding: 6rem 4rem; }
+  .recognition-inner { max-width: 900px; margin: 0 auto; }
+  .recognition-header { text-align: center; margin-bottom: 3rem; }
+  .recognition-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+  .recognition-list li { font-family: var(--serif); font-size: 1.25rem; font-weight: 300; color: var(--mid); padding: 1.5rem 0; border-top: 1px solid var(--cream-deep); font-style: italic; line-height: 1.55; }
+  .recognition-list li:last-child { border-bottom: 1px solid var(--cream-deep); }
+  .recognition-list li::before { content: '\201C'; color: var(--sage); margin-right: 0.6rem; font-size: 1.5rem; font-style: normal; }
+  .for-whom { background: var(--cream-mid); padding: 6rem 4rem; }
+  .for-whom-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+  .for-whom-col h3 { font-family: var(--serif); font-size: 1.5rem; font-weight: 400; color: var(--dark); margin-bottom: 1.5rem; line-height: 1.3; }
+  .for-whom-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.85rem; }
+  .for-whom-col li { font-size: 0.95rem; color: var(--mid); padding-left: 1.75rem; position: relative; line-height: 1.65; }
+  .for-whom-col.yes li::before { content: '\2713'; color: var(--sage); position: absolute; left: 0; font-weight: 500; }
+  .for-whom-col.no li::before { content: '\2192'; color: var(--light); position: absolute; left: 0; }
+  .pricing { background: var(--cream); padding: 6rem 4rem; }
+  .pricing-inner { max-width: 900px; margin: 0 auto; }
+  .pricing-header { text-align: center; margin-bottom: 3rem; }
+  .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .pricing-card { background: #fff; padding: 2.5rem 2rem; text-align: center; border-radius: 2px; border: 1px solid var(--cream-deep); }
+  .pricing-card .p-type { font-family: var(--serif); font-size: 1.35rem; font-weight: 400; color: var(--dark); margin-bottom: 0.75rem; }
+  .pricing-card .p-price { font-family: var(--serif); font-size: 2.75rem; color: var(--sage); font-weight: 300; margin: 1rem 0 1.25rem; letter-spacing: -0.01em; }
+  .pricing-card .p-duration { font-size: 0.78rem; color: var(--light); letter-spacing: 0.12em; text-transform: uppercase; }
+  .pricing-note { text-align: center; font-family: var(--serif); font-size: 1.05rem; font-style: italic; color: var(--light); margin-top: 2.5rem; }
+  .inline-cta { background: var(--cream); padding: 4rem 4rem 5rem; text-align: center; }
+  .inline-cta a { display: inline-flex; align-items: center; gap: 0.75rem; font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--dark); text-decoration: none; border: 1px solid var(--sage); padding: 1rem 2.25rem; transition: all 0.2s; border-radius: 2px; }
+  .inline-cta a:hover { background: var(--sage); color: #fff; }
+
   @media (max-width: 900px) {
     nav { padding: 1.25rem 1.5rem; }
     .nav-right { gap: 0.5rem; }
@@ -210,6 +238,11 @@
     .writing-title { font-size: 1.1rem; }
     .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
     footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; }
+    .recognition-section, .for-whom, .pricing { padding: 3.5rem 1.5rem; }
+    .recognition-list li { font-size: 1.05rem; padding: 1.25rem 0; }
+    .for-whom-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .pricing-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .inline-cta { padding: 2.5rem 1.5rem 3.5rem; }
   }
   @media (max-width: 480px) {
     .hero-name { font-size: clamp(1.5rem, 9vw, 2.2rem); }
@@ -323,6 +356,25 @@
     </div>
   </div>
 </section>
+
+<!-- DO YOU RECOGNIZE YOURSELF -->
+<section class="recognition-section" id="recognize">
+  <div class="recognition-inner">
+    <div class="recognition-header fade-in">
+      <p class="section-label">Do you recognize yourself?</p>
+      <h2 class="section-title">Phrases you may<br><em>feel are your own</em></h2>
+    </div>
+    <ul class="recognition-list fade-in">
+      <li>I've been sleeping badly for months and don't really know why.</li>
+      <li>I can explain what's happening to me, but my body keeps reacting the same way.</li>
+      <li>Setting a boundary triggers guilt before the words are even out.</li>
+      <li>I function well on the outside, but something inside has been going dim.</li>
+      <li>In every relationship I end up occupying the same place without meaning to.</li>
+      <li>I can't stop even when my body has been asking for rest for a long time.</li>
+    </ul>
+  </div>
+</section>
+
 <!-- SERVICES -->
 <section class="services" id="services">
   <div class="services-inner">
@@ -379,6 +431,65 @@
     </div>
   </div>
 </section>
+
+<!-- WHO IT IS FOR / NOT FOR -->
+<section class="for-whom" id="for-whom">
+  <div class="for-whom-inner">
+    <div class="for-whom-col yes fade-in">
+      <p class="section-label">This may fit you if…</p>
+      <h3>This space is for you</h3>
+      <ul>
+        <li>You want to understand what keeps repeating in your bonds and in your way of being in the world.</li>
+        <li>You are open to looking at your history, your patterns and your body from a relational perspective.</li>
+        <li>You are looking for a process at your own pace, without rigid protocols or quick fixes.</li>
+        <li>You need a safe space where you can show up without a façade.</li>
+        <li>You understand this is integrative humanistic accompaniment, not clinical or pharmacological treatment.</li>
+      </ul>
+    </div>
+    <div class="for-whom-col no fade-in">
+      <p class="section-label">This may not fit if…</p>
+      <h3>Other support may serve you better</h3>
+      <ul>
+        <li>You are going through an acute crisis or there is immediate risk to yourself (in that case, contact emergency services: <a href="tel:112" style="color:inherit;">112</a> or <a href="tel:024" style="color:inherit;">024</a>).</li>
+        <li>You need psychiatric evaluation, a prescription or a clinical report.</li>
+        <li>You are in a serious active addiction that requires medical attention first — in that case, I can refer you to a trusted psychiatrist during the first session.</li>
+        <li>You are specifically looking for protocolized cognitive-behavioral therapy or other specific clinical approaches.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FEES -->
+<section class="pricing" id="fees">
+  <div class="pricing-inner">
+    <div class="pricing-header fade-in">
+      <p class="section-label">Fees</p>
+      <h2 class="section-title">How to begin<br><em>a process</em></h2>
+    </div>
+    <div class="pricing-grid fade-in">
+      <div class="pricing-card">
+        <p class="p-type">Individual session</p>
+        <p class="p-price">70 €</p>
+        <p class="p-duration">60 min · In-person or online</p>
+      </div>
+      <div class="pricing-card">
+        <p class="p-type">Couple session</p>
+        <p class="p-price">100 €</p>
+        <p class="p-duration">60 min · In-person or online</p>
+      </div>
+    </div>
+    <p class="pricing-note fade-in">Message me on WhatsApp to book a first conversation.</p>
+  </div>
+</section>
+
+<!-- INLINE CTA -->
+<div class="inline-cta fade-in">
+  <a href="https://wa.me/34671894458?text=Hello%2C%20I%27d%20like%20more%20information%20about%20a%20first%20session" target="_blank" rel="noopener noreferrer">
+    Message me on WhatsApp
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+</div>
+
 <!-- WRITINGS -->
 <section class="writings" id="writings">
   <div class="writings-hero fade-in">

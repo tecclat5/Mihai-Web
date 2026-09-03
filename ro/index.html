@@ -128,6 +128,33 @@ section { padding: 7rem 4rem; }
 footer { background: var(--dark); border-top: 1px solid rgba(255,255,255,0.07); padding: 2rem 4rem; display: flex; justify-content: space-between; align-items: center; }
 footer p { font-size: 0.78rem; color: rgba(255,255,255,0.25); }
 
+.recognition-section { background: var(--cream); padding: 6rem 4rem; }
+.recognition-inner { max-width: 900px; margin: 0 auto; }
+.recognition-header { text-align: center; margin-bottom: 3rem; }
+.recognition-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+.recognition-list li { font-family: var(--serif); font-size: 1.25rem; font-weight: 300; color: var(--mid); padding: 1.5rem 0; border-top: 1px solid var(--cream-deep); font-style: italic; line-height: 1.55; }
+.recognition-list li:last-child { border-bottom: 1px solid var(--cream-deep); }
+.recognition-list li::before { content: '\201C'; color: var(--sage); margin-right: 0.6rem; font-size: 1.5rem; font-style: normal; }
+.for-whom { background: var(--cream-mid); padding: 6rem 4rem; }
+.for-whom-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+.for-whom-col h3 { font-family: var(--serif); font-size: 1.5rem; font-weight: 400; color: var(--dark); margin-bottom: 1.5rem; line-height: 1.3; }
+.for-whom-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.85rem; }
+.for-whom-col li { font-size: 0.95rem; color: var(--mid); padding-left: 1.75rem; position: relative; line-height: 1.65; }
+.for-whom-col.yes li::before { content: '\2713'; color: var(--sage); position: absolute; left: 0; font-weight: 500; }
+.for-whom-col.no li::before { content: '\2192'; color: var(--light); position: absolute; left: 0; }
+.pricing { background: var(--cream); padding: 6rem 4rem; }
+.pricing-inner { max-width: 900px; margin: 0 auto; }
+.pricing-header { text-align: center; margin-bottom: 3rem; }
+.pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.pricing-card { background: #fff; padding: 2.5rem 2rem; text-align: center; border-radius: 2px; border: 1px solid var(--cream-deep); }
+.pricing-card .p-type { font-family: var(--serif); font-size: 1.35rem; font-weight: 400; color: var(--dark); margin-bottom: 0.75rem; }
+.pricing-card .p-price { font-family: var(--serif); font-size: 2.75rem; color: var(--sage); font-weight: 300; margin: 1rem 0 1.25rem; letter-spacing: -0.01em; }
+.pricing-card .p-duration { font-size: 0.78rem; color: var(--light); letter-spacing: 0.12em; text-transform: uppercase; }
+.pricing-note { text-align: center; font-family: var(--serif); font-size: 1.05rem; font-style: italic; color: var(--light); margin-top: 2.5rem; }
+.inline-cta { background: var(--cream); padding: 4rem 4rem 5rem; text-align: center; }
+.inline-cta a { display: inline-flex; align-items: center; gap: 0.75rem; font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--dark); text-decoration: none; border: 1px solid var(--sage); padding: 1rem 2.25rem; transition: all 0.2s; border-radius: 2px; }
+.inline-cta a:hover { background: var(--sage); color: #fff; }
+
 @media (max-width: 900px) {
   nav { padding: 1.2rem 1.5rem; }
   .nav-links { display: none; }
@@ -143,6 +170,11 @@ footer p { font-size: 0.78rem; color: rgba(255,255,255,0.25); }
   footer { flex-direction: column; gap: 0.5rem; text-align: center; }
   .writing-item { grid-template-columns: 80px 1fr; }
   .writing-tag { display: none; }
+  .recognition-section, .for-whom, .pricing { padding: 3.5rem 1.5rem; }
+  .recognition-list li { font-size: 1.05rem; padding: 1.25rem 0; }
+  .for-whom-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .pricing-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .inline-cta { padding: 2.5rem 1.5rem 3.5rem; }
 }
 </style>
 </head>
@@ -234,6 +266,23 @@ footer p { font-size: 0.78rem; color: rgba(255,255,255,0.25); }
   </div>
 </section>
 
+<section class="recognition-section" id="recunoaste">
+  <div class="recognition-inner">
+    <div class="recognition-header fade-in">
+      <p class="section-label">Te recunoști?</p>
+      <h2 class="section-title">Fraze pe care poate<br><em>le simți proprii</em></h2>
+    </div>
+    <ul class="recognition-list fade-in">
+      <li>Dorm prost de luni de zile și nu știu exact de ce.</li>
+      <li>Pot să explic ce mi se întâmplă, dar corpul continuă să reacționeze la fel.</li>
+      <li>Să spun „nu" îmi provoacă vinovăție înainte să ies cu vorbele.</li>
+      <li>Funcționez bine pe dinafară, dar înăuntru ceva s-a stins încet.</li>
+      <li>În fiecare relație ajung să ocup același loc fără să vreau.</li>
+      <li>Nu reușesc să mă opresc chiar dacă trupul cere pauză de mult timp.</li>
+    </ul>
+  </div>
+</section>
+
 <section class="services" id="servicii">
   <div class="services-inner">
     <div class="services-header">
@@ -320,6 +369,61 @@ footer p { font-size: 0.78rem; color: rgba(255,255,255,0.25); }
     </div>
   </div>
 </section>
+
+<section class="for-whom" id="pentru-cine">
+  <div class="for-whom-inner">
+    <div class="for-whom-col yes fade-in">
+      <p class="section-label">Ți se potrivește dacă…</p>
+      <h3>Acest spațiu este pentru tine</h3>
+      <ul>
+        <li>Vrei să înțelegi ce se repetă în relațiile tale și în felul tău de a fi în lume.</li>
+        <li>Ești dispus să privești istoria ta, tiparele și corpul dintr-o perspectivă relațională.</li>
+        <li>Cauți un proces în ritmul tău, fără soluții rapide sau protocoale rigide.</li>
+        <li>Ai nevoie de un spațiu sigur în care să te arăți fără fațadă.</li>
+        <li>Înțelegi că este o însoțire umanistă integratoare, nu un tratament clinic sau farmacologic.</li>
+      </ul>
+    </div>
+    <div class="for-whom-col no fade-in">
+      <p class="section-label">Nu este potrivit dacă…</p>
+      <h3>Alt tip de ajutor te poate servi mai bine</h3>
+      <ul>
+        <li>Treci printr-o criză acută sau există un risc imediat pentru tine (în acest caz, sună la <a href="tel:112" style="color:inherit;">112</a> sau <a href="tel:024" style="color:inherit;">024</a>).</li>
+        <li>Ai nevoie de evaluare psihiatrică, rețetă sau raport clinic.</li>
+        <li>Ești într-o dependență activă gravă care necesită întâi atenție medicală — în acest caz, în prima ședință te pot îndruma către un psihiatru de încredere.</li>
+        <li>Cauți în mod specific terapie cognitiv-comportamentală protocolizată sau alte abordări clinice concrete.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="tarife">
+  <div class="pricing-inner">
+    <div class="pricing-header fade-in">
+      <p class="section-label">Tarife</p>
+      <h2 class="section-title">Cum începi<br><em>un proces</em></h2>
+    </div>
+    <div class="pricing-grid fade-in">
+      <div class="pricing-card">
+        <p class="p-type">Ședință individuală</p>
+        <p class="p-price">70 €</p>
+        <p class="p-duration">60 min · Prezențial sau online</p>
+      </div>
+      <div class="pricing-card">
+        <p class="p-type">Ședință de cuplu</p>
+        <p class="p-price">100 €</p>
+        <p class="p-duration">60 min · Prezențial sau online</p>
+      </div>
+    </div>
+    <p class="pricing-note fade-in">Scrie-mi pe WhatsApp pentru a rezerva o primă convorbire.</p>
+  </div>
+</section>
+
+<div class="inline-cta fade-in">
+  <a href="https://wa.me/34671894458?text=Bun%C4%83%2C%20a%C8%99%20dori%20mai%20multe%20informa%C8%9Bii%20despre%20o%20prim%C4%83%20%C8%99edin%C8%9B%C4%83" target="_blank" rel="noopener noreferrer">
+    Scrie-mi pe WhatsApp
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+</div>
 
 <section class="writings" id="scrieri">
   <div class="writings-hero fade-in">
