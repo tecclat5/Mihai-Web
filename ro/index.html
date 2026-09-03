@@ -151,7 +151,28 @@ footer p { font-size: 0.78rem; color: rgba(255,255,255,0.25); }
 .pricing-card .p-price { font-family: var(--serif); font-size: 2.75rem; color: var(--sage); font-weight: 300; margin: 1rem 0 1.25rem; letter-spacing: -0.01em; }
 .pricing-card .p-duration { font-size: 0.78rem; color: var(--light); letter-spacing: 0.12em; text-transform: uppercase; }
 .pricing-note { text-align: center; font-family: var(--serif); font-size: 1.05rem; font-style: italic; color: var(--light); margin-top: 2.5rem; }
-.inline-cta { background: var(--cream); padding: 4rem 4rem 5rem; text-align: center; }
+.process { background: var(--cream); padding: 6rem 4rem; }
+.process-inner { max-width: 1100px; margin: 0 auto; }
+.process-header { text-align: center; margin-bottom: 4rem; }
+.process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; }
+.process-step { text-align: left; }
+.process-num { font-family: var(--serif); font-size: 4rem; font-weight: 300; color: var(--sage); line-height: 1; margin-bottom: 1rem; letter-spacing: -0.02em; }
+.process-step h3 { font-family: var(--serif); font-size: 1.5rem; font-weight: 400; color: var(--dark); margin-bottom: 0.75rem; }
+.process-step p { font-size: 0.95rem; color: var(--mid); line-height: 1.7; }
+.faq { background: var(--cream-mid); padding: 6rem 4rem; }
+.faq-inner { max-width: 900px; margin: 0 auto; }
+.faq-header { text-align: center; margin-bottom: 3rem; }
+.faq-category { margin-bottom: 3rem; }
+.faq-category:last-child { margin-bottom: 0; }
+.faq-category h3 { font-family: var(--serif); font-size: 1.35rem; font-weight: 400; color: var(--dark); margin-bottom: 0.5rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--cream-deep); }
+.faq-item { border-bottom: 1px solid var(--cream-deep); }
+.faq-item summary { cursor: pointer; padding: 1.25rem 0; font-size: 1rem; color: var(--dark); font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; transition: color 0.2s; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: '+'; font-family: var(--serif); font-size: 1.5rem; font-weight: 300; color: var(--sage); flex-shrink: 0; transition: transform 0.3s; line-height: 1; }
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item summary:hover { color: var(--sage); }
+.faq-item .faq-answer { padding: 0 0 1.5rem; font-size: 0.95rem; color: var(--mid); line-height: 1.75; }
+.inline-cta { background: var(--cream-mid); padding: 4rem 4rem 5rem; text-align: center; }
 .inline-cta a { display: inline-flex; align-items: center; gap: 0.75rem; font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--dark); text-decoration: none; border: 1px solid var(--sage); padding: 1rem 2.25rem; transition: all 0.2s; border-radius: 2px; }
 .inline-cta a:hover { background: var(--sage); color: #fff; }
 
@@ -170,7 +191,9 @@ footer p { font-size: 0.78rem; color: rgba(255,255,255,0.25); }
   footer { flex-direction: column; gap: 0.5rem; text-align: center; }
   .writing-item { grid-template-columns: 80px 1fr; }
   .writing-tag { display: none; }
-  .recognition-section, .for-whom, .pricing { padding: 3.5rem 1.5rem; }
+  .recognition-section, .for-whom, .pricing, .process, .faq { padding: 3.5rem 1.5rem; }
+  .process-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .process-num { font-size: 3rem; }
   .recognition-list li { font-size: 1.05rem; padding: 1.25rem 0; }
   .for-whom-inner { grid-template-columns: 1fr; gap: 2.5rem; }
   .pricing-grid { grid-template-columns: 1fr; gap: 1.5rem; }
@@ -370,6 +393,32 @@ footer p { font-size: 0.78rem; color: rgba(255,255,255,0.25); }
   </div>
 </section>
 
+<section class="process" id="proces">
+  <div class="process-inner">
+    <div class="process-header fade-in">
+      <p class="section-label">Procesul</p>
+      <h2 class="section-title">Cum lucrăm<br><em>în trei etape</em></h2>
+    </div>
+    <div class="process-grid fade-in">
+      <div class="process-step">
+        <div class="process-num">01</div>
+        <h3>Reglare</h3>
+        <p>Stabilizarea sistemului nervos, regăsirea unui teren solid, normalizarea a ceea ce a apărut după o criză, o experiență sau un moment de viață dificil. Înainte de a privi înăuntru, trebuie mai întâi să te poți susține.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">02</div>
+        <h3>Elaborare</h3>
+        <p>A da cuvinte, gesturi și simboluri celor trăite. A numi ceea ce cere să fie numit. A permite corpului să încheie mișcările rămase la jumătate și emoțiilor să-și găsească forma.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">03</div>
+        <h3>Ancorare</h3>
+        <p>A traduce ceea ce s-a învățat în schimbări concrete: felul în care locuim corpul, relațiile, munca, timpul. Ca înțelegerea să devină viață, nu doar idee.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="for-whom" id="pentru-cine">
   <div class="for-whom-inner">
     <div class="for-whom-col yes fade-in">
@@ -470,6 +519,87 @@ footer p { font-size: 0.78rem; color: rgba(255,255,255,0.25); }
       </a>
     </div>
     <p style="margin-top:2rem;font-size:0.85rem;color:var(--light);font-style:italic;"></p>
+  </div>
+</section>
+
+<section class="faq" id="intrebari">
+  <div class="faq-inner">
+    <div class="faq-header fade-in">
+      <p class="section-label">Întrebări frecvente</p>
+      <h2 class="section-title">Înainte de<br><em>a începe</em></h2>
+    </div>
+
+    <div class="faq-category fade-in">
+      <h3>Despre abordare</h3>
+      <details class="faq-item">
+        <summary>Ce este psihoterapia umanistă integratoare?</summary>
+        <p class="faq-answer">Pornește de la o idee simplă: ființa umană nu este un sistem defect care are nevoie de reparare, ci un proces de dezvoltare care uneori se blochează. Sarcina nu este de a diagnostica și aplica o tehnică, ci de a crea condițiile pentru ca acel proces natural să-și reia cursul. „Integratoare" înseamnă că îmbin diferite tradiții — gestalt, transpersonală, somatosenzorială — în funcție de ceea ce fiecare persoană are nevoie în fiecare moment.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Prin ce se deosebește de terapiile mai protocolizate?</summary>
+        <p class="faq-answer">Terapiile protocolizate (cognitiv-comportamentală, de exemplu) lucrează cu scheme relativ închise: identificarea convingerilor iraționale, dezasamblarea tiparelor, reprogramarea răspunsurilor. Abordarea mea pornește de la ascultare și de la experiența prezentă. Nu încerc să te „repar" — te însoțesc să înțelegi ce se repetă în tine și să găsești resursele tale proprii pentru a trăi cu mai multă autenticitate.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Lucrezi și cu corpul?</summary>
+        <p class="faq-answer">Da. Provin dintr-o formare în psihoterapie corporală somatosenzorială. În ședință nu doar vorbim: dăm atenție felului în care respiri când apare ceva, ce se încordează, ce se închide, ce cere să se miște. Corpul păstrează informații care uneori nu ajung la cuvinte — a lucra cu el permite integrarea experiențelor care rămân blocate atunci când sunt abordate doar rațional.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Ce este psihoterapia transpersonală?</summary>
+        <p class="faq-answer">Este o ramură a curentului umanist care încorporează dimensiuni spirituale și stări extinse de conștiință fără a le patologiza. Este deosebit de utilă când suferința are și o dimensiune existențială: pierderea sensului, crize de viață, procese de autocunoaștere profundă, integrarea experiențelor non-ordinare.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Cu ce teme mă poți ajuta?</summary>
+        <p class="faq-answer">Temele cu care lucrez cel mai frecvent: trauma (în special trauma relațională și de dezvoltare), anxietate, autoreglarea sistemului nervos, legături și atașament, criză de identitate, burnout, depresie din perspectivă umanistă, integrarea experiențelor psihedelic, procese de doliu, persoane extrem de sensibile (PES).</p>
+      </details>
+    </div>
+
+    <div class="faq-category fade-in">
+      <h3>Despre ședințe</h3>
+      <details class="faq-item">
+        <summary>Cum este o primă ședință?</summary>
+        <p class="faq-answer">Prima ședință este o întâlnire în care tu îmi spui ce te aduce, iar eu ascult. Nu există chestionare sau evaluări formale. La final, dacă simți că legătura poate funcționa și eu văd că este posibil, definim un ritm de lucru. Dacă ai nevoie de altă resursă — un psihiatru, o altă abordare terapeutică —, îți voi spune clar.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Cât durează un proces?</summary>
+        <p class="faq-answer">Depinde de profunzimea muncii și de ritmul tău. Unele procese se încheie în 8–12 ședințe când există un focus clar și delimitat. Altele se extind pe mai multe luni sau mai mult de un an când este vorba de reconstrucție vitală, traumă complexă sau schimbare de identitate. Nu lucrez cu pachete închise — procesul îl definim împreună și poți opri când simți că ai terminat.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Cât de des sunt ședințele?</summary>
+        <p class="faq-answer">Cel mai frecvent este o dată pe săptămână. La începutul procesului sau în momentele de intensitate mare poate avea sens de două ori pe săptămână; în fazele de integrare, se pot distanța la fiecare două săptămâni.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Lucrezi și online?</summary>
+        <p class="faq-answer">Da. Multe procese funcționează la fel de bine online ca și fizic. Singura diferență practică: ședințele care includ lucru corporal intens sau expresiv se recomandă în format fizic.</p>
+      </details>
+      <details class="faq-item">
+        <summary>În ce limbi lucrezi?</summary>
+        <p class="faq-answer">Spaniolă, catalană, engleză și română.</p>
+      </details>
+    </div>
+
+    <div class="faq-category fade-in">
+      <h3>Aspecte practice</h3>
+      <details class="faq-item">
+        <summary>Cât costă ședințele?</summary>
+        <p class="faq-answer">Ședință individuală: 70 € · 60 minute. Ședință de cuplu: 100 € · 60 minute. Prețul este același în format fizic și online.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Cum se plătește?</summary>
+        <p class="faq-answer">La finalul fiecărei ședințe, prin Bizum, transfer bancar sau numerar. Dacă ai nevoie de factură, o emit fără probleme.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Cum rezerv o primă ședință?</summary>
+        <p class="faq-answer">Cel mai rapid este să îmi scrii pe WhatsApp la +34 671 894 458. Spune-mi pe scurt ce te aduce și ne punem de acord asupra zilei și orei pentru prima întâlnire. Poți folosi și formularul de contact de pe acest site.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Accepți asigurări de sănătate?</summary>
+        <p class="faq-answer">În prezent nu lucrez cu asigurări. Toate ședințele sunt private.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Unde se află cabinetul?</summary>
+        <p class="faq-answer">În Calle Muntaner 215, Barcelona 08036, în cartierul Eixample (alături de Sant Gervasi). Bine conectat prin FGC (stația Muntaner) și mai multe autobuze.</p>
+      </details>
+    </div>
   </div>
 </section>
 

@@ -206,7 +206,28 @@
   .pricing-card .p-price { font-family: var(--serif); font-size: 2.75rem; color: var(--sage); font-weight: 300; margin: 1rem 0 1.25rem; letter-spacing: -0.01em; }
   .pricing-card .p-duration { font-size: 0.78rem; color: var(--light); letter-spacing: 0.12em; text-transform: uppercase; }
   .pricing-note { text-align: center; font-family: var(--serif); font-size: 1.05rem; font-style: italic; color: var(--light); margin-top: 2.5rem; }
-  .inline-cta { background: var(--cream); padding: 4rem 4rem 5rem; text-align: center; }
+  .process { background: var(--cream); padding: 6rem 4rem; }
+  .process-inner { max-width: 1100px; margin: 0 auto; }
+  .process-header { text-align: center; margin-bottom: 4rem; }
+  .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; }
+  .process-step { text-align: left; }
+  .process-num { font-family: var(--serif); font-size: 4rem; font-weight: 300; color: var(--sage); line-height: 1; margin-bottom: 1rem; letter-spacing: -0.02em; }
+  .process-step h3 { font-family: var(--serif); font-size: 1.5rem; font-weight: 400; color: var(--dark); margin-bottom: 0.75rem; }
+  .process-step p { font-size: 0.95rem; color: var(--mid); line-height: 1.7; }
+  .faq { background: var(--cream-mid); padding: 6rem 4rem; }
+  .faq-inner { max-width: 900px; margin: 0 auto; }
+  .faq-header { text-align: center; margin-bottom: 3rem; }
+  .faq-category { margin-bottom: 3rem; }
+  .faq-category:last-child { margin-bottom: 0; }
+  .faq-category h3 { font-family: var(--serif); font-size: 1.35rem; font-weight: 400; color: var(--dark); margin-bottom: 0.5rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--cream-deep); }
+  .faq-item { border-bottom: 1px solid var(--cream-deep); }
+  .faq-item summary { cursor: pointer; padding: 1.25rem 0; font-size: 1rem; color: var(--dark); font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; transition: color 0.2s; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after { content: '+'; font-family: var(--serif); font-size: 1.5rem; font-weight: 300; color: var(--sage); flex-shrink: 0; transition: transform 0.3s; line-height: 1; }
+  .faq-item[open] summary::after { transform: rotate(45deg); }
+  .faq-item summary:hover { color: var(--sage); }
+  .faq-item .faq-answer { padding: 0 0 1.5rem; font-size: 0.95rem; color: var(--mid); line-height: 1.75; }
+  .inline-cta { background: var(--cream-mid); padding: 4rem 4rem 5rem; text-align: center; }
   .inline-cta a { display: inline-flex; align-items: center; gap: 0.75rem; font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--dark); text-decoration: none; border: 1px solid var(--sage); padding: 1rem 2.25rem; transition: all 0.2s; border-radius: 2px; }
   .inline-cta a:hover { background: var(--sage); color: #fff; }
 
@@ -238,7 +259,9 @@
     .writing-title { font-size: 1.1rem; }
     .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
     footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; }
-    .recognition-section, .for-whom, .pricing { padding: 3.5rem 1.5rem; }
+    .recognition-section, .for-whom, .pricing, .process, .faq { padding: 3.5rem 1.5rem; }
+    .process-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .process-num { font-size: 3rem; }
     .recognition-list li { font-size: 1.05rem; padding: 1.25rem 0; }
     .for-whom-inner { grid-template-columns: 1fr; gap: 2.5rem; }
     .pricing-grid { grid-template-columns: 1fr; gap: 1.5rem; }
@@ -432,6 +455,33 @@
   </div>
 </section>
 
+<!-- THE PROCESS -->
+<section class="process" id="process">
+  <div class="process-inner">
+    <div class="process-header fade-in">
+      <p class="section-label">The process</p>
+      <h2 class="section-title">How we work<br><em>in three phases</em></h2>
+    </div>
+    <div class="process-grid fade-in">
+      <div class="process-step">
+        <div class="process-num">01</div>
+        <h3>Regulation</h3>
+        <p>Stabilizing the nervous system, recovering ground, normalizing what has arrived after a crisis, an experience, or a difficult life moment. Before looking inward, first one must be able to hold oneself.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">02</div>
+        <h3>Elaboration</h3>
+        <p>Giving words, gestures and symbols to what has been lived. Naming what asks to be named. Allowing the body to complete the movements that were left unfinished and emotions to find their form.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">03</div>
+        <h3>Anchoring</h3>
+        <p>Translating what has been learned into concrete changes: the way we inhabit the body, our relationships, our work, our time. So that understanding becomes life, not just idea.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- WHO IT IS FOR / NOT FOR -->
 <section class="for-whom" id="for-whom">
   <div class="for-whom-inner">
@@ -536,6 +586,89 @@
     </div>
   </div>
 </section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="faq-inner">
+    <div class="faq-header fade-in">
+      <p class="section-label">Frequently asked questions</p>
+      <h2 class="section-title">Before<br><em>we begin</em></h2>
+    </div>
+
+    <div class="faq-category fade-in">
+      <h3>About the approach</h3>
+      <details class="faq-item">
+        <summary>What is integrative humanistic psychotherapy?</summary>
+        <p class="faq-answer">It starts from a basic idea: the human being is not a broken system that needs to be fixed, but a developmental process that sometimes gets blocked. The task is not to diagnose and apply a technique, but to create the conditions for that natural process to resume its course. "Integrative" means that I combine different traditions — gestalt, transpersonal, somatosensory — according to what each person needs at each moment.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How is it different from more protocol-based therapies?</summary>
+        <p class="faq-answer">Protocol-based therapies (cognitive-behavioral, for example) work with relatively closed schemes: identifying irrational beliefs, dismantling patterns, reprogramming responses. My approach starts from listening and present experience. I don't try to "fix" you — I accompany you to understand what keeps repeating in you and to find your own resources to live with more authenticity.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do you also work with the body?</summary>
+        <p class="faq-answer">Yes. I come from a training in somatosensory body psychotherapy. In session we don't only talk: we pay attention to how you breathe when something emerges, what tenses, what closes, what asks to move. The body holds information that sometimes doesn't reach words — working with it allows integration of experiences that stay stuck when approached only from the rational.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What is transpersonal psychotherapy?</summary>
+        <p class="faq-answer">It's a branch of the humanistic tradition that incorporates spiritual dimensions and expanded states of consciousness without pathologizing them. It is especially useful when suffering also has an existential dimension: loss of meaning, life crises, deep self-knowledge processes, integration of non-ordinary experiences.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What topics can you help me with?</summary>
+        <p class="faq-answer">The topics I work with most frequently: trauma (especially relational and developmental trauma), anxiety, nervous system self-regulation, bonds and attachment, identity crisis, burnout, depression from a humanistic view, integration of psychedelic experiences, grief processes, highly sensitive people (HSP).</p>
+      </details>
+    </div>
+
+    <div class="faq-category fade-in">
+      <h3>About the sessions</h3>
+      <details class="faq-item">
+        <summary>What is a first session like?</summary>
+        <p class="faq-answer">The first session is a meeting where you tell me what brings you here, and I listen. There are no questionnaires or formal evaluations. At the end, if you feel the bond can work and I also see it possible, we define a working rhythm. If you need another resource — a psychiatrist, another therapeutic approach —, I'll tell you clearly.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How long does a process last?</summary>
+        <p class="faq-answer">It depends on the depth of the work and your pace. Some processes are completed in 8–12 sessions when there is a clear and delimited focus. Others extend over several months or more than a year when there is vital reconstruction, complex trauma, or identity change. I don't work with closed packages — we define the process together and you can stop whenever you feel you have finished.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How often are the sessions?</summary>
+        <p class="faq-answer">The most common is once a week. At the beginning of the process or in moments of high intensity, twice a week may make sense; in integration phases, sessions may space out to every two weeks.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do you also work online?</summary>
+        <p class="faq-answer">Yes. Many processes work just as well online as in person. The only practical difference: sessions that include intense body or expressive work are recommended in person.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What languages do you work in?</summary>
+        <p class="faq-answer">Spanish, Catalan, English and Romanian.</p>
+      </details>
+    </div>
+
+    <div class="faq-category fade-in">
+      <h3>Practical matters</h3>
+      <details class="faq-item">
+        <summary>How much do the sessions cost?</summary>
+        <p class="faq-answer">Individual session: 70 € · 60 minutes. Couple session: 100 € · 60 minutes. The price is the same in person and online.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How do I pay?</summary>
+        <p class="faq-answer">At the end of each session, by Bizum, bank transfer or cash. If you need an invoice, I can issue one without a problem.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How do I book a first session?</summary>
+        <p class="faq-answer">The fastest way is to message me on WhatsApp at +34 671 894 458. Tell me briefly what brings you and we'll agree on a day and time for the first appointment. You can also use the contact form on this website.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do you accept health insurance?</summary>
+        <p class="faq-answer">Currently I don't work with health insurance. All sessions are private.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Where is the practice located?</summary>
+        <p class="faq-answer">At Calle Muntaner 215, Barcelona 08036, in the Eixample district (next to Sant Gervasi). Well connected by FGC (Muntaner station) and several buses.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="contact-inner">

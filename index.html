@@ -811,7 +811,30 @@
   .pricing-card .p-duration { font-size: 0.78rem; color: var(--light); letter-spacing: 0.12em; text-transform: uppercase; }
   .pricing-note { text-align: center; font-family: var(--serif); font-size: 1.05rem; font-style: italic; color: var(--light); margin-top: 2.5rem; }
 
-  .inline-cta { background: var(--cream); padding: 4rem 4rem 5rem; text-align: center; }
+  .process { background: var(--cream); padding: 6rem 4rem; }
+  .process-inner { max-width: 1100px; margin: 0 auto; }
+  .process-header { text-align: center; margin-bottom: 4rem; }
+  .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; }
+  .process-step { text-align: left; }
+  .process-num { font-family: var(--serif); font-size: 4rem; font-weight: 300; color: var(--sage); line-height: 1; margin-bottom: 1rem; letter-spacing: -0.02em; }
+  .process-step h3 { font-family: var(--serif); font-size: 1.5rem; font-weight: 400; color: var(--dark); margin-bottom: 0.75rem; }
+  .process-step p { font-size: 0.95rem; color: var(--mid); line-height: 1.7; }
+
+  .faq { background: var(--cream-mid); padding: 6rem 4rem; }
+  .faq-inner { max-width: 900px; margin: 0 auto; }
+  .faq-header { text-align: center; margin-bottom: 3rem; }
+  .faq-category { margin-bottom: 3rem; }
+  .faq-category:last-child { margin-bottom: 0; }
+  .faq-category h3 { font-family: var(--serif); font-size: 1.35rem; font-weight: 400; color: var(--dark); margin-bottom: 0.5rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--cream-deep); }
+  .faq-item { border-bottom: 1px solid var(--cream-deep); }
+  .faq-item summary { cursor: pointer; padding: 1.25rem 0; font-size: 1rem; color: var(--dark); font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; transition: color 0.2s; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after { content: '+'; font-family: var(--serif); font-size: 1.5rem; font-weight: 300; color: var(--sage); flex-shrink: 0; transition: transform 0.3s; line-height: 1; }
+  .faq-item[open] summary::after { transform: rotate(45deg); }
+  .faq-item summary:hover { color: var(--sage); }
+  .faq-item .faq-answer { padding: 0 0 1.5rem; font-size: 0.95rem; color: var(--mid); line-height: 1.75; }
+
+  .inline-cta { background: var(--cream-mid); padding: 4rem 4rem 5rem; text-align: center; }
   .inline-cta a { display: inline-flex; align-items: center; gap: 0.75rem; font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--dark); text-decoration: none; border: 1px solid var(--sage); padding: 1rem 2.25rem; transition: all 0.2s; border-radius: 2px; }
   .inline-cta a:hover { background: var(--sage); color: #fff; }
 
@@ -873,7 +896,9 @@
 
     footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; }
 
-    .recognition-section, .for-whom, .pricing { padding: 3.5rem 1.5rem; }
+    .recognition-section, .for-whom, .pricing, .process, .faq { padding: 3.5rem 1.5rem; }
+    .process-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .process-num { font-size: 3rem; }
     .recognition-list li { font-size: 1.05rem; padding: 1.25rem 0; }
     .for-whom-inner { grid-template-columns: 1fr; gap: 2.5rem; }
     .pricing-grid { grid-template-columns: 1fr; gap: 1.5rem; }
@@ -1188,6 +1213,33 @@
   </div>
 </section>
 
+<!-- EL PROCESO -->
+<section class="process" id="proceso">
+  <div class="process-inner">
+    <div class="process-header fade-in">
+      <p class="section-label">El proceso</p>
+      <h2 class="section-title">Cómo trabajamos<br><em>en tres tiempos</em></h2>
+    </div>
+    <div class="process-grid fade-in">
+      <div class="process-step">
+        <div class="process-num">01</div>
+        <h3>Regulación</h3>
+        <p>Estabilizar el sistema nervioso, recuperar suelo, normalizar lo que llegó tras una crisis, una experiencia o un momento vital difícil. Antes de mirar hacia dentro, primero hay que poder sostenerse.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">02</div>
+        <h3>Elaboración</h3>
+        <p>Dar palabras, gestos y símbolos a lo que se vivió. Nombrar lo que pide ser nombrado. Permitir que el cuerpo termine los movimientos que se quedaron a medias y que las emociones encuentren su forma.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">03</div>
+        <h3>Anclaje</h3>
+        <p>Traducir lo aprendido en cambios concretos: el modo de habitar el cuerpo, las relaciones, el trabajo, el tiempo. Que la comprensión se haga vida, no solo idea.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PARA QUIÉN ES / NO ES -->
 <section class="for-whom" id="para-quien">
   <div class="for-whom-inner">
@@ -1285,6 +1337,88 @@
         <span class="writing-title">Cuando el cuerpo también necesita ser escuchado: psicoterapia corporal y contacto físico en el tratamiento del trauma</span>
         <span class="writing-tag">Cuerpo</span>
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="preguntas">
+  <div class="faq-inner">
+    <div class="faq-header fade-in">
+      <p class="section-label">Preguntas frecuentes</p>
+      <h2 class="section-title">Antes de<br><em>empezar</em></h2>
+    </div>
+
+    <div class="faq-category fade-in">
+      <h3>Sobre el enfoque</h3>
+      <details class="faq-item">
+        <summary>¿Qué es la psicoterapia humanista integradora?</summary>
+        <p class="faq-answer">Parte de una idea básica: el ser humano no es un sistema averiado que necesita ser reparado, sino un proceso de desarrollo que a veces se bloquea. La tarea no es diagnosticar y aplicar una técnica, sino crear las condiciones para que ese proceso natural retome su curso. "Integradora" significa que combino distintas tradiciones — gestalt, transpersonal, somatosensorial — según lo que cada persona necesite en cada momento.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿En qué se diferencia de otras terapias más protocolizadas?</summary>
+        <p class="faq-answer">Las terapias protocolizadas (cognitivo-conductual, por ejemplo) trabajan con esquemas relativamente cerrados: identificar creencias irracionales, desmontar patrones, reprogramar respuestas. Mi enfoque parte de la escucha y de la experiencia presente. No trato de "arreglarte", sino de acompañarte a comprender lo que se repite en ti y a encontrar tus propios recursos para vivir con más autenticidad.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Trabajas también con el cuerpo?</summary>
+        <p class="faq-answer">Sí. Vengo de una formación en psicoterapia corporal somatosensorial. En sesión no solo hablamos: prestamos atención a cómo respiras cuando algo emerge, qué se tensa, qué se cierra, qué pide moverse. El cuerpo guarda información que a veces no llega a las palabras — trabajar con él permite integrar experiencias que solo desde lo racional se quedan estancadas.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué es la psicoterapia transpersonal?</summary>
+        <p class="faq-answer">Es una rama de la corriente humanista que incorpora dimensiones espirituales y estados ampliados de conciencia sin patologizarlos. Es especialmente útil cuando el malestar tiene también una dimensión existencial: pérdida de sentido, crisis vitales, procesos de autoconocimiento profundos, integración de experiencias no ordinarias.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Con qué temas puedes ayudarme?</summary>
+        <p class="faq-answer">Los temas que trabajo con más frecuencia: trauma (especialmente trauma relacional y del desarrollo), ansiedad, autorregulación del sistema nervioso, vínculos y apego, crisis de identidad, burnout, depresión desde la mirada humanista, integración de experiencias psicodélicas, procesos de duelo, personas altamente sensibles (PAS).</p>
+      </details>
+    </div>
+
+    <div class="faq-category fade-in">
+      <h3>Sobre las sesiones</h3>
+      <details class="faq-item">
+        <summary>¿Cómo es una primera sesión?</summary>
+        <p class="faq-answer">La primera sesión es un encuentro donde tú me cuentas lo que te trae, y yo escucho. No hay cuestionarios ni evaluaciones formales. Al final, si sientes que el vínculo puede funcionar y yo también lo veo posible, definimos un ritmo de trabajo. Si necesitas otro recurso — un psiquiatra, otro enfoque terapéutico —, te lo diré con claridad.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuánto dura un proceso?</summary>
+        <p class="faq-answer">Depende de la profundidad del trabajo y de tu ritmo. Algunos procesos se completan en 8-12 sesiones cuando hay un foco claro y muy delimitado. Otros se extienden a varios meses o más de un año cuando hay reconstrucción vital, trauma complejo o cambio identitario. No trabajo con paquetes cerrados — el proceso lo definimos juntos y puedes parar cuando sientas que has terminado.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Con qué frecuencia son las sesiones?</summary>
+        <p class="faq-answer">Lo más habitual es una vez por semana. Al inicio del proceso o en momentos de alta intensidad, puede tener sentido dos veces por semana; en fases de integración, puede espaciarse a cada dos semanas.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Trabajas también online?</summary>
+        <p class="faq-answer">Sí. Muchos procesos funcionan igual de bien online que presencialmente. La única diferencia práctica: las sesiones que incluyen trabajo corporal intenso o expresivo se recomiendan presenciales.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿En qué idiomas atiendes?</summary>
+        <p class="faq-answer">Castellano, catalán, inglés y rumano.</p>
+      </details>
+    </div>
+
+    <div class="faq-category fade-in">
+      <h3>Sobre lo práctico</h3>
+      <details class="faq-item">
+        <summary>¿Cuánto cuestan las sesiones?</summary>
+        <p class="faq-answer">Sesión individual: 70 € · 60 minutos. Sesión de pareja: 100 € · 60 minutos. El precio es el mismo en presencial y en online.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cómo se paga?</summary>
+        <p class="faq-answer">Al final de cada sesión, por Bizum, transferencia o efectivo. Si necesitas factura, la emito sin problema.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cómo reservo una primera sesión?</summary>
+        <p class="faq-answer">La forma más rápida es escribirme por WhatsApp al +34 671 894 458. Cuéntame brevemente lo que te trae y acordamos día y hora para la primera cita. También puedes usar el formulario de contacto de esta web.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Aceptas mutuas o seguros de salud?</summary>
+        <p class="faq-answer">Actualmente no trabajo con mutuas ni seguros. Todas las sesiones son privadas.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Dónde está la consulta?</summary>
+        <p class="faq-answer">En Calle Muntaner 215, Barcelona 08036, en el barrio del Eixample (junto a Sant Gervasi). Bien comunicada por FGC (Muntaner) y varios buses.</p>
+      </details>
     </div>
   </div>
 </section>
