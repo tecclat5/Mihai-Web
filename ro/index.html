@@ -724,10 +724,22 @@ footer p { font-size: 0.78rem; color: rgba(255,255,255,0.25); }
 <script>
   const nav = document.getElementById('mainNav');
   window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 20); });
+  // Google Ads — conversión "Clic WhatsApp"
+  function trackWhatsAppConversion() {
+    if (typeof gtag === 'function') {
+      gtag('event', 'conversion', { 'send_to': 'AW-18436478922/Llj4CO3PyPgcEMqvmddE' });
+    }
+  }
+
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('a[href*="wa.me"]')) trackWhatsAppConversion();
+  });
+
   function sendToWhatsApp(e) {
     e.preventDefault();
     const name = document.getElementById('name').value;
     const message = document.getElementById('message').value;
+    trackWhatsAppConversion();
     window.open('https://wa.me/34671894458?text=' + encodeURIComponent('Buna ziua, ma numesc ' + name + '. ' + message), '_blank');
   }
 </script>

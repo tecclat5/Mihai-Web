@@ -1624,12 +1624,24 @@
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   document.querySelectorAll('.hero-logo').forEach(el => observer.observe(el));
 
+  // Google Ads — conversión "Clic WhatsApp"
+  function trackWhatsAppConversion() {
+    if (typeof gtag === 'function') {
+      gtag('event', 'conversion', { 'send_to': 'AW-18436478922/Llj4CO3PyPgcEMqvmddE' });
+    }
+  }
+
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('a[href*="wa.me"]')) trackWhatsAppConversion();
+  });
+
   function sendToWhatsApp(e) {
     e.preventDefault();
     const name = document.getElementById('name').value.trim();
     const message = document.getElementById('message').value.trim();
     const text = `Hola Mihai, soy ${name}. ${message}`;
     const url = `https://wa.me/34671894458?text=${encodeURIComponent(text)}`;
+    trackWhatsAppConversion();
     window.open(url, '_blank');
   }
 
