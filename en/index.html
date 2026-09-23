@@ -27,8 +27,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="pGrZGf0o4wbw3ckEQXZEjbQF1kc3eEIcYYQP2qqNZmU" />
-<title>English-speaking Humanistic Psychotherapist in Sant Cugat del Vallès | Mihai Flaviu Sirb</title>
-<meta name="description" content="English-speaking humanistic psychotherapist in Sant Cugat del Vallès (Barcelona). Gestalt, transpersonal and somatic therapy for trauma, anxiety, burnout and psychedelic integration.">
+<title>Humanistic Integrative Psychotherapy in Sant Cugat | Mihai Flaviu Sirb</title>
+<meta name="description" content="English-speaking humanistic integrative psychotherapist in Sant Cugat del Vallès (Barcelona). Gestalt, transpersonal and somatic therapy for trauma, anxiety, burnout and psychedelic integration.">
 <meta name="author" content="Mihai Flaviu Sirb">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://mihaiflaviusirb.com/en/">
@@ -96,7 +96,7 @@
     "@type": "Person",
     "@id": "https://mihaiflaviusirb.com/#person",
     "name": "Mihai Flaviu Sirb",
-    "jobTitle": "Humanistic psychotherapist",
+    "jobTitle": "Humanistic integrative psychotherapist",
     "url": "https://mihaiflaviusirb.com/en/",
     "worksFor": { "@id": "https://mihaiflaviusirb.com/#business" },
     "knowsLanguage": ["en", "es", "ca", "ro"]
@@ -108,6 +108,11 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Are you a psychologist or a psychotherapist?",
+      "acceptedAnswer": { "@type": "Answer", "text": "I am a psychotherapist. A Psychology degree is the study of the mind in general; very little of it is doing therapy, and you can finish the degree without ever having accompanied anyone. Psychotherapy is another matter: years of training in a specific method, supervised practice and one’s own personal therapy. I have been doing this for ten years, with training in Gestalt, NARM somatosensory trauma work and Claudio Naranjo’s SAT programme. Half a century of research comparing therapeutic schools concludes that outcomes depend far more on the relationship and the particular therapist than on their qualification. If you need a clinical diagnosis, an expert report, medication or insurance coverage, you need a clinical psychologist and I will refer you to someone I trust in the first session." }
+    },
     { "@type": "Question", "name": "What is integrative humanistic psychotherapy?", "acceptedAnswer": { "@type": "Answer", "text": "It starts from a basic idea: the human being is not a broken system that needs to be fixed, but a developmental process that sometimes gets blocked. The task is not to diagnose and apply a technique, but to create the conditions for that natural process to resume its course. \"Integrative\" means that I combine different traditions — gestalt, transpersonal, somatosensory — according to what each person needs at each moment." } },
     { "@type": "Question", "name": "How is it different from more protocol-based therapies?", "acceptedAnswer": { "@type": "Answer", "text": "Protocol-based therapies (cognitive-behavioral, for example) work with relatively closed schemes: identifying irrational beliefs, dismantling patterns, reprogramming responses. My approach starts from listening and present experience. I don't try to \"fix\" you — I accompany you to understand what keeps repeating in you and to find your own resources to live with more authenticity." } },
     { "@type": "Question", "name": "Do you also work with the body?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. I come from a training in somatosensory body psychotherapy. In session we don't only talk: we pay attention to how you breathe when something emerges, what tenses, what closes, what asks to move. The body holds information that sometimes doesn't reach words — working with it allows integration of experiences that stay stuck when approached only from the rational." } },
@@ -336,6 +341,132 @@
     .writing-item { grid-template-columns: 1fr; gap: 0.3rem; }
     .writing-date { font-size: 0.75rem; }
   }
+
+  /* --- Entrada secuenciada, firma y botones (equivalente al castellano) --- */
+  .entrada-paso {
+    opacity: 0; transform: translateY(18px);
+    animation: entrada-aparece 0.85s cubic-bezier(.16,.84,.44,1) forwards;
+    animation-delay: calc(var(--paso) * 1s - 0.8s);
+  }
+  @keyframes entrada-aparece { to { opacity: 1; transform: translateY(0); } }
+  @media (prefers-reduced-motion: reduce) {
+    .entrada-paso { animation-duration: 0.01s; animation-delay: 0s; }
+  }
+  .hero { position: relative; overflow: hidden; min-height: auto; display: block; padding: 0 4rem; }
+  .hero::before { display: none; }
+  .hero-inner { display: block; max-width: 1200px; margin: 0 auto; }
+  .hero-content {
+    display: flex; flex-direction: column; align-items: center;
+    text-align: center; max-width: 46rem; margin: 0 auto;
+  }
+  .hero-entrada {
+    min-height: 100svh; position: relative;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: clamp(1.5rem, 4vh, 3rem);
+    padding: clamp(5rem, 11vh, 7rem) 0 clamp(5rem, 10vh, 6.5rem);
+    box-sizing: border-box;
+  }
+  .hero-resto {
+    display: flex; flex-direction: column; align-items: center;
+    padding-bottom: 6rem;
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+  }
+  .hero-resto.visible { opacity: 1; transform: translateY(0); }
+  .hero-logo-wrap { display: flex; align-items: center; justify-content: center; padding: 0; }
+  .hero-logo { width: clamp(96px, 13vh, 150px); }
+  .hero-verso { margin: 0; padding: 0; max-width: 34rem; }
+  .hero-verso p {
+    font-family: var(--serif); font-style: italic;
+    font-size: clamp(2rem, 4vw, 3.1rem); line-height: 1.25;
+    color: var(--dark); margin: 0 0 0.7rem; letter-spacing: -0.005em;
+  }
+  .hero-verso cite {
+    font-style: normal; font-size: 0.72rem; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--light);
+  }
+  .hero-name {
+    font-family: var(--serif); font-size: clamp(2.5rem, 4vw, 3rem);
+    font-weight: 400; line-height: 1.15; color: var(--accent); margin-bottom: 1.5rem;
+  }
+  .hero-firma { margin: 0 0 1.9rem; display: flex; flex-direction: column; gap: 0.35rem; }
+  .hero-firma-nombre { font-family: var(--serif); font-size: 1.5rem; color: var(--dark); }
+  .hero-firma-titulo {
+    font-size: 0.74rem; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--sage); font-weight: 500;
+  }
+  .hero-tagline { margin-left: auto; margin-right: auto; }
+  .hero-actions { display: flex; align-items: center; gap: 1.75rem; flex-wrap: wrap; justify-content: center; }
+  .hero-cta-primary {
+    background: var(--accent); color: #fff; border: 1px solid var(--accent);
+    border-radius: 3px; padding: 0.95rem 1.6rem; text-transform: none;
+    letter-spacing: 0.02em; font-size: 0.92rem;
+  }
+  .hero-cta-primary:hover { background: var(--sage); border-color: var(--sage); color: #fff; }
+  .hero-cta-ghost { border-bottom-color: var(--light); color: var(--mid); }
+  .hero-scroll-line {
+    position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 0.7rem;
+    transition: opacity 0.4s ease;
+    font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--light);
+  }
+  body.scrolled .hero-scroll-line { opacity: 0; pointer-events: none; }
+  .nav-cta {
+    background: var(--accent); color: #fff !important; border-radius: 3px;
+    padding: 0.6rem 1.15rem; text-decoration: none; font-size: 0.82rem;
+    letter-spacing: 0.02em; transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--sage); }
+  @media (max-width: 860px) { .nav-cta { display: none; } }
+  @media (max-width: 720px) { .hero { padding: 0 1.5rem; } }
+
+  .credibilidad {
+    background: var(--cream-mid);
+    border-top: 1px solid var(--cream-deep);
+    border-bottom: 1px solid var(--cream-deep);
+    padding: 2.6rem 2rem;
+  }
+  .credibilidad-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem; text-align: center;
+  }
+  .cred-bloque { display: flex; flex-direction: column; gap: 0.5rem; }
+  .cred-dato { font-family: var(--serif); font-size: 1.6rem; color: var(--dark); line-height: 1.15; }
+  .cred-dato strong { color: var(--accent); font-weight: 400; }
+  .cred-desc { font-size: 0.8rem; line-height: 1.5; color: var(--mid); }
+  .cred-estrellas { color: var(--accent); letter-spacing: 2px; font-size: 1.1rem; }
+  .credibilidad a { color: inherit; text-decoration: none; }
+  .credibilidad a:hover .cred-dato { color: var(--accent); }
+  @media (max-width: 800px) {
+    .credibilidad { padding: 2rem 1.5rem; }
+    .credibilidad-inner { grid-template-columns: 1fr; gap: 1.8rem; }
+    .cred-dato { font-size: 1.35rem; }
+  }
+
+  .reviews { background: var(--cream-mid); padding: 110px 0; }
+  .reviews-inner { max-width: 1180px; margin: 0 auto; padding: 0 40px; }
+  .reviews-header { text-align: center; margin-bottom: 56px; }
+  .reviews-rating { display: inline-flex; align-items: center; gap: 10px; margin-top: 18px; color: var(--mid); font-size: 0.9rem; }
+  .reviews-stars { color: var(--accent); letter-spacing: 2px; font-size: 1rem; }
+  .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+  .review-card { background: #fff; border: 1px solid var(--cream-deep); border-radius: 4px; padding: 30px 32px; display: flex; flex-direction: column; }
+  .review-text { font-size: 0.95rem; line-height: 1.75; color: var(--mid); margin: 0 0 22px; flex: 1; }
+  .review-author { font-family: var(--serif); font-size: 1.05rem; color: var(--dark); margin: 0; }
+  .reviews-cta { text-align: center; margin-top: 48px; }
+  .reviews-cta a { color: var(--accent); font-size: 0.88rem; text-decoration: none; border-bottom: 1px solid var(--cream-deep); padding-bottom: 3px; }
+  .reviews-cta a:hover { border-color: var(--accent); }
+  .credenciales { margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--cream-deep); }
+  .credenciales-anios { font-family: var(--serif); font-size: 1.35rem; color: var(--dark); margin-bottom: 1.6rem; line-height: 1.3; }
+  .credenciales-anios strong { color: var(--accent); font-weight: 400; }
+  .credenciales-titulo { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--light); margin-bottom: 1.1rem; }
+  .credenciales-lista { list-style: none; padding: 0; margin: 0; }
+  .credenciales-lista li { font-size: 0.88rem; line-height: 1.6; color: var(--mid); padding: 0.42rem 0; border-bottom: 1px solid rgba(216,224,206,0.5); }
+  .credenciales-lista li:last-child { border-bottom: none; }
+  .credenciales-lista span { color: var(--dark); font-weight: 500; }
+  .credenciales-lista em { font-style: normal; color: var(--light); font-size: 0.8rem; white-space: nowrap; margin-left: 0.3rem; }
+  @media (max-width: 720px) { .reviews { padding: 80px 0; } .reviews-inner { padding: 0 24px; } .review-card { padding: 26px 24px; } }
 </style>
 </head>
 <body>
@@ -350,6 +481,7 @@
     </ul>
     <a href="/" class="lang-switch" title="Versión en español">ES</a>
     <a href="/ro/" class="lang-switch" title="Versiunea română">RO</a>
+    <a class="nav-cta" href="https://wa.me/34671894458?text=Hello%2C%20I%27d%20like%20more%20information%20about%20a%20first%20session" target="_blank" rel="noopener noreferrer">Message me</a>
     <button class="nav-hamburger" id="hamburger" aria-label="Menu" onclick="toggleMenu()">
       <span></span><span></span><span></span>
     </button>
@@ -367,28 +499,11 @@
 <section class="hero" id="start">
   <div class="hero-inner">
     <div class="hero-content">
-      <p class="hero-eyebrow fade-in">Humanistic Psychotherapy · Sant Cugat del Vallès</p>
-      <h1 class="hero-name fade-in">
-        Mihai<br>
-        <em>Flaviu</em><br>
-        Sirb
-      </h1>
-      <p class="hero-tagline fade-in">
-        I have lived through the collapse of my own structures and I know the freedom of starting to inhabit one's own skin.
-      </p>
-      <p class="hero-sub fade-in">
-        I accompany people through processes of personal reconstruction and identity crisis. My intention is that you rediscover your own resources to live with authenticity, listen to yourself fully, and learn to care for yourself without losing yourself in others.
-      </p>
-      <a href="#about" class="hero-cta fade-in">
-        Discover my approach
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
-    </div>
-    <div class="hero-logo-wrap">
-      <svg class="hero-logo" viewBox="0 0 340 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo of Mihai Flaviu Sirb - Humanistic Psychotherapy">
-        <title>Mihai Flaviu Sirb — Humanistic Psychotherapy in Barcelona</title>
+      <div class="hero-entrada">
+        <div class="hero-logo-wrap entrada-paso" style="--paso: 1">
+          <svg class="hero-logo" viewBox="0 0 340 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo of Mihai Flaviu Sirb - Humanistic Psychotherapy">
+        <title>Mihai Flaviu Sirb — Psicoterapia Humanista en Barcelona</title>
+        <desc>Logotipo simbólico que representa el proceso de reconstrucción personal y la conexión entre figuras en relación.</desc>
         <g transform="translate(170, 240)">
           <ellipse cx="0" cy="42" rx="90" ry="44" fill="#4A6640"/>
           <path d="M 0,-168 C -44,-160 -76,-116 -76,-66 C -76,-16 -52,-4 0,-4 C 52,-4 76,-16 76,-66 C 76,-116 44,-160 0,-168 Z" fill="#4A6640"/>
@@ -414,10 +529,72 @@
           </g>
         </g>
       </svg>
+        </div>
+        <blockquote class="hero-verso entrada-paso" style="--paso: 2">
+          <p>My soul is a lake… a nest of stars in the calm night.</p>
+          <cite>Delmira Agustini</cite>
+        </blockquote>
+        <div class="hero-scroll-line entrada-paso" style="--paso: 3">Scroll</div>
+      </div>
+      <div class="hero-resto">
+        <h1 class="hero-name fade-in">
+          <span class="hero-seo-title">Humanistic Integrative Psychotherapist in Sant Cugat del Vallès</span>
+          From surviving <em>to being alive</em>.
+        </h1>
+        <p class="hero-firma fade-in">
+          <span class="hero-firma-nombre">Mihai Flaviu Sirb</span>
+          <span class="hero-firma-titulo">Humanistic Integrative Psychotherapy · Sant Cugat del Vallès</span>
+        </p>
+        <p class="hero-tagline fade-in">Trauma · Anxiety · Burnout · Identity crisis · Attachment<br>In person and online</p>
+        <div class="hero-actions fade-in">
+          <a href="https://wa.me/34671894458?text=Hello%2C%20I%27d%20like%20more%20information%20about%20a%20first%20session" class="hero-cta hero-cta-primary" target="_blank" rel="noopener noreferrer">
+            Message me on WhatsApp
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#about" class="hero-cta hero-cta-ghost">Discover my approach</a>
+        </div>
+      </div>
     </div>
+  </div>
+  </section>
+
+<section class="credibilidad" aria-label="Training and experience">
+  <div class="credibilidad-inner">
+    <div class="cred-bloque fade-in">
+      <p class="cred-dato"><strong>10 years</strong> accompanying processes</p>
+      <p class="cred-desc">Adults, couples and long-term processes</p>
+    </div>
+    <div class="cred-bloque fade-in">
+      <p class="cred-dato">Gestalt · NARM · SAT</p>
+      <p class="cred-desc">Trained at Institut Drala Gestalt, Centre Besai and Claudio Naranjo’s programme. Psychology degree (UOC), final year</p>
+    </div>
+    <a class="cred-bloque fade-in" href="#reviews">
+      <p class="cred-dato"><span class="cred-estrellas" aria-hidden="true">★★★★★</span><br>5.0 on Google</p>
+      <p class="cred-desc">Six reviews from people who have done the work</p>
+    </a>
   </div>
 </section>
 <!-- ABOUT -->
+<section class="recognition-section" id="recognize">
+  <div class="recognition-inner">
+    <div class="recognition-header fade-in">
+      <p class="section-label">Do you recognize yourself?</p>
+      <h2 class="section-title">Phrases you may<br><em>feel are your own</em></h2>
+    </div>
+    <ul class="recognition-list fade-in">
+      <li>I've been sleeping badly for months and don't really know why.</li>
+      <li>I can explain what's happening to me, but my body keeps reacting the same way.</li>
+      <li>Setting a boundary triggers guilt before the words are even out.</li>
+      <li>I function well on the outside, but something inside has been going dim.</li>
+      <li>In every relationship I end up occupying the same place without meaning to.</li>
+      <li>I can't stop even when my body has been asking for rest for a long time.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- DO YOU RECOGNIZE YOURSELF -->
+
+
 <section class="about" id="about">
   <div class="about-grid">
     <div class="fade-in">
@@ -437,25 +614,21 @@
         <li>Therapeutic Theater</li>
         <li>Non-Dual Mindfulness</li>
       </ul>
+      <div class="credenciales">
+        <p class="credenciales-anios"><strong>10 years</strong> accompanying processes</p>
+        <p class="credenciales-titulo">Training</p>
+        <ul class="credenciales-lista">
+          <li><span>Gestalt Psychotherapy</span> · Institut Drala Gestalt <em>2018-2022</em></li>
+          <li><span>Postgraduate in NARM Somatosensory Psychotherapy</span> · Centre Besai <em>2025-2026</em></li>
+          <li><span>Postgraduate in Therapeutic Theatre</span> · Institut Integratiu <em>2018-2020</em></li>
+          <li><span>SAT Programme</span> · Claudio Naranjo <em>2019-2023</em></li>
+          <li><span>AMAR Training</span> · Lluís Fusté, Institut Amar <em>2024-2025</em></li>
+          <li><span>Bioenergetics and Biodanza</span> · Sabina Salta <em>2020-2021</em></li>
+          <li><span>Mindfulness Instructor</span> <em>2015-2017</em></li>
+          <li><span>Psychology Degree</span> · Universitat Oberta de Catalunya <em>final year</em></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</section>
-
-<!-- DO YOU RECOGNIZE YOURSELF -->
-<section class="recognition-section" id="recognize">
-  <div class="recognition-inner">
-    <div class="recognition-header fade-in">
-      <p class="section-label">Do you recognize yourself?</p>
-      <h2 class="section-title">Phrases you may<br><em>feel are your own</em></h2>
-    </div>
-    <ul class="recognition-list fade-in">
-      <li>I've been sleeping badly for months and don't really know why.</li>
-      <li>I can explain what's happening to me, but my body keeps reacting the same way.</li>
-      <li>Setting a boundary triggers guilt before the words are even out.</li>
-      <li>I function well on the outside, but something inside has been going dim.</li>
-      <li>In every relationship I end up occupying the same place without meaning to.</li>
-      <li>I can't stop even when my body has been asking for rest for a long time.</li>
-    </ul>
   </div>
 </section>
 
@@ -571,6 +744,48 @@
 </section>
 
 <!-- FEES -->
+<section class="reviews" id="reviews">
+  <div class="reviews-inner">
+    <div class="reviews-header fade-in">
+      <p class="section-label">Those who have been here</p>
+      <h2 class="section-title">What they say<br><em>about this process</em></h2>
+      <p class="reviews-rating">
+        <span class="reviews-stars" aria-hidden="true">★★★★★</span>
+        <span>6 Google reviews · published with their permission</span>
+      </p>
+    </div>
+    <div class="reviews-grid">
+      <blockquote class="review-card fade-in">
+        <p class="review-text">I was looking for something more than ordinary therapy, something that also touched the spiritual part I had abandoned years ago. Here I have been able to talk about things I used to be ashamed to mention. The process is slow but real, and little by little I have reconnected my head, my body and that more intuitive part I had almost forgotten. I recommend it to anyone looking for something deeper than just managing symptoms.</p>
+        <p class="review-author">Mourad M.</p>
+      </blockquote>
+      <blockquote class="review-card fade-in">
+        <p class="review-text">I never thought I would say this, but starting therapy has been one of the best decisions I have made in years. I arrived after a horrible year at work, burnt out to the point of not recognising myself, thinking I simply had to endure it. Mihai helped me understand why I had been functioning that way for so long. I am still in the process but I already notice the difference in how I face each day. To anyone who thinks this is not for them, I say give it a try.</p>
+        <p class="review-author">Eric G.</p>
+      </blockquote>
+      <blockquote class="review-card fade-in">
+        <p class="review-text">I am a nurse and I arrived quite overwhelmed by my work, without knowing where I placed my own limits with others. With Mihai I have come to understand — and then to feel — what happens in my body, not only in my head. A slow and respectful process. I recommend it warmly.</p>
+        <p class="review-author">César M.</p>
+      </blockquote>
+      <blockquote class="review-card fade-in">
+        <p class="review-text">I have been in therapy with him for a while and the experience has been outstanding. He makes it possible to create a safe space where you can speak without feeling judged, with very practical tools that genuinely help day to day. I have noticed progress I did not expect and he has given me resources to keep working on my own. I would recommend him to anyone looking for real psychological support.</p>
+        <p class="review-author">Esteban S.</p>
+      </blockquote>
+      <blockquote class="review-card fade-in">
+        <p class="review-text">Excellent professional. He is very empathetic, warm, and makes you feel comfortable from the very first minute, something that worried me at first as it was my first time in therapy. The online sessions work wonderfully and you can tell he prepares each case thoroughly. Highly recommended.</p>
+        <p class="review-author">Ernesto T.</p>
+      </blockquote>
+      <blockquote class="review-card fade-in">
+        <p class="review-text">A great professional, close and empathetic. His humanistic approach has helped me understand myself better and face difficulties with greater clarity. Highly recommended.</p>
+        <p class="review-author">R.</p>
+      </blockquote>
+    </div>
+    <p class="reviews-cta fade-in">
+      <a href="https://www.google.com/search?q=Mihai+Flaviu+Sirb+Psicoterapia+Humanista+Sant+Cugat" target="_blank" rel="noopener noreferrer">See the reviews on Google</a>
+    </p>
+  </div>
+</section>
+
 <section class="pricing" id="fees">
   <div class="pricing-inner">
     <div class="pricing-header fade-in">
@@ -658,6 +873,14 @@
 
     <div class="faq-category fade-in">
       <h3>About the approach</h3>
+      <details class="faq-item">
+        <summary>Are you a psychologist or a psychotherapist?</summary>
+        <p class="faq-answer">I am a psychotherapist, and it is worth knowing what that means, because the difference probably works in your favour.</p>
+        <p class="faq-answer">A Psychology degree is the study of the mind in general: statistics, neuroscience, social, organisational and developmental psychology. Very little of that is doing therapy. You can finish the degree without ever having accompanied anyone.</p>
+        <p class="faq-answer">Psychotherapy is another matter: years of training in a specific method, supervised practice and one’s own personal therapy, because nobody can accompany you to a place they have never been themselves. I have been doing this for ten years, with training in Gestalt, NARM somatosensory trauma work and Claudio Naranjo’s SAT programme.</p>
+        <p class="faq-answer">And there is something rarely mentioned: half a century of research comparing therapeutic schools concludes that outcomes depend far more on the relationship and on the particular therapist than on their qualification or their school. I explain this in depth in <a href="/en/blog/dodo-bird-verdict-why-psychotherapy-works/">this article</a>.</p>
+        <p class="faq-answer"><strong>When you need a clinical psychologist rather than me:</strong> if you are looking for a clinical diagnosis, an expert report, medication or insurance coverage. In that case I will refer you to someone I trust in the first session.</p>
+      </details>
       <details class="faq-item">
         <summary>What is integrative humanistic psychotherapy?</summary>
         <p class="faq-answer">It starts from a basic idea: the human being is not a broken system that needs to be fixed, but a developmental process that sometimes gets blocked. The task is not to diagnose and apply a technique, but to create the conditions for that natural process to resume its course. "Integrative" means that I combine different traditions — gestalt, transpersonal, somatosensory — according to what each person needs at each moment.</p>
@@ -939,6 +1162,20 @@
     trackWhatsAppConversion();
     window.open('https://wa.me/34671894458?text=' + encodeURIComponent('Hello Mihai, I\'m ' + name + '. ' + message), '_blank');
   }
+</script>
+<script>
+  (function () {
+    var resto = document.querySelector('.hero-resto');
+    if (resto) {
+      var verResto = function () {
+        var bajando = window.scrollY > 60;
+        resto.classList.toggle('visible', bajando);
+        document.body.classList.toggle('scrolled', bajando);
+      };
+      window.addEventListener('scroll', verResto, { passive: true });
+      verResto();
+    }
+  })();
 </script>
 </body>
 </html>
