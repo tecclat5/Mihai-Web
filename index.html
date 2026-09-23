@@ -338,7 +338,7 @@
   }
 
   .hero-logo {
-    width: clamp(90px, 11vw, 132px);
+    width: clamp(150px, 20vw, 240px);
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.9s ease 0.4s, transform 0.9s ease 0.4s;
@@ -367,6 +367,28 @@
     margin: 0 0 0.7rem;
     letter-spacing: -0.005em;
   }
+
+  /* Entrada: el logo y el verso ocupan la primera pantalla; el resto llega al bajar */
+  .hero-entrada {
+    min-height: 100svh;
+    position: relative;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 2.5rem;
+  }
+  .hero-resto {
+    display: flex; flex-direction: column; align-items: center;
+    padding-bottom: 6rem;
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+  }
+  .hero-resto.visible { opacity: 1; transform: translateY(0); }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-resto { transition: opacity 0.3s ease; transform: none; }
+  }
+  .hero { min-height: auto; display: block; padding: 0 4rem 0; }
+  .hero-inner { display: block; }
+  .hero-content { max-width: 46rem; }
   .hero-firma {
     margin: 0 0 1.9rem;
     display: flex; flex-direction: column; gap: 0.35rem;
@@ -486,11 +508,13 @@
   }
 
   .hero-scroll-line {
-    position: absolute; bottom: 3rem; left: 4rem;
-    display: flex; align-items: center; gap: 1rem;
-    font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
+    position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 0.7rem;
+    transition: opacity 0.4s ease;
+    font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase;
     color: var(--light);
   }
+  body.scrolled .hero-scroll-line { opacity: 0; pointer-events: none; }
   .hero-scroll-line::after {
     content: '';
     display: block; width: 60px; height: 1px;
@@ -1125,6 +1149,7 @@
       <span></span><span></span><span></span>
     </button>
   </div>
+      </div>
 </nav>
 
 <div class="nav-mobile" id="mobileMenu">
@@ -1140,6 +1165,7 @@
 <section class="hero" id="inicio">
   <div class="hero-inner">
     <div class="hero-content">
+      <div class="hero-entrada">
       <div class="hero-logo-wrap">
       <svg class="hero-logo" viewBox="0 0 340 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logotipo de Mihai Flaviu Sirb - Psicoterapia Humanista">
         <title>Mihai Flaviu Sirb — Psicoterapia Humanista en Barcelona</title>
@@ -1174,6 +1200,9 @@
         <p>Es un lago mi alma… nido de estrellas en la noche calma.</p>
         <cite>Delmira Agustini</cite>
       </blockquote>
+      <div class="hero-scroll-line">Scroll</div>
+      </div>
+      <div class="hero-resto">
       <h1 class="hero-name fade-in">
         <span class="hero-seo-title">Psicoterapeuta Humanista Integrativo en Sant Cugat del Vallès</span>
         De sobrevivir <em>a estar vivo</em>.
@@ -1196,10 +1225,57 @@
       </div>
     </div>
   </div>
-  <div class="hero-scroll-line">Scroll</div>
 </section>
 
 <!-- ABOUT -->
+<!-- FRANJA DE CREDIBILIDAD -->
+<style>
+  .credibilidad {
+    background: var(--cream-mid);
+    border-top: 1px solid var(--cream-deep);
+    border-bottom: 1px solid var(--cream-deep);
+    padding: 2.6rem 2rem;
+  }
+  .credibilidad-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem; text-align: center;
+  }
+  .cred-bloque { display: flex; flex-direction: column; gap: 0.5rem; }
+  .cred-dato {
+    font-family: var(--serif); font-size: 1.6rem; color: var(--dark); line-height: 1.15;
+  }
+  .cred-dato strong { color: var(--accent); font-weight: 400; }
+  .cred-desc {
+    font-size: 0.8rem; line-height: 1.5; color: var(--mid);
+  }
+  .cred-estrellas { color: var(--accent); letter-spacing: 2px; font-size: 1.1rem; }
+  .credibilidad a { color: inherit; text-decoration: none; }
+  .credibilidad a:hover .cred-dato { color: var(--accent); }
+  @media (max-width: 800px) {
+    .credibilidad { padding: 2rem 1.5rem; }
+    .credibilidad-inner { grid-template-columns: 1fr; gap: 1.8rem; }
+    .cred-dato { font-size: 1.35rem; }
+  }
+</style>
+
+<section class="credibilidad" aria-label="Formación y experiencia">
+  <div class="credibilidad-inner">
+    <div class="cred-bloque fade-in">
+      <p class="cred-dato"><strong>10 años</strong> acompañando procesos</p>
+      <p class="cred-desc">Adultos, parejas y procesos de larga duración</p>
+    </div>
+    <div class="cred-bloque fade-in">
+      <p class="cred-dato">Gestalt · NARM · SAT</p>
+      <p class="cred-desc">Formación en Institut Drala Gestalt, Centre Besai y el programa de Claudio Naranjo. Grado en Psicología (UOC), último curso</p>
+    </div>
+    <a class="cred-bloque fade-in" href="#resenas">
+      <p class="cred-dato"><span class="cred-estrellas" aria-hidden="true">★★★★★</span><br>5,0 en Google</p>
+      <p class="cred-desc">Seis reseñas de personas que han hecho el proceso</p>
+    </a>
+  </div>
+</section>
+
 <section class="recognition-section" id="reconoces">
   <div class="recognition-inner">
     <div class="recognition-header fade-in">
@@ -1844,6 +1920,19 @@
 </a>
 
 <script>
+  (function () {
+    var resto = document.querySelector('.hero-resto');
+    if (resto) {
+      var verResto = function () {
+        var bajando = window.scrollY > 60;
+        resto.classList.toggle('visible', bajando);
+        document.body.classList.toggle('scrolled', bajando);
+      };
+      window.addEventListener('scroll', verResto, { passive: true });
+      verResto();
+    }
+  })();
+
   (function () {
     var boton = document.getElementById('waFloat');
     if (!boton) return;
