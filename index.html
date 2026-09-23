@@ -339,9 +339,6 @@
 
   .hero-logo {
     width: clamp(150px, 20vw, 240px);
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.9s ease 0.4s, transform 0.9s ease 0.4s;
   }
   .hero-logo.visible { opacity: 1; transform: none; }
 
@@ -366,6 +363,19 @@
     color: var(--dark);
     margin: 0 0 0.7rem;
     letter-spacing: -0.005em;
+  }
+
+  .entrada-paso {
+    opacity: 0;
+    transform: translateY(18px);
+    animation: entrada-aparece 0.85s cubic-bezier(.16,.84,.44,1) forwards;
+    animation-delay: calc(var(--paso) * 1s - 0.8s);
+  }
+  @keyframes entrada-aparece {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .entrada-paso { animation-duration: 0.01s; animation-delay: 0s; }
   }
 
   /* Entrada: el logo y el verso ocupan la primera pantalla; el resto llega al bajar */
@@ -1166,7 +1176,7 @@
   <div class="hero-inner">
     <div class="hero-content">
       <div class="hero-entrada">
-      <div class="hero-logo-wrap">
+      <div class="hero-logo-wrap entrada-paso" style="--paso: 1">
       <svg class="hero-logo" viewBox="0 0 340 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logotipo de Mihai Flaviu Sirb - Psicoterapia Humanista">
         <title>Mihai Flaviu Sirb — Psicoterapia Humanista en Barcelona</title>
         <desc>Logotipo simbólico que representa el proceso de reconstrucción personal y la conexión entre figuras en relación.</desc>
@@ -1196,11 +1206,11 @@
         </g>
       </svg>
     </div>
-      <blockquote class="hero-verso fade-in">
+      <blockquote class="hero-verso entrada-paso" style="--paso: 2">
         <p>Es un lago mi alma… nido de estrellas en la noche calma.</p>
         <cite>Delmira Agustini</cite>
       </blockquote>
-      <div class="hero-scroll-line">Scroll</div>
+      <div class="hero-scroll-line entrada-paso" style="--paso: 3">Scroll</div>
       </div>
       <div class="hero-resto">
       <h1 class="hero-name fade-in">
