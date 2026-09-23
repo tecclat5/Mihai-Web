@@ -317,28 +317,28 @@
 
   .hero-inner {
     position: relative; z-index: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+    display: flex;
+    justify-content: center;
     width: 100%;
     max-width: 1200px;
   }
 
   .hero-content {
     position: relative; z-index: 1;
+    display: flex; flex-direction: column; align-items: center;
+    text-align: center; max-width: 46rem; margin: 0 auto;
   }
 
   .hero-logo-wrap {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 0;
+    margin-bottom: 2.2rem;
   }
 
   .hero-logo {
-    width: 100%;
-    max-width: 320px;
+    width: clamp(90px, 11vw, 132px);
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.9s ease 0.4s, transform 0.9s ease 0.4s;
@@ -354,9 +354,8 @@
     font-weight: 500;
   }
   .hero-verso {
-    margin: 0 0 1.75rem;
-    padding: 0 0 0 1.1rem;
-    border-left: 1px solid var(--cream-deep);
+    margin: 0 0 1.5rem;
+    padding: 0;
     max-width: 34rem;
   }
   .hero-verso p {
@@ -368,6 +367,19 @@
     margin: 0 0 0.7rem;
     letter-spacing: -0.005em;
   }
+  .hero-firma {
+    margin: 0 0 1.9rem;
+    display: flex; flex-direction: column; gap: 0.35rem;
+  }
+  .hero-firma-nombre {
+    font-family: var(--serif); font-size: 1.5rem; color: var(--dark);
+  }
+  .hero-firma-titulo {
+    font-size: 0.74rem; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--sage); font-weight: 500;
+  }
+  .hero-actions { justify-content: center; }
+  .hero-tagline { margin-left: auto; margin-right: auto; }
   .hero-verso cite {
     font-style: normal;
     font-size: 0.72rem;
@@ -382,11 +394,11 @@
 
   .hero-name {
     font-family: var(--serif);
-    font-size: clamp(1.9rem, 3vw, 2.5rem);
+    font-size: clamp(2.5rem, 4vw, 3rem);
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.15;
     color: var(--accent);
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.5rem;
     letter-spacing: -0.01em;
   }
 
@@ -902,11 +914,7 @@
   }
 
   .hero-logo {
-    width: clamp(120px, 18vw, 200px);
     flex-shrink: 0;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.9s ease 0.3s, transform 0.9s ease 0.3s;
   }
   .hero-logo.visible { opacity: 1; transform: none; }
 
@@ -1045,24 +1053,19 @@
       gap: 0;
     }
     .hero-content { display: contents; }
-    .hero-eyebrow { order: 1; margin-bottom: 0.75rem; }
-    .hero-name { order: 2; font-size: clamp(1.5rem, 5.5vw, 1.95rem); margin-bottom: 1.2rem; }
+    .hero-name { font-size: clamp(1.5rem, 5.5vw, 1.95rem); margin-bottom: 1.2rem; }
     .hero-logo-wrap { order: 3; display: flex; padding: 0; margin-bottom: 1.5rem; }
-    .hero-tagline {
-      order: 4;
-      font-size: 1.05rem;
+    .hero-tagline { font-size: 1.05rem;
       margin-bottom: 1.5rem;
       margin-left: auto;
       margin-right: auto;
     }
-    .hero-sub {
-      order: 5;
-      font-size: 0.88rem;
+    .hero-sub { font-size: 0.88rem;
       margin-bottom: 2rem;
       margin-left: auto;
       margin-right: auto;
     }
-    .hero-cta { order: 6; align-self: center; }
+    .hero-cta { align-self: center; }
     .hero-logo { max-width: 180px; }
     .hero-scroll-line { display: none; }
 
@@ -1137,28 +1140,7 @@
 <section class="hero" id="inicio">
   <div class="hero-inner">
     <div class="hero-content">
-      <blockquote class="hero-verso fade-in">
-        <p>Es un lago mi alma… nido de estrellas en la noche calma.</p>
-        <cite>Delmira Agustini</cite>
-      </blockquote>
-      <h1 class="hero-name fade-in">
-        <span class="hero-seo-title">Psicoterapeuta Humanista Integrativo en Sant Cugat del Vallès</span>
-        De sobrevivir <em>a estar vivo</em>.
-      </h1>
-      <p class="hero-tagline fade-in">
-        Psicoterapia humanista integrativa en Sant Cugat del Vallès para trauma, ansiedad, burnout y crisis de identidad. Presencial y online.
-      </p>
-      <div class="hero-actions fade-in">
-        <a href="https://wa.me/34671894458?text=Hola%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20una%20primera%20sesi%C3%B3n" class="hero-cta hero-cta-primary" target="_blank" rel="noopener noreferrer">
-          Escríbeme por WhatsApp
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-        <a href="#sobre-mi" class="hero-cta hero-cta-ghost">Conoce mi enfoque</a>
-      </div>
-    </div>
-    <div class="hero-logo-wrap">
+      <div class="hero-logo-wrap">
       <svg class="hero-logo" viewBox="0 0 340 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logotipo de Mihai Flaviu Sirb - Psicoterapia Humanista">
         <title>Mihai Flaviu Sirb — Psicoterapia Humanista en Barcelona</title>
         <desc>Logotipo simbólico que representa el proceso de reconstrucción personal y la conexión entre figuras en relación.</desc>
@@ -1187,6 +1169,31 @@
           </g>
         </g>
       </svg>
+    </div>
+      <blockquote class="hero-verso fade-in">
+        <p>Es un lago mi alma… nido de estrellas en la noche calma.</p>
+        <cite>Delmira Agustini</cite>
+      </blockquote>
+      <h1 class="hero-name fade-in">
+        <span class="hero-seo-title">Psicoterapeuta Humanista Integrativo en Sant Cugat del Vallès</span>
+        De sobrevivir <em>a estar vivo</em>.
+      </h1>
+      <p class="hero-firma fade-in">
+        <span class="hero-firma-nombre">Mihai Flaviu Sirb</span>
+        <span class="hero-firma-titulo">Psicoterapia Humanista Integrativa · Sant Cugat del Vallès</span>
+      </p>
+      <p class="hero-tagline fade-in">
+        Trauma · Ansiedad · Burnout · Crisis de identidad · Vínculos<br>Presencial y online
+      </p>
+      <div class="hero-actions fade-in">
+        <a href="https://wa.me/34671894458?text=Hola%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20una%20primera%20sesi%C3%B3n" class="hero-cta hero-cta-primary" target="_blank" rel="noopener noreferrer">
+          Escríbeme por WhatsApp
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#sobre-mi" class="hero-cta hero-cta-ghost">Conoce mi enfoque</a>
+      </div>
     </div>
   </div>
   <div class="hero-scroll-line">Scroll</div>
