@@ -353,6 +353,31 @@
     margin-bottom: 1.5rem;
     font-weight: 500;
   }
+  .hero-verso {
+    margin: 0 0 1.75rem;
+    padding: 0 0 0 1.1rem;
+    border-left: 1px solid var(--cream-deep);
+    max-width: 28rem;
+  }
+  .hero-verso p {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.08rem;
+    line-height: 1.55;
+    color: var(--mid);
+    margin: 0 0 0.4rem;
+  }
+  .hero-verso cite {
+    font-style: normal;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+  @media (max-width: 860px) {
+    .hero-verso { margin-bottom: 1.4rem; }
+    .hero-verso p { font-size: 1rem; }
+  }
 
   .hero-name {
     font-family: var(--serif);
@@ -1111,13 +1136,15 @@
 <section class="hero" id="inicio">
   <div class="hero-inner">
     <div class="hero-content">
-      <p class="hero-eyebrow fade-in">Psicoterapia Humanista · Sant Cugat del Vallès</p>
+      <blockquote class="hero-verso fade-in">
+        <p>Es un lago mi alma… nido de estrellas en la noche calma.</p>
+        <cite>Delmira Agustini</cite>
+      </blockquote>
       <h1 class="hero-name fade-in">
         <span class="hero-seo-title">Psicoterapeuta Humanista en Sant Cugat del Vallès</span>
-        Funcionas bien<br>
-        por fuera.<br>
-        <em>Por dentro, algo</em><br>
-        se ha ido apagando.
+        De sobrevivir<br>
+        <em>a estar</em><br>
+        vivo.
       </h1>
       <p class="hero-tagline fade-in">
         Psicoterapia humanista en Sant Cugat del Vallès para trauma, ansiedad, burnout y crisis de identidad. Presencial y online.
