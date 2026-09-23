@@ -398,6 +398,49 @@
   .hero-cta:hover { color: var(--sage); border-color: var(--sage); }
   .hero-cta svg { transition: transform 0.2s; }
   .hero-cta:hover svg { transform: translateX(4px); }
+  .hero-actions {
+    display: flex; align-items: center; gap: 1.75rem; flex-wrap: wrap;
+  }
+  .hero-cta-primary {
+    background: var(--accent); color: #fff; border: 1px solid var(--accent);
+    border-radius: 3px; padding: 0.95rem 1.6rem; text-transform: none;
+    letter-spacing: 0.02em; font-size: 0.92rem;
+  }
+  .hero-cta-primary:hover {
+    background: var(--sage); border-color: var(--sage); color: #fff;
+  }
+  .hero-cta-ghost { border-bottom-color: var(--light); color: var(--mid); }
+  .nav-cta {
+    background: var(--accent); color: #fff !important; border-radius: 3px;
+    padding: 0.6rem 1.15rem; text-decoration: none; font-size: 0.82rem;
+    letter-spacing: 0.02em; transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--sage); }
+  @media (max-width: 860px) { .nav-cta { display: none; } }
+  .credenciales {
+    margin-top: 2.5rem; padding-top: 2rem;
+    border-top: 1px solid var(--cream-deep);
+  }
+  .credenciales-anios {
+    font-family: var(--serif); font-size: 1.35rem; color: var(--dark);
+    margin-bottom: 1.6rem; line-height: 1.3;
+  }
+  .credenciales-anios strong { color: var(--accent); font-weight: 400; }
+  .credenciales-titulo {
+    font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--light); margin-bottom: 1.1rem;
+  }
+  .credenciales-lista { list-style: none; padding: 0; margin: 0; }
+  .credenciales-lista li {
+    font-size: 0.88rem; line-height: 1.6; color: var(--mid);
+    padding: 0.42rem 0; border-bottom: 1px solid rgba(216, 224, 206, 0.5);
+  }
+  .credenciales-lista li:last-child { border-bottom: none; }
+  .credenciales-lista span { color: var(--dark); font-weight: 500; }
+  .credenciales-lista em {
+    font-style: normal; color: var(--light); font-size: 0.8rem;
+    white-space: nowrap; margin-left: 0.3rem;
+  }
 
   .hero-scroll-line {
     position: absolute; bottom: 3rem; left: 4rem;
@@ -1043,6 +1086,7 @@
     </ul>
     <a href="/en/" class="lang-switch" title="English version">EN</a>
     <a href="/ro/" class="lang-switch" title="Versiunea română">RO</a>
+    <a class="nav-cta" href="https://wa.me/34671894458?text=Hola%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20una%20primera%20sesi%C3%B3n" target="_blank" rel="noopener noreferrer">Escríbeme</a>
     <button class="nav-hamburger" id="hamburger" aria-label="Menú" onclick="toggleMenu()">
       <span></span><span></span><span></span>
     </button>
@@ -1065,22 +1109,23 @@
       <p class="hero-eyebrow fade-in">Psicoterapia Humanista · Sant Cugat del Vallès</p>
       <h1 class="hero-name fade-in">
         <span class="hero-seo-title">Psicoterapeuta Humanista en Sant Cugat del Vallès</span>
-        Mihai<br>
-        <em>Flaviu</em><br>
-        Sirb
+        Funcionas bien<br>
+        por fuera.<br>
+        <em>Por dentro, algo</em><br>
+        se ha ido apagando.
       </h1>
       <p class="hero-tagline fade-in">
-        He atravesado el colapso de mis propias estructuras y conozco la libertad de empezar a habitar la propia piel.
+        Psicoterapia humanista en Sant Cugat del Vallès para trauma, ansiedad, burnout y crisis de identidad. Presencial y online.
       </p>
-      <p class="hero-sub fade-in">
-        Acompaño a personas en procesos de reconstrucción personal y crisis de identidad. Mi intención es que reencuentres tus propios recursos para vivir con autenticidad, escucharte de verdad y aprender a cuidarte sin perderte en los demás. Eso abre paso, inevitablemente, a una manera de vivir más creativa y espontánea.
-      </p>
-      <a href="#sobre-mi" class="hero-cta fade-in">
-        Conoce mi enfoque
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
+      <div class="hero-actions fade-in">
+        <a href="https://wa.me/34671894458?text=Hola%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20una%20primera%20sesi%C3%B3n" class="hero-cta hero-cta-primary" target="_blank" rel="noopener noreferrer">
+          Escríbeme por WhatsApp
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#sobre-mi" class="hero-cta hero-cta-ghost">Conoce mi enfoque</a>
+      </div>
     </div>
     <div class="hero-logo-wrap">
       <svg class="hero-logo" viewBox="0 0 340 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logotipo de Mihai Flaviu Sirb - Psicoterapia Humanista">
@@ -1117,6 +1162,24 @@
 </section>
 
 <!-- ABOUT -->
+<section class="recognition-section" id="reconoces">
+  <div class="recognition-inner">
+    <div class="recognition-header fade-in">
+      <p class="section-label">¿Te reconoces?</p>
+      <h2 class="section-title">Frases que quizás<br><em>sientas propias</em></h2>
+    </div>
+    <ul class="recognition-list fade-in">
+      <li>Duermo mal desde hace meses y no sé exactamente por qué.</li>
+      <li>Puedo explicar lo que me pasa, pero mi cuerpo sigue reaccionando igual.</li>
+      <li>Poner límites me genera culpa antes de que las palabras salgan.</li>
+      <li>Funciono bien por fuera, pero por dentro algo se ha ido apagando.</li>
+      <li>En cada relación termino ocupando el mismo lugar sin querer.</li>
+      <li>Me cuesta parar aunque el cuerpo lleve tiempo pidiendo pausa.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- TE RECONOCES -->
 <section class="about" id="sobre-mi">
   <div class="about-grid">
     <div class="fade-in">
@@ -1143,25 +1206,22 @@
         <li>Teatro Terapéutico</li>
         <li>Mindfulness No Dual</li>
       </ul>
-    </div>
-  </div>
-</section>
 
-<!-- TE RECONOCES -->
-<section class="recognition-section" id="reconoces">
-  <div class="recognition-inner">
-    <div class="recognition-header fade-in">
-      <p class="section-label">¿Te reconoces?</p>
-      <h2 class="section-title">Frases que quizás<br><em>sientas propias</em></h2>
+      <div class="credenciales">
+        <p class="credenciales-anios"><strong>10 años</strong> acompañando procesos</p>
+        <p class="credenciales-titulo">Formación</p>
+        <ul class="credenciales-lista">
+          <li><span>Psicoterapia Gestalt</span> · Institut Drala Gestalt <em>2018-2022</em></li>
+          <li><span>Posgrado en Psicoterapia Somatosensorial NARM</span> · Centre Besai <em>2025-2026</em></li>
+          <li><span>Posgrado en Teatro Terapéutico</span> · Institut Integratiu <em>2018-2020</em></li>
+          <li><span>Programa SAT</span> · Claudio Naranjo <em>2019-2023</em></li>
+          <li><span>Formación en AMAR</span> · Lluís Fusté, Institut Amar <em>2024-2025</em></li>
+          <li><span>Bioenergética y Biodanza</span> · Sabina Salta <em>2020-2021</em></li>
+          <li><span>Instructor de Mindfulness</span> <em>2015-2017</em></li>
+          <li><span>Grado en Psicología</span> · Universitat Oberta de Catalunya <em>último curso</em></li>
+        </ul>
+      </div>
     </div>
-    <ul class="recognition-list fade-in">
-      <li>Duermo mal desde hace meses y no sé exactamente por qué.</li>
-      <li>Puedo explicar lo que me pasa, pero mi cuerpo sigue reaccionando igual.</li>
-      <li>Poner límites me genera culpa antes de que las palabras salgan.</li>
-      <li>Funciono bien por fuera, pero por dentro algo se ha ido apagando.</li>
-      <li>En cada relación termino ocupando el mismo lugar sin querer.</li>
-      <li>Me cuesta parar aunque el cuerpo lleve tiempo pidiendo pausa.</li>
-    </ul>
   </div>
 </section>
 
