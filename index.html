@@ -358,8 +358,8 @@
   .entrada-paso {
     opacity: 0;
     transform: translateY(18px);
-    animation: entrada-aparece 0.85s cubic-bezier(.16,.84,.44,1) forwards;
-    animation-delay: calc(var(--paso) * 1s - 0.8s);
+    animation: entrada-aparece 0.6s cubic-bezier(.16,.84,.44,1) forwards;
+    animation-delay: calc(var(--paso) * 0.3s - 0.15s);
   }
   @keyframes entrada-aparece {
     to { opacity: 1; transform: translateY(0); }
@@ -370,19 +370,22 @@
 
   /* Entrada: el logo y el verso ocupan la primera pantalla; el resto llega al bajar */
   .hero-entrada {
-    min-height: 100svh;
+    min-height: 60svh;
     position: relative;
     display: flex; flex-direction: column;
     align-items: center; justify-content: center;
     gap: clamp(1.5rem, 4vh, 3rem);
-    padding: clamp(5rem, 11vh, 7rem) 0 clamp(5rem, 10vh, 6.5rem);
+    padding: clamp(3rem, 7vh, 4.5rem) 0 clamp(1.5rem, 4vh, 2.5rem);
     box-sizing: border-box;
+  }
+  @media (max-width: 760px) {
+    .hero-entrada { min-height: 52svh; }
   }
   .hero-resto {
     display: flex; flex-direction: column; align-items: center;
     padding-bottom: 6rem;
     opacity: 0; transform: translateY(24px);
-    transition: opacity 0.9s ease, transform 0.9s ease;
+    transition: opacity 0.7s ease 1.05s, transform 0.7s ease 1.05s;
   }
   .hero-resto.visible { opacity: 1; transform: translateY(0); }
   @media (prefers-reduced-motion: reduce) {
@@ -1925,10 +1928,9 @@
   (function () {
     var resto = document.querySelector('.hero-resto');
     if (resto) {
+      requestAnimationFrame(function () { resto.classList.add('visible'); });
       var verResto = function () {
-        var bajando = window.scrollY > 60;
-        resto.classList.toggle('visible', bajando);
-        document.body.classList.toggle('scrolled', bajando);
+        document.body.classList.toggle('scrolled', window.scrollY > 60);
       };
       window.addEventListener('scroll', verResto, { passive: true });
       verResto();
