@@ -428,11 +428,11 @@
   }
   .credibilidad-inner {
     max-width: 1100px; margin: 0 auto;
-    display: grid; grid-template-columns: repeat(4, 1fr);
-    gap: 2rem; text-align: center;
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    gap: 1.6rem; text-align: center;
   }
   .cred-bloque { display: flex; flex-direction: column; gap: 0.5rem; }
-  .cred-dato { font-family: var(--serif); font-size: 1.3rem; color: var(--dark); line-height: 1.15; }
+  .cred-dato { font-family: var(--serif); font-size: 1.2rem; color: var(--dark); line-height: 1.15; }
   .cred-dato strong { color: var(--accent); font-weight: 400; }
   .cred-desc { font-size: 0.8rem; line-height: 1.5; color: var(--mid); }
   .cred-estrellas { color: var(--accent); letter-spacing: 2px; font-size: 1.1rem; }
@@ -440,8 +440,10 @@
   .credibilidad a:hover .cred-dato { color: var(--accent); }
   .cred-resenas { display: block; max-width: 1100px; margin: 1.8rem auto 0; text-align: center; font-size: 0.85rem; color: var(--mid); }
   .credibilidad a.cred-resenas:hover { color: var(--accent); }
-  @media (max-width: 1000px) and (min-width: 801px) {
-    .credibilidad-inner { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 1100px) and (min-width: 801px) {
+    .credibilidad-inner { grid-template-columns: repeat(6, 1fr); }
+    .credibilidad-inner > .cred-bloque { grid-column: span 2; }
+    .credibilidad-inner > .cred-bloque:nth-child(n+4) { grid-column: span 3; }
   }
   @media (max-width: 800px) {
     .credibilidad { padding: 2rem 1.5rem; }
@@ -570,15 +572,19 @@
     </div>
     <div class="cred-bloque fade-in">
       <p class="cred-dato">Postgraduate Diploma in Gestalt Psychotherapy</p>
-      <p class="cred-desc">Institut Drala Gestalt · 2018–2022</p>
+      <p class="cred-desc">Institut Drala Gestalt · <span style="white-space:nowrap">2016–2019</span></p>
     </div>
     <div class="cred-bloque fade-in">
       <p class="cred-dato">Postgraduate Diploma in Somatosensory Body Psychotherapy</p>
-      <p class="cred-desc">NARM · Centre Besai · 2025–2026</p>
+      <p class="cred-desc">NARM · Centre Besai · <span style="white-space:nowrap">2025–2026</span></p>
+    </div>
+    <div class="cred-bloque fade-in">
+      <p class="cred-dato">Postgraduate Diploma in Therapeutic Theatre</p>
+      <p class="cred-desc">Institut Integratiu · <span style="white-space:nowrap">2019–2020</span></p>
     </div>
     <div class="cred-bloque fade-in">
       <p class="cred-dato">Degree in Psychology</p>
-      <p class="cred-desc">UOC · Specialisation in Clinical Assessment and Intervention · final year</p>
+      <p class="cred-desc">Universitat Oberta de Catalunya · Specialisation in Clinical Assessment and Intervention · final year</p>
     </div>
   </div>
   <a class="cred-resenas fade-in" href="#reviews"><span class="cred-estrellas" aria-hidden="true">★★★★★</span> 5.0 on Google · 8 reviews from people who have done the work</a>
@@ -627,9 +633,9 @@
         <p class="credenciales-anios"><strong>10 years</strong> accompanying processes</p>
         <p class="credenciales-titulo">Training</p>
         <ul class="credenciales-lista">
-          <li><span>Postgraduate Diploma in Gestalt Psychotherapy</span> · Institut Drala Gestalt <em>2018-2022</em></li>
+          <li><span>Postgraduate Diploma in Gestalt Psychotherapy</span> · Institut Drala Gestalt <em>2016-2019</em></li>
           <li><span>Postgraduate in NARM Somatosensory Psychotherapy</span> · Centre Besai <em>2025-2026</em></li>
-          <li><span>Postgraduate in Therapeutic Theatre</span> · Institut Integratiu <em>2018-2020</em></li>
+          <li><span>Postgraduate in Therapeutic Theatre</span> · Institut Integratiu <em>2019-2020</em></li>
           <li><span>SAT Programme</span> · Claudio Naranjo <em>2019-2023</em></li>
           <li><span>AMAR Training</span> · Lluís Fusté, Institut Amar <em>2024-2025</em></li>
           <li><span>Bioenergetics and Biodanza</span> · Sabina Salta <em>2020-2021</em></li>
