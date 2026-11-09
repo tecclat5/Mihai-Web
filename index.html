@@ -1237,12 +1237,12 @@
   }
   .credibilidad-inner {
     max-width: 1100px; margin: 0 auto;
-    display: grid; grid-template-columns: repeat(5, 1fr);
-    gap: 1.6rem; text-align: center;
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 2rem 2.5rem; text-align: center;
   }
   .cred-bloque { display: flex; flex-direction: column; gap: 0.5rem; }
   .cred-dato {
-    font-family: var(--serif); font-size: 1.2rem; color: var(--dark); line-height: 1.15;
+    font-family: var(--serif); font-size: 1.35rem; color: var(--dark); line-height: 1.15;
   }
   .cred-dato strong { color: var(--accent); font-weight: 400; }
   .cred-desc {
@@ -1253,10 +1253,8 @@
   .credibilidad a:hover .cred-dato { color: var(--accent); }
   .cred-resenas { display: block; max-width: 1100px; margin: 1.8rem auto 0; text-align: center; font-size: 0.85rem; color: var(--mid); }
   .credibilidad a.cred-resenas:hover { color: var(--accent); }
-  @media (max-width: 1100px) and (min-width: 801px) {
-    .credibilidad-inner { grid-template-columns: repeat(6, 1fr); }
-    .credibilidad-inner > .cred-bloque { grid-column: span 2; }
-    .credibilidad-inner > .cred-bloque:nth-child(n+4) { grid-column: span 3; }
+  @media (max-width: 1000px) and (min-width: 801px) {
+    .credibilidad-inner { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 800px) {
     .credibilidad { padding: 2rem 1.5rem; }
@@ -1282,6 +1280,10 @@
     <div class="cred-bloque fade-in">
       <p class="cred-dato">Posgrado en Teatro Terapéutico</p>
       <p class="cred-desc">Institut Integratiu · <span style="white-space:nowrap">2019–2020</span></p>
+    </div>
+    <div class="cred-bloque fade-in">
+      <p class="cred-dato">Instructor de Mindfulness MBSR</p>
+      <p class="cred-desc">Institut Mindfulness · <span style="white-space:nowrap">2015–2017</span></p>
     </div>
     <div class="cred-bloque fade-in">
       <p class="cred-dato">Grado en Psicología</p>
@@ -1346,7 +1348,7 @@
           <li><span>Programa SAT</span> · Claudio Naranjo <em>2019-2023</em></li>
           <li><span>Formación en AMAR</span> · Lluís Fusté, Institut Amar <em>2024-2025</em></li>
           <li><span>Bioenergética y Biodanza</span> · Sabina Salta <em>2020-2021</em></li>
-          <li><span>Instructor de Mindfulness</span> <em>2015-2017</em></li>
+          <li><span>Instructor de Mindfulness MBSR</span> · Institut Mindfulness <em>2015-2017</em></li>
           <li><span>Grado en Psicología</span> · Universitat Oberta de Catalunya <em>Evaluación e Intervención Clínica · último curso</em></li>
         </ul>
       </div>
