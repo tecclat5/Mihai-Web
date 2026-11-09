@@ -394,20 +394,25 @@ footer p { font-size: 0.78rem; color: rgba(255,255,255,0.25); }
   }
   .credibilidad-inner {
     max-width: 1100px; margin: 0 auto;
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem; text-align: center;
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 2rem; text-align: center;
   }
   .cred-bloque { display: flex; flex-direction: column; gap: 0.5rem; }
-  .cred-dato { font-family: var(--serif); font-size: 1.6rem; color: var(--dark); line-height: 1.15; }
+  .cred-dato { font-family: var(--serif); font-size: 1.3rem; color: var(--dark); line-height: 1.15; }
   .cred-dato strong { color: var(--accent); font-weight: 400; }
   .cred-desc { font-size: 0.8rem; line-height: 1.5; color: var(--mid); }
   .cred-estrellas { color: var(--accent); letter-spacing: 2px; font-size: 1.1rem; }
   .credibilidad a { color: inherit; text-decoration: none; }
   .credibilidad a:hover .cred-dato { color: var(--accent); }
+  .cred-resenas { display: block; max-width: 1100px; margin: 1.8rem auto 0; text-align: center; font-size: 0.85rem; color: var(--mid); }
+  .credibilidad a.cred-resenas:hover { color: var(--accent); }
+  @media (max-width: 1000px) and (min-width: 801px) {
+    .credibilidad-inner { grid-template-columns: repeat(2, 1fr); }
+  }
   @media (max-width: 800px) {
     .credibilidad { padding: 2rem 1.5rem; }
     .credibilidad-inner { grid-template-columns: 1fr; gap: 1.8rem; }
-    .cred-dato { font-size: 1.35rem; }
+    .cred-dato { font-size: 1.2rem; }
   }
 
   .reviews { background: var(--cream-mid); padding: 110px 0; }
@@ -520,14 +525,19 @@ footer p { font-size: 0.78rem; color: rgba(255,255,255,0.25); }
       <p class="cred-desc">Adulți, cupluri și procese de lungă durată</p>
     </div>
     <div class="cred-bloque fade-in">
-      <p class="cred-dato">Gestalt · NARM · SAT</p>
-      <p class="cred-desc">Formare la Institut Drala Gestalt, Centre Besai și programul lui Claudio Naranjo. Licență în Psihologie (UOC), Evaluare și Intervenție Clinică, ultimul an</p>
+      <p class="cred-dato">Postuniversitar în Psihoterapie Gestalt</p>
+      <p class="cred-desc">Institut Drala Gestalt · 2018–2022</p>
     </div>
-    <a class="cred-bloque fade-in" href="#recenzii">
-      <p class="cred-dato"><span class="cred-estrellas" aria-hidden="true">★★★★★</span><br>5,0 pe Google</p>
-      <p class="cred-desc">Opt recenzii de la persoane care au parcurs procesul</p>
-    </a>
+    <div class="cred-bloque fade-in">
+      <p class="cred-dato">Postuniversitar în Psihoterapie Corporală Somatosenzorială</p>
+      <p class="cred-desc">NARM · Centre Besai · 2025–2026</p>
+    </div>
+    <div class="cred-bloque fade-in">
+      <p class="cred-dato">Licență în Psihologie</p>
+      <p class="cred-desc">UOC · Specializare în Evaluare și Intervenție Clinică · ultimul an</p>
+    </div>
   </div>
+  <a class="cred-resenas fade-in" href="#recenzii"><span class="cred-estrellas" aria-hidden="true">★★★★★</span> 5,0 pe Google · 8 recenzii de la persoane care au parcurs procesul</a>
 </section>
 
 <section class="recognition-section" id="recunoaste">
@@ -570,7 +580,7 @@ footer p { font-size: 0.78rem; color: rgba(255,255,255,0.25); }
         <p class="credenciales-anios"><strong>10 ani</strong> de însoțire a proceselor</p>
         <p class="credenciales-titulo">Formare</p>
         <ul class="credenciales-lista">
-          <li><span>Psihoterapie Gestalt</span> · Institut Drala Gestalt <em>2018-2022</em></li>
+          <li><span>Postuniversitar în Psihoterapie Gestalt</span> · Institut Drala Gestalt <em>2018-2022</em></li>
           <li><span>Postuniversitar în Psihoterapie Somatosenzorială NARM</span> · Centre Besai <em>2025-2026</em></li>
           <li><span>Postuniversitar în Teatru Terapeutic</span> · Institut Integratiu <em>2018-2020</em></li>
           <li><span>Programul SAT</span> · Claudio Naranjo <em>2019-2023</em></li>
