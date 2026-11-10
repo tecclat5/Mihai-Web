@@ -5,21 +5,37 @@
   <!-- Home ES -->
   <url>
     <loc>https://mihaiflaviusirb.com/</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://mihaiflaviusirb.com/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://mihaiflaviusirb.com/ca/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://mihaiflaviusirb.com/en/" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://mihaiflaviusirb.com/ro/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mihaiflaviusirb.com/" />
+  </url>
+
+  <!-- Home CA -->
+  <url>
+    <loc>https://mihaiflaviusirb.com/ca/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mihaiflaviusirb.com/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://mihaiflaviusirb.com/ca/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mihaiflaviusirb.com/en/" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://mihaiflaviusirb.com/ro/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mihaiflaviusirb.com/" />
   </url>
 
   <!-- Home EN -->
   <url>
     <loc>https://mihaiflaviusirb.com/en/</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://mihaiflaviusirb.com/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://mihaiflaviusirb.com/ca/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://mihaiflaviusirb.com/en/" />
     <xhtml:link rel="alternate" hreflang="ro" href="https://mihaiflaviusirb.com/ro/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mihaiflaviusirb.com/" />
@@ -28,10 +44,11 @@
   <!-- Home RO -->
   <url>
     <loc>https://mihaiflaviusirb.com/ro/</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://mihaiflaviusirb.com/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://mihaiflaviusirb.com/ca/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://mihaiflaviusirb.com/en/" />
     <xhtml:link rel="alternate" hreflang="ro" href="https://mihaiflaviusirb.com/ro/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mihaiflaviusirb.com/" />
