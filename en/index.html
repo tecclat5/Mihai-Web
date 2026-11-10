@@ -271,7 +271,8 @@
   .process { background: var(--cream); padding: 6rem 4rem; }
   .process-inner { max-width: 1100px; margin: 0 auto; }
   .process-header { text-align: center; margin-bottom: 4rem; }
-  .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; }
+  .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5rem; }
+  @media (max-width: 1100px) { .process-grid { grid-template-columns: repeat(2, 1fr); } }
   .process-step { text-align: left; }
   .process-num { font-family: var(--serif); font-size: 4rem; font-weight: 300; color: var(--sage); line-height: 1; margin-bottom: 1rem; letter-spacing: -0.02em; }
   .process-step h3 { font-family: var(--serif); font-size: 1.5rem; font-weight: 400; color: var(--dark); margin-bottom: 0.75rem; }
@@ -574,7 +575,7 @@
     </div>
     <div class="cred-bloque fade-in">
       <p class="cred-dato">Postgraduate Diploma in Somatosensory Body Psychotherapy</p>
-      <p class="cred-desc">NARM · Centre Besai · <span style="white-space:nowrap">2025–2026</span></p>
+      <p class="cred-desc">NeuroAffective Relational Model™ (NARM®) · Centre Besai · <span style="white-space:nowrap">2025–2026</span></p>
     </div>
     <div class="cred-bloque fade-in">
       <p class="cred-dato">Postgraduate Diploma in Therapeutic Theatre</p>
@@ -624,12 +625,11 @@
       <p>For many years I worked to appear capable and at ease in the world while inside an anxiety I rarely named hummed beneath everything. For a time, substances were the only truce with my nervous system. At thirty-one, my life is the daily practice of integration: learning to stay in my body when the old impulse to leave appears.</p>
       <p>I come to this work as someone who has navigated the collapse of his own structures. My work begins from one conviction: <strong>we were wounded in relationship and in relationship we can heal</strong>. That is why I offer a space where mind and body work together, within a safe bond.</p>
       <ul class="formation-list">
-        <li>Somatosensory Body Work</li>
-        <li>Acceptance and Commitment Therapy (ACT)</li>
-        <li>Emotion-Focused Therapy</li>
-        <li>Gestalt and Transpersonal Psychology</li>
-        <li>Therapeutic Theater</li>
-        <li>Non-Dual Mindfulness</li>
+        <li>NeuroAffective Relational Model™ (NARM®)</li>
+        <li>Gestalt</li>
+        <li>Somatosensory Body Psychotherapy</li>
+        <li>Mindfulness</li>
+        <li>Therapeutic Theatre</li>
       </ul>
       <div class="credenciales">
         <p class="credenciales-anios"><strong>10 years</strong> accompanying processes</p>
@@ -686,9 +686,9 @@
       </div>
       <div class="service-card fade-in" onclick="toggleService(this)">
         <span class="service-number">05</span>
-        <h3 class="service-name"><span class="service-name-left"><svg class="service-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v5"/><path d="M9 10c-2 1-3 3-2.5 5.5L7 18"/><path d="M15 10c2 1 3 3 2.5 5.5L17 18"/><path d="M9 18h6"/><path d="M10 18v3"/><path d="M14 18v3"/><path d="M19 8c1-1 2-1 3 0"/><path d="M19 11c1 0 2-.5 3-1.5"/></svg>Avoidant Personality</span><em class="service-toggle">+</em></h3>
+        <h3 class="service-name"><span class="service-name-left"><svg class="service-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v5"/><path d="M9 10c-2 1-3 3-2.5 5.5L7 18"/><path d="M15 10c2 1 3 3 2.5 5.5L17 18"/><path d="M9 18h6"/><path d="M10 18v3"/><path d="M14 18v3"/><path d="M19 8c1-1 2-1 3 0"/><path d="M19 11c1 0 2-.5 3-1.5"/></svg>Self-sufficiency and Distance</span><em class="service-toggle">+</em></h3>
         <p class="service-desc">Self-sufficiency and emotional distance as the only home one has ever known. I work specifically with those who use independence to protect themselves from the fear of being truly seen.</p>
-        <div class="service-extra"><p>Avoidance is a learned response in an environment where real contact had too high a cost. The work is to slowly reduce that cost, without forcing an openness the system is not yet ready to hold.</p></div>
+        <div class="service-extra"><p>What psychology calls avoidant personality is a pattern of pulling back from contact: a strong sensitivity to rejection or criticism, a sense of not measuring up, and a tendency to keep one's distance so as not to risk getting hurt. From the outside it can look like coldness or independence; inside there is often a longing for closeness that feels frightening.</p><p>Avoidance is a learned response in an environment where real contact had too high a cost. The work is to slowly reduce that cost, without forcing an openness the system is not yet ready to hold.</p></div>
       </div>
       <div class="service-card fade-in" onclick="toggleService(this)">
         <span class="service-number">06</span>
@@ -711,23 +711,28 @@
   <div class="process-inner">
     <div class="process-header fade-in">
       <p class="section-label">The process</p>
-      <h2 class="section-title">How we work<br><em>in three phases</em></h2>
+      <h2 class="section-title">How we work<br><em>in four phases</em></h2>
     </div>
     <div class="process-grid fade-in">
       <div class="process-step">
         <div class="process-num">01</div>
-        <h3>Regulation</h3>
-        <p>Stabilizing the nervous system, recovering ground, normalizing what has arrived after a crisis, an experience, or a difficult life moment. Before looking inward, first one must be able to hold oneself.</p>
+        <h3>What you want for yourself</h3>
+        <p>We begin by clarifying what you truly want: more calm, more connection, being able to say no. That intention guides the process.</p>
       </div>
       <div class="process-step">
         <div class="process-num">02</div>
-        <h3>Elaboration</h3>
-        <p>Giving words, gestures and symbols to what has been lived. Naming what asks to be named. Allowing the body to complete the movements that were left unfinished and emotions to find their form.</p>
+        <h3>Exploring the present</h3>
+        <p>We look at how what you are going through is organised today: what you think, what you feel and what happens in your body as we talk. What matters from your story emerges on its own, without having to relive it.</p>
       </div>
       <div class="process-step">
         <div class="process-num">03</div>
-        <h3>Anchoring</h3>
-        <p>Translating what has been learned into concrete changes: the way we inhabit the body, our relationships, our work, our time. So that understanding becomes life, not just idea.</p>
+        <h3>Recovering the ability to choose</h3>
+        <p>Without blame, we recognise the strategies that once protected you and now hold you back. Emotions find room to be held and to complete themselves at their own pace.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">04</div>
+        <h3>Anchoring the new in the body</h3>
+        <p>When more calm or connection appears, we pause so the body can register it and it becomes a resource.</p>
       </div>
     </div>
   </div>
