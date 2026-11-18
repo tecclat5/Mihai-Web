@@ -54,28 +54,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mihaiflaviusirb.com/" />
   </url>
 
-  <!-- Blog ES: Integración psicodélica -->
-  <url>
-    <loc>https://mihaiflaviusirb.com/blog/integracion-psicodelica/</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mihaiflaviusirb.com/blog/integracion-psicodelica/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://mihaiflaviusirb.com/en/blog/psychedelic-integration-barcelona/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mihaiflaviusirb.com/blog/integracion-psicodelica/" />
-  </url>
-
-  <!-- Blog EN: Psychedelic integration -->
-  <url>
-    <loc>https://mihaiflaviusirb.com/en/blog/psychedelic-integration-barcelona/</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mihaiflaviusirb.com/en/blog/psychedelic-integration-barcelona/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://mihaiflaviusirb.com/blog/integracion-psicodelica/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mihaiflaviusirb.com/blog/integracion-psicodelica/" />
-  </url>
-
   <!-- Blog ES: Veredicto del pájaro Dodo -->
   <url>
     <loc>https://mihaiflaviusirb.com/blog/dodo-todos-ganan/</loc>
@@ -207,17 +185,6 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://mihaiflaviusirb.com/ro/blog/terapie-somatica-barcelona-psiherapie-corporala/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://mihaiflaviusirb.com/blog/psicoterapia-corporal/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://mihaiflaviusirb.com/en/blog/somatic-therapy-barcelona-body-psychotherapy-trauma/" />
-  </url>
-
-  <!-- Blog RO: Integrare psihedelic -->
-  <url>
-    <loc>https://mihaiflaviusirb.com/ro/blog/integrare-psihedelic-barcelona/</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://mihaiflaviusirb.com/ro/blog/integrare-psihedelic-barcelona/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://mihaiflaviusirb.com/blog/integracion-psicodelica/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://mihaiflaviusirb.com/en/blog/psychedelic-integration-barcelona/" />
   </url>
 
 
