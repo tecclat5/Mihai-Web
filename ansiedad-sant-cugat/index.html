@@ -2,6 +2,30 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+
+<!-- Google tag (gtag.js) + Consent Mode v2 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18436478922"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Sin consentimiento previo no se almacena nada.
+  var mfsStored = null;
+  try { mfsStored = localStorage.getItem('mfs_consent'); } catch (e) {}
+  var mfsOK = (mfsStored === 'granted') ? 'granted' : 'denied';
+  gtag('consent', 'default', {
+    'ad_storage': mfsOK,
+    'ad_user_data': mfsOK,
+    'ad_personalization': mfsOK,
+    'analytics_storage': mfsOK,
+    'wait_for_update': 500
+  });
+
+  gtag('js', new Date());
+  gtag('config', 'AW-18436478922');
+  gtag('config', 'G-JV6TH88V57');
+</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Terapia para la ansiedad en Sant Cugat | Mihai Flaviu Sirb</title>
 <meta name="description" content="Psicoterapia para la ansiedad en Sant Cugat del Vallès, a 5 minutos de FGC. Trabajo con el cuerpo y el sistema nervioso desde NARM y Gestalt. Presencial y online.">
@@ -320,12 +344,8 @@
       <h2>Por qué entenderla no siempre basta</h2>
       <p>Muchas personas que llegan a consulta ya saben por qué les pasa lo que les pasa. Lo han leído, lo han pensado, lo pueden explicar. Y aun así el cuerpo sigue reaccionando igual. Es porque la ansiedad no vive solo en las ideas: es una respuesta del sistema nervioso que en algún momento tuvo sentido —protegerte— y que se quedó encendida.</p>
 
-      <h2>Cómo trabajo la ansiedad</h2>
-      <p><strong>1. Lo que quieres para ti.</strong> Empezamos aclarando qué deseas de verdad: más calma, dormir mejor, poder decir que no sin culpa.</p>
-      <p><strong>2. Regulación.</strong> Antes de mirar hacia dentro, primero hay que poder sostenerse. Aprendemos a notar en el cuerpo cuándo se activa la alarma y a recuperar suelo.</p>
-      <p><strong>3. Elaboración.</strong> Damos palabras a lo que hay debajo de la ansiedad, a tu ritmo y sin tener que revivir tu historia en detalle.</p>
-      <p><strong>4. Recuperar la capacidad de elegir.</strong> Reconocemos, sin culpa, las estrategias que un día te protegieron y hoy te limitan.</p>
-      <p>Trabajo desde el NeuroAffective Relational Model (NARM), la psicoterapia corporal somatosensorial, la Gestalt y el mindfulness. En sesión no solo hablamos: prestamos atención a lo que ocurre en tu cuerpo mientras hablas.</p>
+      <h2>Mi enfoque</h2>
+      <p>Acompañamiento personalizado bajo los principios y las intervenciones de NARM, la Gestalt y la psicología somática. NARM (NeuroAffective Relational Model) es un enfoque para el trauma relacional y del desarrollo: trabaja en el presente, con el cuerpo y la relación, sin necesidad de revivir el pasado con detalle.</p>
 
       <h2>Desde dónde acompaño</h2>
       <p>Yo mismo he convivido con la ansiedad buena parte de mi vida. La conozco en el cuerpo y en la forma de anticipar el mundo antes de que pase nada. Acompañarte desde ahí tiene una textura distinta a la de un protocolo.</p>

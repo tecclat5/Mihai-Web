@@ -2,6 +2,30 @@
 <html lang="ca">
 <head>
 <meta charset="UTF-8">
+
+<!-- Google tag (gtag.js) + Consent Mode v2 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18436478922"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Sin consentimiento previo no se almacena nada.
+  var mfsStored = null;
+  try { mfsStored = localStorage.getItem('mfs_consent'); } catch (e) {}
+  var mfsOK = (mfsStored === 'granted') ? 'granted' : 'denied';
+  gtag('consent', 'default', {
+    'ad_storage': mfsOK,
+    'ad_user_data': mfsOK,
+    'ad_personalization': mfsOK,
+    'analytics_storage': mfsOK,
+    'wait_for_update': 500
+  });
+
+  gtag('js', new Date());
+  gtag('config', 'AW-18436478922');
+  gtag('config', 'G-JV6TH88V57');
+</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Teràpia per a l'ansietat a Sant Cugat | Mihai Flaviu Sirb</title>
 <meta name="description" content="Psicoteràpia per a l'ansietat a Sant Cugat del Vallès, a 5 minuts dels FGC. Treball amb el cos i el sistema nerviós des de NARM i Gestalt. Presencial i en línia.">
@@ -320,12 +344,8 @@
       <h2>Per què entendre-la no sempre n'hi ha prou</h2>
       <p>Moltes persones que arriben a la consulta ja saben per què els passa el que els passa. Ho han llegit, ho han pensat, ho poden explicar. I tot i així el cos continua reaccionant igual. És perquè l'ansietat no viu només a les idees: és una resposta del sistema nerviós que en algun moment va tenir sentit —protegir-te— i que s'ha quedat encesa.</p>
 
-      <h2>Com treballo l'ansietat</h2>
-      <p><strong>1. El que vols per a tu.</strong> Comencem aclarint què vols de debò: més calma, dormir millor, poder dir que no sense culpa.</p>
-      <p><strong>2. Regulació.</strong> Abans de mirar cap endins, primer cal poder sostenir-se. Aprenem a notar al cos quan s'activa l'alarma i a recuperar terra ferma.</p>
-      <p><strong>3. Elaboració.</strong> Posem paraules al que hi ha sota l'ansietat, al teu ritme i sense haver de reviure la teva història amb detall.</p>
-      <p><strong>4. Recuperar la capacitat de triar.</strong> Reconeixem, sense culpa, les estratègies que un dia et van protegir i avui et limiten.</p>
-      <p>Treballo des del NeuroAffective Relational Model (NARM), la psicoteràpia corporal somatosensorial, la Gestalt i el mindfulness. A la sessió no només parlem: parem atenció al que passa al teu cos mentre parles.</p>
+      <h2>El meu enfocament</h2>
+      <p>Acompanyament personalitzat sota els principis i les intervencions del NARM, la Gestalt i la psicologia somàtica. El NARM (NeuroAffective Relational Model) és un enfocament per al trauma relacional i del desenvolupament: treballa en el present, amb el cos i la relació, sense necessitat de reviure el passat amb detall.</p>
 
       <h2>Des d'on acompanyo</h2>
       <p>Jo mateix he conviscut amb l'ansietat bona part de la meva vida. La conec al cos i en la manera d'anticipar el món abans que passi res. Acompanyar-te des d'aquí té una textura diferent de la d'un protocol.</p>

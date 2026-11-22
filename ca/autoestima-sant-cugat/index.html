@@ -2,6 +2,30 @@
 <html lang="ca">
 <head>
 <meta charset="UTF-8">
+
+<!-- Google tag (gtag.js) + Consent Mode v2 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18436478922"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Sin consentimiento previo no se almacena nada.
+  var mfsStored = null;
+  try { mfsStored = localStorage.getItem('mfs_consent'); } catch (e) {}
+  var mfsOK = (mfsStored === 'granted') ? 'granted' : 'denied';
+  gtag('consent', 'default', {
+    'ad_storage': mfsOK,
+    'ad_user_data': mfsOK,
+    'ad_personalization': mfsOK,
+    'analytics_storage': mfsOK,
+    'wait_for_update': 500
+  });
+
+  gtag('js', new Date());
+  gtag('config', 'AW-18436478922');
+  gtag('config', 'G-JV6TH88V57');
+</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Teràpia per a l'autoestima a Sant Cugat | Mihai Flaviu Sirb</title>
 <meta name="description" content="Psicoteràpia per a l'autoestima, la culpa i la veu crítica interior a Sant Cugat del Vallès. Enfocament humanista i corporal. Presencial i en línia.">
@@ -318,12 +342,8 @@
       <h2>No es tracta de pensar en positiu</h2>
       <p>Repetir-se frases boniques poques vegades canvia res, perquè la manera com et tractes no va néixer d'una idea, sinó d'una experiència: vas aprendre a protegir-te sent exigent amb tu, fent-te petit o avançant-te al que els altres necessitaven. Aquelles estratègies van tenir sentit. Avui et poden estar limitant.</p>
 
-      <h2>Com treballo</h2>
-      <p><strong>1. El que vols per a tu.</strong> Què t'agradaria sentir de tu mateix, en concret.</p>
-      <p><strong>2. Regulació.</strong> Notar al cos com apareix la crítica interior i trobar un lloc més estable des d'on mirar-la.</p>
-      <p><strong>3. Elaboració.</strong> Entendre d'on ve aquella veu i què intentava protegir.</p>
-      <p><strong>4. Recuperar la capacitat de triar.</strong> Reconèixer sense culpa aquelles estratègies i començar a tractar-te d'una altra manera.</p>
-      <p>Treballo des del NeuroAffective Relational Model (NARM), la Gestalt i la psicoteràpia corporal. El canvi no ve de convèncer-te que vals, sinó de viure, sessió a sessió, l'experiència de ser vist sense judici.</p>
+      <h2>El meu enfocament</h2>
+      <p>Acompanyament personalitzat sota els principis i les intervencions del NARM, la Gestalt i la psicologia somàtica. El NARM (NeuroAffective Relational Model) és un enfocament per al trauma relacional i del desenvolupament: treballa en el present, amb el cos i la relació, sense necessitat de reviure el passat amb detall.</p>
 
       <h2>Quan necessites una altra ajuda</h2>
       <p>Si estàs en una crisi aguda o tens idees de fer-te mal, truca al <a href="tel:112">112</a> o al <a href="tel:024">024</a>.</p>

@@ -2,6 +2,30 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+
+<!-- Google tag (gtag.js) + Consent Mode v2 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18436478922"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Sin consentimiento previo no se almacena nada.
+  var mfsStored = null;
+  try { mfsStored = localStorage.getItem('mfs_consent'); } catch (e) {}
+  var mfsOK = (mfsStored === 'granted') ? 'granted' : 'denied';
+  gtag('consent', 'default', {
+    'ad_storage': mfsOK,
+    'ad_user_data': mfsOK,
+    'ad_personalization': mfsOK,
+    'analytics_storage': mfsOK,
+    'wait_for_update': 500
+  });
+
+  gtag('js', new Date());
+  gtag('config', 'AW-18436478922');
+  gtag('config', 'G-JV6TH88V57');
+</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Terapia de pareja en Sant Cugat | Mihai Flaviu Sirb</title>
 <meta name="description" content="Terapia de pareja en Sant Cugat del Vallès basada en el apego. Salir del bucle de las discusiones y recuperar la conexión. 100 € la sesión, presencial y online.">
@@ -315,12 +339,8 @@
       <h2>El bucle que se repite</h2>
       <p>Muchas parejas llegan atrapadas en el mismo baile: uno persigue, reclama, sube el tono; el otro se cierra, se retira, se protege. Cuanto más persigue uno, más se aleja el otro. Ninguno es el malo: los dos están intentando, a su manera, no perder el vínculo.</p>
 
-      <h2>Cómo trabajo con parejas</h2>
-      <p>Trabajo siguiendo las directrices de Sue Johnson y la terapia de pareja basada en el apego. Mi papel no es decidir quién tiene razón, sino ayudaros a ver el ciclo que os atrapa y a poner palabras a lo que de verdad se está pidiendo.</p>
-      <p><strong>1. Lo que queréis.</strong> Aclaramos qué desea cada uno para la relación.</p>
-      <p><strong>2. Regulación.</strong> Bajamos la intensidad para que la conversación sea posible.</p>
-      <p><strong>3. Elaboración.</strong> Nombramos lo que hay debajo de la rabia o del silencio: miedo, soledad, necesidad de ser visto.</p>
-      <p><strong>4. Recuperar la capacidad de elegir.</strong> Dejar de reaccionar en automático y empezar a responderos de otra manera.</p>
+      <h2>Mi enfoque</h2>
+      <p>Acompañamiento personalizado bajo los principios y las intervenciones de NARM, la Gestalt y la psicología somática; con parejas, desde el enfoque basado en el apego.</p>
 
       <h2>Cómo son las sesiones</h2>
       <p>Sesiones de 60 minutos con los dos miembros de la pareja, presenciales en Sant Cugat u online. Atiendo en castellano, catalán, inglés y rumano, también a parejas de distinto idioma.</p>

@@ -2,6 +2,30 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+
+<!-- Google tag (gtag.js) + Consent Mode v2 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18436478922"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Sin consentimiento previo no se almacena nada.
+  var mfsStored = null;
+  try { mfsStored = localStorage.getItem('mfs_consent'); } catch (e) {}
+  var mfsOK = (mfsStored === 'granted') ? 'granted' : 'denied';
+  gtag('consent', 'default', {
+    'ad_storage': mfsOK,
+    'ad_user_data': mfsOK,
+    'ad_personalization': mfsOK,
+    'analytics_storage': mfsOK,
+    'wait_for_update': 500
+  });
+
+  gtag('js', new Date());
+  gtag('config', 'AW-18436478922');
+  gtag('config', 'G-JV6TH88V57');
+</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Learning to self-regulate: Allan Schore and the neurobiology of why we transform in relationship | Mihai Flaviu Sirb</title>
 <meta name="description" content="Relational trauma, nervous system self-regulation and attachment: why we transform in relationship and how neurobiological repair works in psychotherapy. Barcelona.">

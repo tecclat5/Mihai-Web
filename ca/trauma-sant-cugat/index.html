@@ -2,6 +2,30 @@
 <html lang="ca">
 <head>
 <meta charset="UTF-8">
+
+<!-- Google tag (gtag.js) + Consent Mode v2 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18436478922"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Sin consentimiento previo no se almacena nada.
+  var mfsStored = null;
+  try { mfsStored = localStorage.getItem('mfs_consent'); } catch (e) {}
+  var mfsOK = (mfsStored === 'granted') ? 'granted' : 'denied';
+  gtag('consent', 'default', {
+    'ad_storage': mfsOK,
+    'ad_user_data': mfsOK,
+    'ad_personalization': mfsOK,
+    'analytics_storage': mfsOK,
+    'wait_for_update': 500
+  });
+
+  gtag('js', new Date());
+  gtag('config', 'AW-18436478922');
+  gtag('config', 'G-JV6TH88V57');
+</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Teràpia per al trauma a Sant Cugat | Mihai Flaviu Sirb</title>
 <meta name="description" content="Psicoteràpia per al trauma relacional, del desenvolupament i el trauma complex a Sant Cugat del Vallès. Enfocament corporal des de NARM. Presencial i en línia.">
@@ -318,13 +342,8 @@
       <h2>Trauma relacional, del desenvolupament i trauma complex</h2>
       <p>Bona part del patiment que arriba a la consulta no ve d'un sol fet, sinó d'experiències repetides en les relacions primerenques: no ser vist, haver de fer-se gran massa aviat, viure pendent de l'estat d'ànim d'un adult. També acompanyo el trauma complex (TEPT complex), on aquestes experiències han deixat empremta en la identitat, en el cos i en la manera de vincular-se.</p>
 
-      <h2>Com treballo</h2>
-      <p>El meu enfocament principal és el NeuroAffective Relational Model (NARM), un model pensat específicament per al trauma del desenvolupament. Treballem en el present: no cal reviure amb detall el que va passar perquè el sistema nerviós es pugui reorganitzar.</p>
-      <p><strong>1. El que vols per a tu.</strong> Què desitges de debò per a la teva vida avui.</p>
-      <p><strong>2. Regulació.</strong> Primer, la seguretat. Recuperar terra ferma abans de mirar cap endins.</p>
-      <p><strong>3. Elaboració.</strong> Posar paraules, gestos i símbols al que es va viure, i deixar que el cos acabi els moviments que van quedar a mitges.</p>
-      <p><strong>4. Recuperar la capacitat de triar.</strong> Reconèixer sense culpa les estratègies que et van protegir i avui et limiten.</p>
-      <p>Hi integro la psicoteràpia corporal somatosensorial i la mirada polivagal: parem atenció a com el teu sistema nerviós organitza les respostes de defensa i a com es poden completar de manera segura, al teu ritme.</p>
+      <h2>El meu enfocament</h2>
+      <p>Acompanyament personalitzat sota els principis i les intervencions del NARM, la Gestalt i la psicologia somàtica. El NARM (NeuroAffective Relational Model) és un enfocament per al trauma relacional i del desenvolupament: treballa en el present, amb el cos i la relació, sense necessitat de reviure el passat amb detall.</p>
 
       <h2>Trauma sexual</h2>
       <p>En casos de trauma sexual en què sigui més segur treballar amb un terapeuta d'un altre gènere, compto amb una xarxa de professionals de confiança a qui et puc orientar.</p>

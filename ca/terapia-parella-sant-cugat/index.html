@@ -2,6 +2,30 @@
 <html lang="ca">
 <head>
 <meta charset="UTF-8">
+
+<!-- Google tag (gtag.js) + Consent Mode v2 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18436478922"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Sin consentimiento previo no se almacena nada.
+  var mfsStored = null;
+  try { mfsStored = localStorage.getItem('mfs_consent'); } catch (e) {}
+  var mfsOK = (mfsStored === 'granted') ? 'granted' : 'denied';
+  gtag('consent', 'default', {
+    'ad_storage': mfsOK,
+    'ad_user_data': mfsOK,
+    'ad_personalization': mfsOK,
+    'analytics_storage': mfsOK,
+    'wait_for_update': 500
+  });
+
+  gtag('js', new Date());
+  gtag('config', 'AW-18436478922');
+  gtag('config', 'G-JV6TH88V57');
+</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Teràpia de parella a Sant Cugat | Mihai Flaviu Sirb</title>
 <meta name="description" content="Teràpia de parella a Sant Cugat del Vallès basada en l'aferrament. Sortir del bucle de les discussions i recuperar la connexió. 100 € la sessió, presencial i en línia.">
@@ -315,12 +339,8 @@
       <h2>El bucle que es repeteix</h2>
       <p>Moltes parelles arriben atrapades en el mateix ball: un persegueix, reclama, apuja el to; l'altre es tanca, es retira, es protegeix. Com més persegueix un, més s'allunya l'altre. Cap dels dos és el dolent: tots dos intenten, a la seva manera, no perdre el vincle.</p>
 
-      <h2>Com treballo amb parelles</h2>
-      <p>Treballo seguint les directrius de Sue Johnson i la teràpia de parella basada en l'aferrament. El meu paper no és decidir qui té raó, sinó ajudar-vos a veure el cicle que us atrapa i a posar paraules al que de debò s'està demanant.</p>
-      <p><strong>1. El que voleu.</strong> Aclarim què desitja cadascú per a la relació.</p>
-      <p><strong>2. Regulació.</strong> Abaixem la intensitat perquè la conversa sigui possible.</p>
-      <p><strong>3. Elaboració.</strong> Anomenem el que hi ha sota la ràbia o el silenci: por, soledat, necessitat de ser vist.</p>
-      <p><strong>4. Recuperar la capacitat de triar.</strong> Deixar de reaccionar en automàtic i començar a respondre-us d'una altra manera.</p>
+      <h2>El meu enfocament</h2>
+      <p>Acompanyament personalitzat sota els principis i les intervencions del NARM, la Gestalt i la psicologia somàtica; amb parelles, des de l'enfocament basat en l'aferrament.</p>
 
       <h2>Com són les sessions</h2>
       <p>Sessions de 60 minuts amb els dos membres de la parella, presencials a Sant Cugat o en línia. Atenc en català, castellà, anglès i romanès, també parelles d'idiomes diferents.</p>
