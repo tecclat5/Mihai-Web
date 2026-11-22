@@ -1028,7 +1028,10 @@
   .pricing-inner { max-width: 900px; margin: 0 auto; }
   .pricing-header { text-align: center; margin-bottom: 3rem; }
   .pricing-header .section-label { justify-content: center; }
-  .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .pricing-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; }
+  .pricing-cta { text-align: center; margin-top: 2.5rem; }
+  .pricing-cta .hero-cta { display: inline-flex; }
+  .contact-promise { font-size: 0.92rem; color: var(--sage); margin: -0.5rem 0 1.5rem; }
   .pricing-card { background: #fff; padding: 2.5rem 2rem; text-align: center; border-radius: 2px; border: 1px solid var(--cream-deep); }
   .pricing-card .p-type { font-family: var(--serif); font-size: 1.35rem; font-weight: 400; color: var(--dark); margin-bottom: 0.75rem; }
   .pricing-card .p-price { font-family: var(--serif); font-size: 2.75rem; color: var(--sage); font-weight: 300; margin: 1rem 0 1.25rem; letter-spacing: -0.01em; }
@@ -1388,6 +1391,7 @@
         <div class="service-extra">
           <p>Acompaño el trabajo con trauma desde el modelo corporal Somatosensorial y el modelo Polivagal, prestando atención a cómo el sistema nervioso autónomo organiza las respuestas de defensa y cómo pueden completarse de forma segura.</p>
           <p>Desde la humildad, tengo la conciencia suficiente para saber cuándo derivar. En casos de trauma sexual en los que resulte más seguro trabajar con un terapeuta de otro género, cuento con una red de profesionales de confianza a quienes puedo orientarte.</p>
+          <p><a href="/trauma-sant-cugat/" class="service-more" onclick="event.stopPropagation()">Más sobre la terapia para el trauma →</a></p>
         </div>
       </div>
 
@@ -1407,6 +1411,7 @@
         <p class="service-desc">Conozco el zumbido de fondo de una ansiedad que nunca se nombró del todo. El radar que no se apaga, la guardia permanente. Trabajamos para que el sistema nervioso aprenda que el peligro ya pasó.</p>
         <div class="service-extra">
           <p>Yo mismo lidié con la ansiedad durante toda mi vida. La conozco en el cuerpo, en los patrones de relación, en la forma de anticipar el mundo antes de que pase nada. Acompañarte desde ahí tiene una textura distinta a la del protocolo.</p>
+          <p><a href="/ansiedad-sant-cugat/" class="service-more" onclick="event.stopPropagation()">Más sobre la terapia para la ansiedad →</a></p>
         </div>
       </div>
 
@@ -1513,6 +1518,7 @@
         <p class="service-desc">El conflicto en la pareja rara vez trata de lo que parece. Debajo de cada discusión hay dos sistemas nerviosos intentando encontrar seguridad. Acompaño a parejas a salir del bucle de la pelea para encontrar lo que realmente se está pidiendo.</p>
         <div class="service-extra">
           <p>Trabajo bajo las directrices y enseñanzas de Sue Johnson, pionera en terapia de pareja basada en el apego. Su marco me ayuda a identificar los ciclos relacionales que atrapan a las parejas y a crear las condiciones para que pueda emerger una conexión más segura y genuina.</p>
+          <p><a href="/terapia-pareja-sant-cugat/" class="service-more" onclick="event.stopPropagation()">Más sobre la terapia de pareja →</a></p>
         </div>
       </div>
     </div>
@@ -1603,6 +1609,14 @@
   .review-author {
     font-family: var(--serif); font-size: 1.05rem; color: var(--dark); margin: 0;
   }
+  .review-who { display: flex; align-items: center; gap: 12px; }
+  .review-avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; flex-shrink: 0; background: var(--cream-deep); }
+  .review-stars { color: #C9A227; letter-spacing: 2px; font-size: 0.95rem; margin: 0 0 12px; }
+  .review-stars .review-src { color: var(--light); letter-spacing: 0; font-size: 0.75rem; margin-left: 8px; }
+  .review-stars .review-src a { color: var(--light); }
+  .footer-tm { font-size: 0.7rem; opacity: 0.55; margin-top: 0.8rem; }
+  .footer-areas a { color: inherit; }
+  .service-more { color: var(--accent); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
   .review-meta { font-size: 0.78rem; color: var(--light); margin: 4px 0 0; }
   .reviews-cta { text-align: center; margin-top: 48px; }
   .reviews-cta a {
@@ -1630,48 +1644,57 @@
 
     <div class="reviews-grid">
       <blockquote class="review-card fade-in">
+        <p class="review-stars" aria-label="5 de 5 estrellas">★★★★★<span class="review-src">Reseña en <a href="https://www.google.com/search?q=Mihai+Flaviu+Sirb+Psicoterapia+Humanista+Sant+Cugat" target="_blank" rel="noopener noreferrer">Google</a></span></p>
         <p class="review-text">Vaig venir per recomanació de la meva mare. La meva ansietat era excessiva i gràcies al Mihai he aconseguit que es redueixi molt. Ara em sento amb més confiança i més control sobre la meva vida. Els vuit mesos que ha durat el meu tractament han estat un aprenentatge enorme. El recomano a tothom que necessiti suport. Gràcies!!</p>
-        <p class="review-author">Estefanía F.</p>
+        <div class="review-who"><img class="review-avatar" src="https://lh3.googleusercontent.com/a-/ALV-UjXhkfMtH4zwqtdkn0FAKxZgMeTIhnUMegCes-SjYkLhcYHGC6UD_g=s96-c" alt="" width="40" height="40" loading="lazy" referrerpolicy="no-referrer"><p class="review-author">Estefanía F.</p></div>
       </blockquote>
 
       <blockquote class="review-card fade-in">
+        <p class="review-stars" aria-label="5 de 5 estrellas">★★★★★<span class="review-src">Reseña en <a href="https://www.google.com/search?q=Mihai+Flaviu+Sirb+Psicoterapia+Humanista+Sant+Cugat" target="_blank" rel="noopener noreferrer">Google</a></span></p>
         <p class="review-text">Recomano totalment a Mihai. El suport durant el meu procés de sanació m'ha permès recuperar la tranquil·litat. Molt agraït per la seva empatia.</p>
-        <p class="review-author">Francesc B.</p>
+        <div class="review-who"><img class="review-avatar" src="https://lh3.googleusercontent.com/a-/ALV-UjW7klD0ev7L_wpvcer8xP3gP4Gv6S4my4Q-O_ELeH8fCudlB2Ny=s96-c" alt="" width="40" height="40" loading="lazy" referrerpolicy="no-referrer"><p class="review-author">Francesc B.</p></div>
       </blockquote>
 
       <blockquote class="review-card fade-in">
+        <p class="review-stars" aria-label="5 de 5 estrellas">★★★★★<span class="review-src">Reseña en <a href="https://www.google.com/search?q=Mihai+Flaviu+Sirb+Psicoterapia+Humanista+Sant+Cugat" target="_blank" rel="noopener noreferrer">Google</a></span></p>
         <p class="review-text">Llevo un tiempo en terapia con él y la experiencia ha sido inmejorable. Hace posible crear un espacio seguro donde poder hablar sin sentirte juzgado, con herramientas muy prácticas que de verdad ayudan en el día a día. He notado avances que no esperaba y me ha dado recursos para seguir trabajando por mi cuenta. Sin duda lo recomiendo a cualquiera que esté buscando apoyo psicológico real.</p>
-        <p class="review-author">Esteban S.</p>
+        <div class="review-who"><img class="review-avatar" src="https://lh3.googleusercontent.com/a-/ALV-UjVdDrLtI4FY8nW_bLaivL-etT59s2VqbUCzOApzKgT6no9VYici=s96-c" alt="" width="40" height="40" loading="lazy" referrerpolicy="no-referrer"><p class="review-author">Esteban S.</p></div>
       </blockquote>
 
       <blockquote class="review-card fade-in">
+        <p class="review-stars" aria-label="5 de 5 estrellas">★★★★★<span class="review-src">Reseña en <a href="https://www.google.com/search?q=Mihai+Flaviu+Sirb+Psicoterapia+Humanista+Sant+Cugat" target="_blank" rel="noopener noreferrer">Google</a></span></p>
         <p class="review-text">Muy buena experiencia con Mihai. Es una persona muy sensible y atenta, y me sentí cómodo desde la primera sesión, aunque mi español todavía no es muy bueno. Tuvo mucha paciencia y me ha ayudado a sentirme más seguro con la gente aquí en España. También me gusta mucho su sentido del humor. Se nota que quiere ayudarte a crecer. Si buscas recibir comentarios constructivos, sabe compartir lo que observa de una manera que puede ayudarte a conocerte mejor. Muy recomendable!</p>
-        <p class="review-author">Fred L.</p>
+        <div class="review-who"><img class="review-avatar" src="https://lh3.googleusercontent.com/a-/ALV-UjXzSaZ77LIP8uDgZMlhYOmgxlQxq30H0u3QEs5c4e_PKsHXVDSdTw=s96-c" alt="" width="40" height="40" loading="lazy" referrerpolicy="no-referrer"><p class="review-author">Fred L.</p></div>
       </blockquote>
 
       <blockquote class="review-card fade-in">
+        <p class="review-stars" aria-label="5 de 5 estrellas">★★★★★<span class="review-src">Reseña en <a href="https://www.google.com/search?q=Mihai+Flaviu+Sirb+Psicoterapia+Humanista+Sant+Cugat" target="_blank" rel="noopener noreferrer">Google</a></span></p>
         <p class="review-text">Buscaba algo más que terapia normal, algo que también tocara la parte espiritual que tenía abandonada hace años. Aquí he podido hablar de cosas que antes me daba vergüenza mencionar. El proceso va lento pero es real, y poco a poco he ido conectando la cabeza, el cuerpo y esa parte más intuitiva que casi había olvidado. Lo recomiendo a quien busque algo más profundo que solo gestionar síntomas.</p>
-        <p class="review-author">Mourad M.</p>
+        <div class="review-who"><img class="review-avatar" src="https://lh3.googleusercontent.com/a-/ALV-UjWy8H1d1JY5O4hfzNbJ9VMolcToZYrhYsrODbUKJ1IucJWkS7Yp=s96-c" alt="" width="40" height="40" loading="lazy" referrerpolicy="no-referrer"><p class="review-author">Mourad M.</p></div>
       </blockquote>
 
       <blockquote class="review-card fade-in">
+        <p class="review-stars" aria-label="5 de 5 estrellas">★★★★★<span class="review-src">Reseña en <a href="https://www.google.com/search?q=Mihai+Flaviu+Sirb+Psicoterapia+Humanista+Sant+Cugat" target="_blank" rel="noopener noreferrer">Google</a></span></p>
         <p class="review-text">Nunca pensé que fuera a decir esto, pero empezar terapia ha sido de las mejores decisiones que he tomado en años. Llegué después de un año horrible en el trabajo, quemado hasta el punto de no reconocerme, y pensando que simplemente tenía que aguantar. Mihai me ayudó a entender por qué llevaba tanto tiempo funcionando así. Todavía estoy en el proceso pero ya noto la diferencia en cómo afronto el día a día. Para cualquier persona que piense que esto no es para él, os digo que probéis.</p>
-        <p class="review-author">Eric G.</p>
+        <div class="review-who"><img class="review-avatar" src="https://lh3.googleusercontent.com/a-/ALV-UjW6jnH1771bFO4Q0hPeZ7IpYPPrdiumkyJ6xJWQ1gI_vvEIQtQ=s96-c" alt="" width="40" height="40" loading="lazy" referrerpolicy="no-referrer"><p class="review-author">Eric G.</p></div>
       </blockquote>
 
       <blockquote class="review-card fade-in">
+        <p class="review-stars" aria-label="5 de 5 estrellas">★★★★★<span class="review-src">Reseña en <a href="https://www.google.com/search?q=Mihai+Flaviu+Sirb+Psicoterapia+Humanista+Sant+Cugat" target="_blank" rel="noopener noreferrer">Google</a></span></p>
         <p class="review-text">Soy enfermero y llegué bastante desbordado por mi trabajo, sin saber dónde ponía yo el límite con los demás. Con Mihai he ido entendiendo (y después sintiendo) lo que me pasa en el cuerpo, no solo en la cabeza. Un proceso lento y respetuoso. Lo recomiendo mucho.</p>
-        <p class="review-author">César M.</p>
+        <div class="review-who"><img class="review-avatar" src="https://lh3.googleusercontent.com/a/ACg8ocLBpHPDzjrrFG-GGs64HkFK47E6LkuO6mEKJuh533tcIiTZBw=s96-c" alt="" width="40" height="40" loading="lazy" referrerpolicy="no-referrer"><p class="review-author">César M.</p></div>
       </blockquote>
 
       <blockquote class="review-card fade-in">
+        <p class="review-stars" aria-label="5 de 5 estrellas">★★★★★<span class="review-src">Reseña en <a href="https://www.google.com/search?q=Mihai+Flaviu+Sirb+Psicoterapia+Humanista+Sant+Cugat" target="_blank" rel="noopener noreferrer">Google</a></span></p>
         <p class="review-text">Excelente profesional. Es muy empático, cercano y hace que te sientas cómodo desde el minuto uno, algo que me daba miedo al principio al ser mi primera vez en terapia. Las sesiones online funcionan de maravilla y se nota que prepara cada caso a conciencia. Muy recomendable.</p>
-        <p class="review-author">Ernesto T.</p>
+        <div class="review-who"><img class="review-avatar" src="https://lh3.googleusercontent.com/a/ACg8ocLq5KBkHOF96TzyNRv8wEuB7NU5SSi2bAxweLEU2nl90Kv-og=s96-c" alt="" width="40" height="40" loading="lazy" referrerpolicy="no-referrer"><p class="review-author">Ernesto T.</p></div>
       </blockquote>
 
       <blockquote class="review-card fade-in">
+        <p class="review-stars" aria-label="5 de 5 estrellas">★★★★★<span class="review-src">Reseña en <a href="https://www.google.com/search?q=Mihai+Flaviu+Sirb+Psicoterapia+Humanista+Sant+Cugat" target="_blank" rel="noopener noreferrer">Google</a></span></p>
         <p class="review-text">Gran profesional, cercano y empático. Su enfoque humanista me ha ayudado a conocerme mejor y a afrontar dificultades con mayor claridad. Muy recomendable.</p>
-        <p class="review-author">R.</p>
+        <div class="review-who"><img class="review-avatar" src="https://lh3.googleusercontent.com/a/ACg8ocJA21ELu4rwPRcrgTqIFDFgRTayJwBEkj9k-DZma0jlO4HAPA=s96-c" alt="" width="40" height="40" loading="lazy" referrerpolicy="no-referrer"><p class="review-author">R.</p></div>
       </blockquote>
     </div>
 
@@ -1690,6 +1713,11 @@
     </div>
     <div class="pricing-grid fade-in">
       <div class="pricing-card">
+        <p class="p-type">Primera llamada</p>
+        <p class="p-price">Gratis</p>
+        <p class="p-duration">20 min · Por teléfono o videollamada</p>
+      </div>
+      <div class="pricing-card">
         <p class="p-type">Sesión individual</p>
         <p class="p-price">70 €</p>
         <p class="p-duration">60 min · Presencial u online</p>
@@ -1700,7 +1728,8 @@
         <p class="p-duration">60 min · Presencial u online</p>
       </div>
     </div>
-    <p class="pricing-note fade-in">Escríbeme por WhatsApp para reservar una primera sesión.</p>
+    <p class="pricing-cta fade-in"><a href="https://wa.me/34671894458?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20la%20llamada%20gratuita%20de%2020%20minutos" class="hero-cta hero-cta-primary" target="_blank" rel="noopener noreferrer">Reservar cita por WhatsApp</a></p>
+    <p class="pricing-note fade-in">Respondo en menos de 24 horas.</p>
   </div>
 </section>
 
@@ -1850,6 +1879,7 @@
       <p class="contact-tagline">
         Sé lo que cuesta escribir el primer mensaje. No hace falta tenerlo todo claro ni encontrar las palabras exactas. Si sientes que ha llegado ese momento, escríbeme.
       </p>
+      <p class="contact-promise">Primera llamada de 20 minutos gratuita · Respondo en menos de 24 horas.</p>
       <div class="contact-details">
         <a href="tel:+34671894458" class="contact-item">
           <span>Teléfono</span>
@@ -1900,6 +1930,7 @@
 </div>
 
 <footer>
+  <p class="footer-areas"><a href="/ansiedad-sant-cugat/">Ansiedad</a> · <a href="/trauma-sant-cugat/">Trauma</a> · <a href="/terapia-pareja-sant-cugat/">Terapia de pareja</a> · <a href="/autoestima-sant-cugat/">Autoestima</a></p>
   <p>© 2026 Mihai Flaviu Sirb — Psicoterapia Humanista · Sant Cugat del Vallès</p>
   <p>Av. de Rius i Taulet, 29-31, 1-4, 08172 Sant Cugat del Vallès · Presencial y Online</p>
   <p class="footer-legal">
@@ -1907,6 +1938,7 @@
     <a href="/legal/privacidad/">Privacidad</a> ·
     <a href="/legal/cookies/">Cookies</a>
   </p>
+  <p class="footer-tm">NeuroAffective Relational Model™ y NARM® son marcas registradas de Laurence Heller, PhD. Formación de posgrado en curso en Centre Besai (2025–2026).</p>
 </footer>
 
 <!-- BOTÓN FLOTANTE DE WHATSAPP -->

@@ -1028,7 +1028,10 @@
   .pricing-inner { max-width: 900px; margin: 0 auto; }
   .pricing-header { text-align: center; margin-bottom: 3rem; }
   .pricing-header .section-label { justify-content: center; }
-  .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .pricing-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; }
+  .pricing-cta { text-align: center; margin-top: 2.5rem; }
+  .pricing-cta .hero-cta { display: inline-flex; }
+  .contact-promise { font-size: 0.92rem; color: var(--sage); margin: -0.5rem 0 1.5rem; }
   .pricing-card { background: #fff; padding: 2.5rem 2rem; text-align: center; border-radius: 2px; border: 1px solid var(--cream-deep); }
   .pricing-card .p-type { font-family: var(--serif); font-size: 1.35rem; font-weight: 400; color: var(--dark); margin-bottom: 0.75rem; }
   .pricing-card .p-price { font-family: var(--serif); font-size: 2.75rem; color: var(--sage); font-weight: 300; margin: 1rem 0 1.25rem; letter-spacing: -0.01em; }
@@ -1603,6 +1606,13 @@
   .review-author {
     font-family: var(--serif); font-size: 1.05rem; color: var(--dark); margin: 0;
   }
+  .review-who { display: flex; align-items: center; gap: 12px; }
+  .review-avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; flex-shrink: 0; background: var(--cream-deep); }
+  .review-stars { color: #C9A227; letter-spacing: 2px; font-size: 0.95rem; margin: 0 0 12px; }
+  .review-stars .review-src { color: var(--light); letter-spacing: 0; font-size: 0.75rem; margin-left: 8px; }
+  .review-stars .review-src a { color: var(--light); }
+  .footer-tm { font-size: 0.7rem; opacity: 0.55; margin-top: 0.8rem; }
+  .footer-areas a { color: inherit; }
   .review-meta { font-size: 0.78rem; color: var(--light); margin: 4px 0 0; }
   .reviews-cta { text-align: center; margin-top: 48px; }
   .reviews-cta a {
@@ -1630,48 +1640,57 @@
 
     <div class="reviews-grid">
       <blockquote class="review-card fade-in">
+        <p class="review-stars" aria-label="5 din 5 stele">★★★★★<span class="review-src">Recenzie pe <a href="https://www.google.com/search?q=Mihai+Flaviu+Sirb+Psicoterapia+Humanista+Sant+Cugat" target="_blank" rel="noopener noreferrer">Google</a></span></p>
         <p class="review-text">Am venit la recomandarea mamei mele. Anxietatea mea era copleșitoare și, datorită lui Mihai, am reușit să o reduc foarte mult. Acum mă simt mai încrezătoare și am mai mult control asupra vieții mele. Cele opt luni cât a durat terapia au fost o învățare enormă. Îl recomand oricui are nevoie de sprijin. Mulțumesc!!</p>
-        <p class="review-author">Estefanía F.</p>
+        <div class="review-who"><img class="review-avatar" src="https://lh3.googleusercontent.com/a-/ALV-UjXhkfMtH4zwqtdkn0FAKxZgMeTIhnUMegCes-SjYkLhcYHGC6UD_g=s96-c" alt="" width="40" height="40" loading="lazy" referrerpolicy="no-referrer"><p class="review-author">Estefanía F.</p></div>
       </blockquote>
 
       <blockquote class="review-card fade-in">
+        <p class="review-stars" aria-label="5 din 5 stele">★★★★★<span class="review-src">Recenzie pe <a href="https://www.google.com/search?q=Mihai+Flaviu+Sirb+Psicoterapia+Humanista+Sant+Cugat" target="_blank" rel="noopener noreferrer">Google</a></span></p>
         <p class="review-text">Îl recomand cu toată încrederea pe Mihai. Sprijinul lui în procesul meu de vindecare m-a ajutat să-mi recapăt liniștea. Foarte recunoscător pentru empatia lui.</p>
-        <p class="review-author">Francesc B.</p>
+        <div class="review-who"><img class="review-avatar" src="https://lh3.googleusercontent.com/a-/ALV-UjW7klD0ev7L_wpvcer8xP3gP4Gv6S4my4Q-O_ELeH8fCudlB2Ny=s96-c" alt="" width="40" height="40" loading="lazy" referrerpolicy="no-referrer"><p class="review-author">Francesc B.</p></div>
       </blockquote>
 
       <blockquote class="review-card fade-in">
+        <p class="review-stars" aria-label="5 din 5 stele">★★★★★<span class="review-src">Recenzie pe <a href="https://www.google.com/search?q=Mihai+Flaviu+Sirb+Psicoterapia+Humanista+Sant+Cugat" target="_blank" rel="noopener noreferrer">Google</a></span></p>
         <p class="review-text">Fac terapie cu el de ceva vreme și experiența a fost excelentă. Creează un spațiu sigur în care poți vorbi fără să te simți judecat, cu instrumente foarte practice care chiar ajută în viața de zi cu zi. Am observat progrese la care nu mă așteptam și mi-a dat resurse ca să lucrez mai departe și singur. Fără îndoială îl recomand oricui caută un sprijin psihologic real.</p>
-        <p class="review-author">Esteban S.</p>
+        <div class="review-who"><img class="review-avatar" src="https://lh3.googleusercontent.com/a-/ALV-UjVdDrLtI4FY8nW_bLaivL-etT59s2VqbUCzOApzKgT6no9VYici=s96-c" alt="" width="40" height="40" loading="lazy" referrerpolicy="no-referrer"><p class="review-author">Esteban S.</p></div>
       </blockquote>
 
       <blockquote class="review-card fade-in">
+        <p class="review-stars" aria-label="5 din 5 stele">★★★★★<span class="review-src">Recenzie pe <a href="https://www.google.com/search?q=Mihai+Flaviu+Sirb+Psicoterapia+Humanista+Sant+Cugat" target="_blank" rel="noopener noreferrer">Google</a></span></p>
         <p class="review-text">O experiență foarte bună cu Mihai. Este o persoană foarte sensibilă și atentă și m-am simțit confortabil încă din prima ședință, deși spaniola mea nu este încă foarte bună. A avut multă răbdare și m-a ajutat să mă simt mai sigur pe mine cu oamenii de aici, din Spania. Îmi place mult și simțul lui al umorului. Se vede că vrea să te ajute să crești. Dacă vrei să primești feedback constructiv, știe să împărtășească ce observă într-un mod care te poate ajuta să te cunoști mai bine. Recomand cu căldură!</p>
-        <p class="review-author">Fred L.</p>
+        <div class="review-who"><img class="review-avatar" src="https://lh3.googleusercontent.com/a-/ALV-UjXzSaZ77LIP8uDgZMlhYOmgxlQxq30H0u3QEs5c4e_PKsHXVDSdTw=s96-c" alt="" width="40" height="40" loading="lazy" referrerpolicy="no-referrer"><p class="review-author">Fred L.</p></div>
       </blockquote>
 
       <blockquote class="review-card fade-in">
+        <p class="review-stars" aria-label="5 din 5 stele">★★★★★<span class="review-src">Recenzie pe <a href="https://www.google.com/search?q=Mihai+Flaviu+Sirb+Psicoterapia+Humanista+Sant+Cugat" target="_blank" rel="noopener noreferrer">Google</a></span></p>
         <p class="review-text">Căutam ceva mai mult decât o terapie obișnuită, ceva care să atingă și partea spirituală pe care o abandonasem de ani de zile. Aici am putut vorbi despre lucruri pe care înainte îmi era rușine să le menționez. Procesul merge încet, dar e real, și încetul cu încetul am reconectat mintea, corpul și acea parte mai intuitivă pe care aproape o uitasem. Îl recomand oricui caută ceva mai profund decât simpla gestionare a simptomelor.</p>
-        <p class="review-author">Mourad M.</p>
+        <div class="review-who"><img class="review-avatar" src="https://lh3.googleusercontent.com/a-/ALV-UjWy8H1d1JY5O4hfzNbJ9VMolcToZYrhYsrODbUKJ1IucJWkS7Yp=s96-c" alt="" width="40" height="40" loading="lazy" referrerpolicy="no-referrer"><p class="review-author">Mourad M.</p></div>
       </blockquote>
 
       <blockquote class="review-card fade-in">
+        <p class="review-stars" aria-label="5 din 5 stele">★★★★★<span class="review-src">Recenzie pe <a href="https://www.google.com/search?q=Mihai+Flaviu+Sirb+Psicoterapia+Humanista+Sant+Cugat" target="_blank" rel="noopener noreferrer">Google</a></span></p>
         <p class="review-text">Nu credeam că voi spune asta vreodată, dar să încep terapia a fost una dintre cele mai bune decizii din ultimii ani. Am ajuns după un an groaznic la muncă, epuizat până la a nu mă mai recunoaște, crezând că pur și simplu trebuie să rezist. Mihai m-a ajutat să înțeleg de ce funcționasem așa atâta timp. Sunt încă în proces, dar deja simt diferența în felul în care fac față zilnic. Oricui crede că asta nu e pentru el: încercați.</p>
-        <p class="review-author">Eric G.</p>
+        <div class="review-who"><img class="review-avatar" src="https://lh3.googleusercontent.com/a-/ALV-UjW6jnH1771bFO4Q0hPeZ7IpYPPrdiumkyJ6xJWQ1gI_vvEIQtQ=s96-c" alt="" width="40" height="40" loading="lazy" referrerpolicy="no-referrer"><p class="review-author">Eric G.</p></div>
       </blockquote>
 
       <blockquote class="review-card fade-in">
+        <p class="review-stars" aria-label="5 din 5 stele">★★★★★<span class="review-src">Recenzie pe <a href="https://www.google.com/search?q=Mihai+Flaviu+Sirb+Psicoterapia+Humanista+Sant+Cugat" target="_blank" rel="noopener noreferrer">Google</a></span></p>
         <p class="review-text">Sunt asistent medical și am ajuns destul de copleșit de muncă, fără să știu unde să pun limita cu ceilalți. Cu Mihai am început să înțeleg (și apoi să simt) ce mi se întâmplă în corp, nu doar în minte. Un proces lent și respectuos. Îl recomand mult.</p>
-        <p class="review-author">César M.</p>
+        <div class="review-who"><img class="review-avatar" src="https://lh3.googleusercontent.com/a/ACg8ocLBpHPDzjrrFG-GGs64HkFK47E6LkuO6mEKJuh533tcIiTZBw=s96-c" alt="" width="40" height="40" loading="lazy" referrerpolicy="no-referrer"><p class="review-author">César M.</p></div>
       </blockquote>
 
       <blockquote class="review-card fade-in">
+        <p class="review-stars" aria-label="5 din 5 stele">★★★★★<span class="review-src">Recenzie pe <a href="https://www.google.com/search?q=Mihai+Flaviu+Sirb+Psicoterapia+Humanista+Sant+Cugat" target="_blank" rel="noopener noreferrer">Google</a></span></p>
         <p class="review-text">Un profesionist excelent. Foarte empatic și apropiat, te face să te simți confortabil din primul minut, lucru de care mă temeam la început, fiind prima mea experiență de terapie. Ședințele online funcționează de minune și se vede că pregătește fiecare caz cu grijă. Foarte recomandat.</p>
-        <p class="review-author">Ernesto T.</p>
+        <div class="review-who"><img class="review-avatar" src="https://lh3.googleusercontent.com/a/ACg8ocLq5KBkHOF96TzyNRv8wEuB7NU5SSi2bAxweLEU2nl90Kv-og=s96-c" alt="" width="40" height="40" loading="lazy" referrerpolicy="no-referrer"><p class="review-author">Ernesto T.</p></div>
       </blockquote>
 
       <blockquote class="review-card fade-in">
+        <p class="review-stars" aria-label="5 din 5 stele">★★★★★<span class="review-src">Recenzie pe <a href="https://www.google.com/search?q=Mihai+Flaviu+Sirb+Psicoterapia+Humanista+Sant+Cugat" target="_blank" rel="noopener noreferrer">Google</a></span></p>
         <p class="review-text">Un mare profesionist, apropiat și empatic. Abordarea lui umanistă m-a ajutat să mă cunosc mai bine și să fac față dificultăților cu mai multă claritate. Foarte recomandat.</p>
-        <p class="review-author">R.</p>
+        <div class="review-who"><img class="review-avatar" src="https://lh3.googleusercontent.com/a/ACg8ocJA21ELu4rwPRcrgTqIFDFgRTayJwBEkj9k-DZma0jlO4HAPA=s96-c" alt="" width="40" height="40" loading="lazy" referrerpolicy="no-referrer"><p class="review-author">R.</p></div>
       </blockquote>
     </div>
 
@@ -1690,6 +1709,11 @@
     </div>
     <div class="pricing-grid fade-in">
       <div class="pricing-card">
+        <p class="p-type">Primul apel</p>
+        <p class="p-price">Gratuit</p>
+        <p class="p-duration">20 min · Telefonic sau video</p>
+      </div>
+      <div class="pricing-card">
         <p class="p-type">Ședință individuală</p>
         <p class="p-price">70 €</p>
         <p class="p-duration">60 min · Față în față sau online</p>
@@ -1700,7 +1724,8 @@
         <p class="p-duration">60 min · Față în față sau online</p>
       </div>
     </div>
-    <p class="pricing-note fade-in">Scrie-mi pe WhatsApp ca să rezervi o primă ședință.</p>
+    <p class="pricing-cta fade-in"><a href="https://wa.me/34671894458?text=Bun%C4%83%2C%20a%C8%99%20vrea%20s%C4%83%20rezerv%20apelul%20gratuit%20de%2020%20de%20minute" class="hero-cta hero-cta-primary" target="_blank" rel="noopener noreferrer">Rezervă prin WhatsApp</a></p>
+    <p class="pricing-note fade-in">Răspund în mai puțin de 24 de ore.</p>
   </div>
 </section>
 
@@ -1851,6 +1876,7 @@
       <p class="contact-tagline">
         Știu cât de greu e să scrii primul mesaj. Nu trebuie să ai totul clar și nici să găsești cuvintele exacte. Dacă simți că a venit momentul, scrie-mi.
       </p>
+      <p class="contact-promise">Primul apel de 20 de minute gratuit · Răspund în mai puțin de 24 de ore.</p>
       <div class="contact-details">
         <a href="tel:+34671894458" class="contact-item">
           <span>Telefon</span>
@@ -1908,6 +1934,7 @@
     <a href="/legal/privacidad/">Confidențialitate</a> ·
     <a href="/legal/cookies/">Cookies</a>
   </p>
+  <p class="footer-tm">NeuroAffective Relational Model™ și NARM® sunt mărci înregistrate ale Laurence Heller, PhD. Formare postuniversitară în curs la Centre Besai (2025–2026).</p>
 </footer>
 
 <!-- BOTÓN FLOTANTE DE WHATSAPP -->
