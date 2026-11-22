@@ -359,8 +359,8 @@
   .entrada-paso {
     opacity: 0;
     transform: translateY(18px);
-    animation: entrada-aparece 0.6s cubic-bezier(.16,.84,.44,1) forwards;
-    animation-delay: calc(var(--paso) * 0.3s - 0.15s);
+    animation: entrada-aparece 0.85s cubic-bezier(.16,.84,.44,1) forwards;
+    animation-delay: calc(var(--paso) * 1s - 0.8s);
   }
   @keyframes entrada-aparece {
     to { opacity: 1; transform: translateY(0); }
@@ -371,22 +371,19 @@
 
   /* Entrada: el logo y el verso ocupan la primera pantalla; el resto llega al bajar */
   .hero-entrada {
-    min-height: 60svh;
+    min-height: 100svh;
     position: relative;
     display: flex; flex-direction: column;
     align-items: center; justify-content: center;
     gap: clamp(1.5rem, 4vh, 3rem);
-    padding: clamp(3rem, 7vh, 4.5rem) 0 clamp(1.5rem, 4vh, 2.5rem);
+    padding: clamp(5rem, 11vh, 7rem) 0 clamp(5rem, 10vh, 6.5rem);
     box-sizing: border-box;
-  }
-  @media (max-width: 760px) {
-    .hero-entrada { min-height: 52svh; }
   }
   .hero-resto {
     display: flex; flex-direction: column; align-items: center;
     padding-bottom: 6rem;
     opacity: 0; transform: translateY(24px);
-    transition: opacity 0.7s ease 1.05s, transform 0.7s ease 1.05s;
+    transition: opacity 0.9s ease, transform 0.9s ease;
   }
   .hero-resto.visible { opacity: 1; transform: translateY(0); }
   @media (prefers-reduced-motion: reduce) {
@@ -1223,12 +1220,6 @@
         Trauma · Ansiedad · Burnout · Crisis de identidad · Vínculos<br>Adultos y jóvenes desde 18 años · Presencial y online
       </p>
       <div class="hero-actions fade-in">
-        <a href="https://wa.me/34671894458?text=Hola%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20una%20primera%20sesi%C3%B3n" class="hero-cta hero-cta-primary" target="_blank" rel="noopener noreferrer">
-          Escríbeme por WhatsApp
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
         <a href="#sobre-mi" class="hero-cta hero-cta-ghost">Conoce mi enfoque</a>
       </div>
     </div>
@@ -1639,13 +1630,18 @@
 
     <div class="reviews-grid">
       <blockquote class="review-card fade-in">
+        <p class="review-text">Vaig venir per recomanació de la meva mare. La meva ansietat era excessiva i gràcies al Mihai he aconseguit que es redueixi molt. Ara em sento amb més confiança i més control sobre la meva vida. Els vuit mesos que ha durat el meu tractament han estat un aprenentatge enorme. El recomano a tothom que necessiti suport. Gràcies!!</p>
+        <p class="review-author">Estefanía F.</p>
+      </blockquote>
+
+      <blockquote class="review-card fade-in">
         <p class="review-text">Recomano totalment a Mihai. El suport durant el meu procés de sanació m'ha permès recuperar la tranquil·litat. Molt agraït per la seva empatia.</p>
         <p class="review-author">Francesc B.</p>
       </blockquote>
 
       <blockquote class="review-card fade-in">
-        <p class="review-text">Vaig venir per recomanació de la meva mare. La meva ansietat era excessiva i gràcies al Mihai he aconseguit que es redueixi molt. Ara em sento amb més confiança i més control sobre la meva vida. Els vuit mesos que ha durat el meu tractament han estat un aprenentatge enorme. El recomano a tothom que necessiti suport. Gràcies!!</p>
-        <p class="review-author">Estefanía F.</p>
+        <p class="review-text">Llevo un tiempo en terapia con él y la experiencia ha sido inmejorable. Hace posible crear un espacio seguro donde poder hablar sin sentirte juzgado, con herramientas muy prácticas que de verdad ayudan en el día a día. He notado avances que no esperaba y me ha dado recursos para seguir trabajando por mi cuenta. Sin duda lo recomiendo a cualquiera que esté buscando apoyo psicológico real.</p>
+        <p class="review-author">Esteban S.</p>
       </blockquote>
 
       <blockquote class="review-card fade-in">
@@ -1661,11 +1657,6 @@
       <blockquote class="review-card fade-in">
         <p class="review-text">Soy enfermero y llegué bastante desbordado por mi trabajo, sin saber dónde ponía yo el límite con los demás. Con Mihai he ido entendiendo (y después sintiendo) lo que me pasa en el cuerpo, no solo en la cabeza. Un proceso lento y respetuoso. Lo recomiendo mucho.</p>
         <p class="review-author">César M.</p>
-      </blockquote>
-
-      <blockquote class="review-card fade-in">
-        <p class="review-text">Llevo un tiempo en terapia con él y la experiencia ha sido inmejorable. Hace posible crear un espacio seguro donde poder hablar sin sentirte juzgado, con herramientas muy prácticas que de verdad ayudan en el día a día. He notado avances que no esperaba y me ha dado recursos para seguir trabajando por mi cuenta. Sin duda lo recomiendo a cualquiera que esté buscando apoyo psicológico real.</p>
-        <p class="review-author">Esteban S.</p>
       </blockquote>
 
       <blockquote class="review-card fade-in">
@@ -1955,9 +1946,10 @@
   (function () {
     var resto = document.querySelector('.hero-resto');
     if (resto) {
-      requestAnimationFrame(function () { resto.classList.add('visible'); });
       var verResto = function () {
-        document.body.classList.toggle('scrolled', window.scrollY > 60);
+        var bajando = window.scrollY > 60;
+        resto.classList.toggle('visible', bajando);
+        document.body.classList.toggle('scrolled', bajando);
       };
       window.addEventListener('scroll', verResto, { passive: true });
       verResto();

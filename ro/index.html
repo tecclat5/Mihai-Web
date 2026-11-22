@@ -359,8 +359,8 @@
   .entrada-paso {
     opacity: 0;
     transform: translateY(18px);
-    animation: entrada-aparece 0.6s cubic-bezier(.16,.84,.44,1) forwards;
-    animation-delay: calc(var(--paso) * 0.3s - 0.15s);
+    animation: entrada-aparece 0.85s cubic-bezier(.16,.84,.44,1) forwards;
+    animation-delay: calc(var(--paso) * 1s - 0.8s);
   }
   @keyframes entrada-aparece {
     to { opacity: 1; transform: translateY(0); }
@@ -371,22 +371,19 @@
 
   /* Entrada: el logo y el verso ocupan la primera pantalla; el resto llega al bajar */
   .hero-entrada {
-    min-height: 60svh;
+    min-height: 100svh;
     position: relative;
     display: flex; flex-direction: column;
     align-items: center; justify-content: center;
     gap: clamp(1.5rem, 4vh, 3rem);
-    padding: clamp(3rem, 7vh, 4.5rem) 0 clamp(1.5rem, 4vh, 2.5rem);
+    padding: clamp(5rem, 11vh, 7rem) 0 clamp(5rem, 10vh, 6.5rem);
     box-sizing: border-box;
-  }
-  @media (max-width: 760px) {
-    .hero-entrada { min-height: 52svh; }
   }
   .hero-resto {
     display: flex; flex-direction: column; align-items: center;
     padding-bottom: 6rem;
     opacity: 0; transform: translateY(24px);
-    transition: opacity 0.7s ease 1.05s, transform 0.7s ease 1.05s;
+    transition: opacity 0.9s ease, transform 0.9s ease;
   }
   .hero-resto.visible { opacity: 1; transform: translateY(0); }
   @media (prefers-reduced-motion: reduce) {
@@ -1223,12 +1220,6 @@
         Traumă · Anxietate · Burnout · Criză de identitate · Relații<br>Adulți și tineri de la 18 ani · Față în față și online
       </p>
       <div class="hero-actions fade-in">
-        <a href="https://wa.me/34671894458?text=Bun%C4%83%2C%20a%C8%99%20vrea%20mai%20multe%20informa%C8%9Bii%20despre%20o%20prim%C4%83%20%C8%99edin%C8%9B%C4%83" class="hero-cta hero-cta-primary" target="_blank" rel="noopener noreferrer">
-          Scrie-mi pe WhatsApp
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
         <a href="#sobre-mi" class="hero-cta hero-cta-ghost">Cum lucrez</a>
       </div>
     </div>
@@ -1639,13 +1630,18 @@
 
     <div class="reviews-grid">
       <blockquote class="review-card fade-in">
+        <p class="review-text">Am venit la recomandarea mamei mele. Anxietatea mea era copleșitoare și, datorită lui Mihai, am reușit să o reduc foarte mult. Acum mă simt mai încrezătoare și am mai mult control asupra vieții mele. Cele opt luni cât a durat terapia au fost o învățare enormă. Îl recomand oricui are nevoie de sprijin. Mulțumesc!!</p>
+        <p class="review-author">Estefanía F.</p>
+      </blockquote>
+
+      <blockquote class="review-card fade-in">
         <p class="review-text">Îl recomand cu toată încrederea pe Mihai. Sprijinul lui în procesul meu de vindecare m-a ajutat să-mi recapăt liniștea. Foarte recunoscător pentru empatia lui.</p>
         <p class="review-author">Francesc B.</p>
       </blockquote>
 
       <blockquote class="review-card fade-in">
-        <p class="review-text">Am venit la recomandarea mamei mele. Anxietatea mea era copleșitoare și, datorită lui Mihai, am reușit să o reduc foarte mult. Acum mă simt mai încrezătoare și am mai mult control asupra vieții mele. Cele opt luni cât a durat terapia au fost o învățare enormă. Îl recomand oricui are nevoie de sprijin. Mulțumesc!!</p>
-        <p class="review-author">Estefanía F.</p>
+        <p class="review-text">Fac terapie cu el de ceva vreme și experiența a fost excelentă. Creează un spațiu sigur în care poți vorbi fără să te simți judecat, cu instrumente foarte practice care chiar ajută în viața de zi cu zi. Am observat progrese la care nu mă așteptam și mi-a dat resurse ca să lucrez mai departe și singur. Fără îndoială îl recomand oricui caută un sprijin psihologic real.</p>
+        <p class="review-author">Esteban S.</p>
       </blockquote>
 
       <blockquote class="review-card fade-in">
@@ -1661,11 +1657,6 @@
       <blockquote class="review-card fade-in">
         <p class="review-text">Sunt asistent medical și am ajuns destul de copleșit de muncă, fără să știu unde să pun limita cu ceilalți. Cu Mihai am început să înțeleg (și apoi să simt) ce mi se întâmplă în corp, nu doar în minte. Un proces lent și respectuos. Îl recomand mult.</p>
         <p class="review-author">César M.</p>
-      </blockquote>
-
-      <blockquote class="review-card fade-in">
-        <p class="review-text">Fac terapie cu el de ceva vreme și experiența a fost excelentă. Creează un spațiu sigur în care poți vorbi fără să te simți judecat, cu instrumente foarte practice care chiar ajută în viața de zi cu zi. Am observat progrese la care nu mă așteptam și mi-a dat resurse ca să lucrez mai departe și singur. Fără îndoială îl recomand oricui caută un sprijin psihologic real.</p>
-        <p class="review-author">Esteban S.</p>
       </blockquote>
 
       <blockquote class="review-card fade-in">
@@ -1956,9 +1947,10 @@
   (function () {
     var resto = document.querySelector('.hero-resto');
     if (resto) {
-      requestAnimationFrame(function () { resto.classList.add('visible'); });
       var verResto = function () {
-        document.body.classList.toggle('scrolled', window.scrollY > 60);
+        var bajando = window.scrollY > 60;
+        resto.classList.toggle('visible', bajando);
+        document.body.classList.toggle('scrolled', bajando);
       };
       window.addEventListener('scroll', verResto, { passive: true });
       verResto();
