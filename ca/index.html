@@ -1323,13 +1323,10 @@
       <p class="section-label">Sobre mi</p>
       <h2 class="section-title">Acompanyar des de<br><em>dins, no des de dalt</em></h2>
       <p>
-        La meva història com a terapeuta comença en l'aïllament asèptic d'una sala de nounats romanesa. Abans de tenir paraules, el meu sistema nerviós ja havia après un patró: com habitar el buit. Vaig créixer en una casa on l'estat emocional del meu pare marcava el clima de tota l'habitació. Em vaig convertir en un radar. Vaig aprendre a llegir el pes d'un silenci, la vibració específica d'una veu abans que esclatés.
+        Vaig créixer en una casa on l'estat emocional del meu pare marcava el clima de tota l'habitació. Em vaig convertir en un radar: vaig aprendre a llegir el pes d'un silenci abans que esclatés. Durant anys, per dins brunzia una ansietat que poques vegades anomenava, i les substàncies van ser durant un temps la meva única treva.
       </p>
       <p>
-        Durant molts anys em vaig esforçar a semblar algú hàbil i desimbolt, mentre per dins em brunzia una ansietat que gairebé mai no posava en paraules. Durant una època, les substàncies van ser l'única treva amb el meu sistema nerviós. Ara, als trenta-un anys, la meva vida és la pràctica diària de la integració: aprendre a quedar-me en el cos quan apareix el vell impuls de fugir.
-      </p>
-      <p>
-        Arribo a aquesta feina com algú que ha travessat l'enfonsament de les seves pròpies estructures. Tot el que faig parteix d'una convicció: <strong>vam ser ferits en relació i en relació podem sanar</strong>. Per això ofereixo un espai on la ment i el cos treballen junts, dins d'un vincle segur.
+        Arribo a aquesta feina com algú que ha travessat el col·lapse de les seves pròpies estructures. Parteixo d'una convicció: <strong>vam ser ferits en relació i en relació podem sanar</strong>.
       </p>
 
       <ul class="formation-list">
@@ -1339,21 +1336,6 @@
         <li>Mindfulness</li>
         <li>Teatre Terapèutic</li>
       </ul>
-
-      <div class="credenciales">
-        <p class="credenciales-anios"><strong>10 anys</strong> acompanyant processos</p>
-        <p class="credenciales-titulo">Formació</p>
-        <ul class="credenciales-lista">
-          <li><span>Postgrau en Psicoteràpia Gestalt</span> · Institut Drala Gestalt <em>2016-2019</em></li>
-          <li><span>Postgrau en Psicoteràpia Somatosensorial NARM</span> · Centre Besai <em>2025-2026</em></li>
-          <li><span>Postgrau en Teatre Terapèutic</span> · Institut Integratiu <em>2019-2020</em></li>
-          <li><span>Programa SAT</span> · Claudio Naranjo <em>2019-2023</em></li>
-          <li><span>Formació en AMAR</span> · Lluís Fusté, Institut Amar <em>2024-2025</em></li>
-          <li><span>Bioenergètica i Biodansa</span> · Sabina Salta <em>2020-2021</em></li>
-          <li><span>Instructor de Mindfulness MBSR</span> · Institut Mindfulness <em>2015-2017</em></li>
-          <li><span>Grau en Psicologia</span> · Universitat Oberta de Catalunya <em>Avaluació i Intervenció Clínica · últim curs</em></li>
-        </ul>
-      </div>
     </div>
   </div>
 </section>
@@ -1560,20 +1542,16 @@
       <h3>Aquest espai és per a tu</h3>
       <ul>
         <li>Vols comprendre el que es repeteix en els teus vincles i en la teva manera d'estar al món.</li>
-        <li>Estàs disposat a mirar la teva història, els teus patrons i el teu cos des d'una perspectiva relacional.</li>
         <li>Busques un procés al teu ritme, sense solucions ràpides ni protocols rígids.</li>
         <li>Necessites un espai segur on mostrar-te sense façana.</li>
-        <li>Entens que això és un acompanyament humanista integrador, no un tractament clínic farmacològic.</li>
       </ul>
     </div>
     <div class="for-whom-col no fade-in">
       <p class="section-label">No és el més adequat si…</p>
       <h3>Una altra ajuda et pot servir millor</h3>
       <ul>
-        <li>Travesses una crisi aguda o hi ha risc immediat per a tu (en aquest cas: <a href="tel:112" style="color:inherit;">112</a> o <a href="tel:024" style="color:inherit;">024</a>).</li>
         <li>Necessites avaluació psiquiàtrica, recepta o informe clínic.</li>
         <li>Estàs en una addicció activa greu que requereix primer atenció mèdica — en aquest cas, a la primera sessió et puc derivar a un psiquiatre de confiança.</li>
-        <li>Busques específicament teràpia cognitivoconductual protocol·litzada o altres enfocaments clínics concrets.</li>
       </ul>
     </div>
   </div>
@@ -1589,6 +1567,8 @@
     margin-top: 18px; color: var(--mid); font-size: 0.9rem;
   }
   .reviews-stars { color: var(--accent); letter-spacing: 2px; font-size: 1rem; }
+  .reviews-grid.is-collapsed .review-card:nth-child(n+5) { display: none; }
+  .reviews-more { display: block; margin: 2rem auto 0; background: none; border: 1px solid currentColor; color: var(--accent); padding: 0.7rem 1.4rem; font: inherit; font-size: 0.9rem; cursor: pointer; border-radius: 2px; }
   .reviews-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 24px;
@@ -1639,7 +1619,7 @@
       </p>
     </div>
 
-    <div class="reviews-grid">
+    <div class="reviews-grid is-collapsed" id="reviewsGrid">
       <blockquote class="review-card fade-in">
         <p class="review-stars" aria-label="5 de 5 estrelles">★★★★★<span class="review-src">Ressenya a <a href="https://www.google.com/search?q=Mihai+Flaviu+Sirb+Psicoterapia+Humanista+Sant+Cugat" target="_blank" rel="noopener noreferrer">Google</a></span></p>
         <p class="review-text">Vaig venir per recomanació de la meva mare. La meva ansietat era excessiva i gràcies al Mihai he aconseguit que es redueixi molt. Ara em sento amb més confiança i més control sobre la meva vida. Els vuit mesos que ha durat el meu tractament han estat un aprenentatge enorme. El recomano a tothom que necessiti suport. Gràcies!!</p>
@@ -1695,7 +1675,9 @@
       </blockquote>
     </div>
 
-    <p class="reviews-cta fade-in">
+        <button type="button" class="reviews-more" id="reviewsMore" aria-expanded="false" onclick="var g=document.getElementById('reviewsGrid');var c=g.classList.toggle('is-collapsed');this.setAttribute('aria-expanded',!c);this.textContent=c?'Veure les 9 ressenyes':'Veure\'n menys';">Veure les 9 ressenyes</button>
+
+<p class="reviews-cta fade-in">
       <a href="https://www.google.com/search?q=Mihai+Flaviu+Sirb+Psicoterapia+Humanista+Sant+Cugat" target="_blank" rel="noopener noreferrer">Mira les ressenyes a Google</a>
     </p>
   </div>
@@ -1739,47 +1721,6 @@
 </div>
 
 <!-- WRITINGS -->
-<section class="writings" id="escritos">
-  <div class="writings-hero fade-in">
-    <img src="/photo.jpg" alt="Mihai Flaviu Sirb als Llacs de Covadonga, Astúries">
-  </div>
-  <div class="writings-inner">
-    <div class="writings-header fade-in">
-      <div>
-        <p class="section-label">Escrits</p>
-        <h2 class="section-title">Reflexions sobre<br><em>el camí interior</em></h2>
-      </div>
-    </div>
-
-    <div class="writings-list fade-in">
-      <a class="writing-item" href="/blog/psicoterapia-humanista-valles/">
-        <span class="writing-date">Setembre 2026</span>
-        <span class="writing-title">Psicoterapia humanista en el Vallès: qué buscar en un terapeuta si vives en Sant Cugat, Rubí o Cerdanyola</span>
-        <span class="writing-tag">Vallès</span>
-      </a>
-      <a class="writing-item" href="/blog/dodo-todos-ganan/">
-        <span class="writing-date">Maig 2026</span>
-        <span class="writing-title">Todos ganan: el veredicto del pájaro Dodo y lo que la ciencia nos dice sobre por qué funciona la psicoterapia</span>
-        <span class="writing-tag">Evidència</span>
-      </a>
-      <a class="writing-item" href="/blog/neurobiologia-regulacion/">
-        <span class="writing-date">Abril 2026</span>
-        <span class="writing-title">Aprender a regularse: Allan Schore y la neurobiología de por qué nos transformamos en relación</span>
-        <span class="writing-tag">Neurobiologia</span>
-      </a>
-      <a class="writing-item" href="/blog/teatro-terapeutico-trauma/">
-        <span class="writing-date">Març 2026</span>
-        <span class="writing-title">El cuerpo en escena: teatro terapéutico, trauma y la ciencia de sanar en relación</span>
-        <span class="writing-tag">Trauma</span>
-      </a>
-      <a class="writing-item" href="/blog/psicoterapia-corporal/">
-        <span class="writing-date">Febrer 2026</span>
-        <span class="writing-title">Cuando el cuerpo también necesita ser escuchado: psicoterapia corporal y contacto físico en el tratamiento del trauma</span>
-        <span class="writing-tag">Cos</span>
-      </a>
-    </div>
-  </div>
-</section>
 
 <!-- FAQ -->
 <section class="faq" id="preguntas">
@@ -1913,6 +1854,47 @@
         </svg>
       </button>
     </form>
+  </div>
+</section>
+<section class="writings" id="escritos">
+  <div class="writings-hero fade-in">
+    <img src="/photo.jpg" alt="Mihai Flaviu Sirb als Llacs de Covadonga, Astúries">
+  </div>
+  <div class="writings-inner">
+    <div class="writings-header fade-in">
+      <div>
+        <p class="section-label">Escrits</p>
+        <h2 class="section-title">Reflexions sobre<br><em>el camí interior</em></h2>
+      </div>
+    </div>
+
+    <div class="writings-list fade-in">
+      <a class="writing-item" href="/blog/psicoterapia-humanista-valles/">
+        <span class="writing-date">Setembre 2026</span>
+        <span class="writing-title">Psicoterapia humanista en el Vallès: qué buscar en un terapeuta si vives en Sant Cugat, Rubí o Cerdanyola</span>
+        <span class="writing-tag">Vallès</span>
+      </a>
+      <a class="writing-item" href="/blog/dodo-todos-ganan/">
+        <span class="writing-date">Maig 2026</span>
+        <span class="writing-title">Todos ganan: el veredicto del pájaro Dodo y lo que la ciencia nos dice sobre por qué funciona la psicoterapia</span>
+        <span class="writing-tag">Evidència</span>
+      </a>
+      <a class="writing-item" href="/blog/neurobiologia-regulacion/">
+        <span class="writing-date">Abril 2026</span>
+        <span class="writing-title">Aprender a regularse: Allan Schore y la neurobiología de por qué nos transformamos en relación</span>
+        <span class="writing-tag">Neurobiologia</span>
+      </a>
+      <a class="writing-item" href="/blog/teatro-terapeutico-trauma/">
+        <span class="writing-date">Març 2026</span>
+        <span class="writing-title">El cuerpo en escena: teatro terapéutico, trauma y la ciencia de sanar en relación</span>
+        <span class="writing-tag">Trauma</span>
+      </a>
+      <a class="writing-item" href="/blog/psicoterapia-corporal/">
+        <span class="writing-date">Febrer 2026</span>
+        <span class="writing-title">Cuando el cuerpo también necesita ser escuchado: psicoterapia corporal y contacto físico en el tratamiento del trauma</span>
+        <span class="writing-tag">Cos</span>
+      </a>
+    </div>
   </div>
 </section>
 

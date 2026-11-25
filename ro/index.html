@@ -1323,13 +1323,10 @@
       <p class="section-label">Despre mine</p>
       <h2 class="section-title">A însoți din<br><em>interior, nu de sus</em></h2>
       <p>
-        Povestea mea ca terapeut începe în izolarea aseptică a unui salon de nou-născuți din România. Înainte să am cuvinte, sistemul meu nervos învățase deja un tipar: cum să locuiască golul. Am crescut într-o casă în care starea emoțională a tatălui meu dădea tonul întregii camere. Am devenit un radar. Am învățat să citesc greutatea unei tăceri, vibrația specifică a unei voci înainte să izbucnească.
+        Am crescut într-o casă în care starea emoțională a tatălui meu dădea tonul întregii încăperi. Am devenit un radar: am învățat să citesc greutatea unei tăceri înainte să izbucnească. Ani de zile a zumzăit în mine o anxietate pe care rareori o numeam, iar o vreme substanțele au fost singurul meu armistițiu.
       </p>
       <p>
-        Mulți ani m-am chinuit să par priceput și dezinvolt în lume, în timp ce înăuntru zumzăia o anxietate pe care rareori o numeam. O vreme, substanțele au fost singurul armistițiu cu sistemul meu nervos. La treizeci și unu de ani, viața mea este practica zilnică a integrării: să învăț să rămân în corp când apare vechiul impuls de a fugi.
-      </p>
-      <p>
-        Vin în această meserie ca cineva care a trecut prin prăbușirea propriilor structuri. Munca mea pornește de la o convingere: <strong>am fost răniți în relație și în relație ne putem vindeca</strong>. De aceea ofer un spațiu în care mintea și corpul lucrează împreună, într-o relație sigură.
+        Vin în această muncă ca cineva care a trecut prin prăbușirea propriilor structuri. Pornesc de la o convingere: <strong>am fost răniți în relație și în relație ne putem vindeca</strong>.
       </p>
 
       <ul class="formation-list">
@@ -1339,21 +1336,6 @@
         <li>Mindfulness</li>
         <li>Teatru Terapeutic</li>
       </ul>
-
-      <div class="credenciales">
-        <p class="credenciales-anios"><strong>10 ani</strong> de însoțire a proceselor</p>
-        <p class="credenciales-titulo">Formare</p>
-        <ul class="credenciales-lista">
-          <li><span>Postuniversitar în Psihoterapie Gestalt</span> · Institut Drala Gestalt <em>2016-2019</em></li>
-          <li><span>Postuniversitar în Psihoterapie Somatosenzorială NARM</span> · Centre Besai <em>2025-2026</em></li>
-          <li><span>Postuniversitar în Teatru Terapeutic</span> · Institut Integratiu <em>2019-2020</em></li>
-          <li><span>Programa SAT</span> · Claudio Naranjo <em>2019-2023</em></li>
-          <li><span>Formare în AMAR</span> · Lluís Fusté, Institut Amar <em>2024-2025</em></li>
-          <li><span>Bioenergetică și Biodanza</span> · Sabina Salta <em>2020-2021</em></li>
-          <li><span>Instructor de Mindfulness MBSR</span> · Institut Mindfulness <em>2015-2017</em></li>
-          <li><span>Licență în Psihologie</span> · Universitat Oberta de Catalunya <em>Evaluare și Intervenție Clinică · ultimul an</em></li>
-        </ul>
-      </div>
     </div>
   </div>
 </section>
@@ -1557,20 +1539,16 @@
       <h3>Acest spațiu este pentru tine</h3>
       <ul>
         <li>Vrei să înțelegi ce se repetă în relațiile tale și în felul tău de a fi în lume.</li>
-        <li>Ești dispus să te uiți la povestea ta, la tiparele tale și la corpul tău dintr-o perspectivă relațională.</li>
         <li>Cauți un proces în ritmul tău, fără soluții rapide sau protocoale rigide.</li>
         <li>Ai nevoie de un spațiu sigur în care să te arăți fără fațadă.</li>
-        <li>Înțelegi că aceasta este o însoțire umanistă integrativă, nu un tratament clinic medicamentos.</li>
       </ul>
     </div>
     <div class="for-whom-col no fade-in">
       <p class="section-label">Nu este potrivit dacă…</p>
       <h3>Alt ajutor te poate servi mai bine</h3>
       <ul>
-        <li>Treci printr-o criză acută sau ești în pericol imediat (în acest caz: <a href="tel:112" style="color:inherit;">112</a> sau <a href="tel:024" style="color:inherit;">024</a>).</li>
         <li>Ai nevoie de evaluare psihiatrică, rețetă sau raport clinic.</li>
         <li>Ești într-o adicție activă gravă care necesită mai întâi îngrijire medicală — în acest caz, la prima ședință te pot îndruma către un psihiatru de încredere.</li>
-        <li>Cauți în mod specific terapie cognitiv-comportamentală bazată pe protocol sau alte abordări clinice concrete.</li>
       </ul>
     </div>
   </div>
@@ -1586,6 +1564,8 @@
     margin-top: 18px; color: var(--mid); font-size: 0.9rem;
   }
   .reviews-stars { color: var(--accent); letter-spacing: 2px; font-size: 1rem; }
+  .reviews-grid.is-collapsed .review-card:nth-child(n+5) { display: none; }
+  .reviews-more { display: block; margin: 2rem auto 0; background: none; border: 1px solid currentColor; color: var(--accent); padding: 0.7rem 1.4rem; font: inherit; font-size: 0.9rem; cursor: pointer; border-radius: 2px; }
   .reviews-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 24px;
@@ -1633,7 +1613,7 @@
       </p>
     </div>
 
-    <div class="reviews-grid">
+    <div class="reviews-grid is-collapsed" id="reviewsGrid">
       <blockquote class="review-card fade-in">
         <p class="review-stars" aria-label="5 din 5 stele">★★★★★<span class="review-src">Recenzie pe <a href="https://www.google.com/search?q=Mihai+Flaviu+Sirb+Psicoterapia+Humanista+Sant+Cugat" target="_blank" rel="noopener noreferrer">Google</a></span></p>
         <p class="review-text">Am venit la recomandarea mamei mele. Anxietatea mea era copleșitoare și, datorită lui Mihai, am reușit să o reduc foarte mult. Acum mă simt mai încrezătoare și am mai mult control asupra vieții mele. Cele opt luni cât a durat terapia au fost o învățare enormă. Îl recomand oricui are nevoie de sprijin. Mulțumesc!!</p>
@@ -1689,7 +1669,9 @@
       </blockquote>
     </div>
 
-    <p class="reviews-cta fade-in">
+        <button type="button" class="reviews-more" id="reviewsMore" aria-expanded="false" onclick="var g=document.getElementById('reviewsGrid');var c=g.classList.toggle('is-collapsed');this.setAttribute('aria-expanded',!c);this.textContent=c?'Vezi toate cele 9 recenzii':'Vezi mai puțin';">Vezi toate cele 9 recenzii</button>
+
+<p class="reviews-cta fade-in">
       <a href="https://www.google.com/search?q=Mihai+Flaviu+Sirb+Psicoterapia+Humanista+Sant+Cugat" target="_blank" rel="noopener noreferrer">Vezi recenziile pe Google</a>
     </p>
   </div>
@@ -1733,48 +1715,6 @@
 </div>
 
 <!-- WRITINGS -->
-<section class="writings" id="escritos">
-  <div class="writings-hero fade-in">
-    <img src="/photo.jpg" alt="Mihai Flaviu Sirb la Lacurile Covadonga, Asturias">
-  </div>
-  <div class="writings-inner">
-    <div class="writings-header">
-      <div>
-        <p class="section-label">Scrieri</p>
-        <h2 class="section-title">Reflecții despre<br><em>drumul interior</em></h2>
-      </div>
-      <a href="/" class="writings-link">Toate articolele în spaniolă →</a>
-    </div>
-    <div class="writings-list">
-      <a class="writing-item" href="/ro/blog/ce-este-psihoterapia-umanista/">
-        <span class="writing-date">Iulie 2026</span>
-        <span class="writing-title">Ce este psihoterapia umanistă</span>
-        <span class="writing-tag">Psihoterapie</span>
-      </a>
-      <a class="writing-item" href="/ro/blog/verdictul-pasarii-dodo-psiherapie/">
-        <span class="writing-date">Mai 2026</span>
-        <span class="writing-title">Toți câștigă: verdictul păsării Dodo și ce vindecă în psihoterapie</span>
-        <span class="writing-tag">Evidențe</span>
-      </a>
-      <a class="writing-item" href="/ro/blog/neurobiologie-reglare-atasament-schore/">
-        <span class="writing-date">Aprilie 2026</span>
-        <span class="writing-title">Neurobiologia atașamentului: de ce ne transformăm în relație</span>
-        <span class="writing-tag">Neurobiologie</span>
-      </a>
-      <a class="writing-item" href="/ro/blog/terapie-somatica-barcelona-psiherapie-corporala/">
-        <span class="writing-date">Februarie 2026</span>
-        <span class="writing-title">Terapie somatică: când corpul are nevoie să fie ascultat</span>
-        <span class="writing-tag">Corp</span>
-      </a>
-      <a class="writing-item" href="/ro/blog/teatru-terapeutic-trauma-corp/">
-        <span class="writing-date">Martie 2026</span>
-        <span class="writing-title">Corpul pe scenă: teatru terapeutic și trauma de dezvoltare</span>
-        <span class="writing-tag">Traumă</span>
-      </a>
-    </div>
-    <p style="margin-top:2rem;font-size:0.85rem;color:var(--light);font-style:italic;"></p>
-  </div>
-</section>
 
 <!-- FAQ -->
 <section class="faq" id="preguntas">
@@ -1908,6 +1848,48 @@
         </svg>
       </button>
     </form>
+  </div>
+</section>
+<section class="writings" id="escritos">
+  <div class="writings-hero fade-in">
+    <img src="/photo.jpg" alt="Mihai Flaviu Sirb la Lacurile Covadonga, Asturias">
+  </div>
+  <div class="writings-inner">
+    <div class="writings-header">
+      <div>
+        <p class="section-label">Scrieri</p>
+        <h2 class="section-title">Reflecții despre<br><em>drumul interior</em></h2>
+      </div>
+      <a href="/" class="writings-link">Toate articolele în spaniolă →</a>
+    </div>
+    <div class="writings-list">
+      <a class="writing-item" href="/ro/blog/ce-este-psihoterapia-umanista/">
+        <span class="writing-date">Iulie 2026</span>
+        <span class="writing-title">Ce este psihoterapia umanistă</span>
+        <span class="writing-tag">Psihoterapie</span>
+      </a>
+      <a class="writing-item" href="/ro/blog/verdictul-pasarii-dodo-psiherapie/">
+        <span class="writing-date">Mai 2026</span>
+        <span class="writing-title">Toți câștigă: verdictul păsării Dodo și ce vindecă în psihoterapie</span>
+        <span class="writing-tag">Evidențe</span>
+      </a>
+      <a class="writing-item" href="/ro/blog/neurobiologie-reglare-atasament-schore/">
+        <span class="writing-date">Aprilie 2026</span>
+        <span class="writing-title">Neurobiologia atașamentului: de ce ne transformăm în relație</span>
+        <span class="writing-tag">Neurobiologie</span>
+      </a>
+      <a class="writing-item" href="/ro/blog/terapie-somatica-barcelona-psiherapie-corporala/">
+        <span class="writing-date">Februarie 2026</span>
+        <span class="writing-title">Terapie somatică: când corpul are nevoie să fie ascultat</span>
+        <span class="writing-tag">Corp</span>
+      </a>
+      <a class="writing-item" href="/ro/blog/teatru-terapeutic-trauma-corp/">
+        <span class="writing-date">Martie 2026</span>
+        <span class="writing-title">Corpul pe scenă: teatru terapeutic și trauma de dezvoltare</span>
+        <span class="writing-tag">Traumă</span>
+      </a>
+    </div>
+    <p style="margin-top:2rem;font-size:0.85rem;color:var(--light);font-style:italic;"></p>
   </div>
 </section>
 

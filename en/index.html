@@ -1323,13 +1323,10 @@
       <p class="section-label">About</p>
       <h2 class="section-title">Accompanying from<br><em>within, not from above</em></h2>
       <p>
-        My story as a therapist begins in the aseptic isolation of a Romanian neonatal ward. Before I had words, my nervous system had already learned a pattern: how to inhabit emptiness. I grew up in a house where my father's emotional state set the climate of the whole room. I became a radar. I learned to read the weight of a silence, the specific vibration of a voice before it exploded.
+        I grew up in a house where my father's emotional state set the climate of the whole room. I became a radar: I learned to read the weight of a silence before it broke. For years an anxiety I rarely named hummed inside me, and for a while substances were my only truce.
       </p>
       <p>
-        For many years I worked hard to appear capable and at ease in the world, while inside an anxiety I rarely named kept humming. For a time, substances were the only truce with my nervous system. At thirty-one, my life is the daily practice of integration: learning to stay in my body when the old impulse to leave shows up.
-      </p>
-      <p>
-        I come to this work as someone who has been through the collapse of his own structures. My work starts from one conviction: <strong>we were wounded in relationship and in relationship we can heal</strong>. That is why I offer a space where mind and body work together, within a safe bond.
+        I come to this work as someone who has lived through the collapse of his own structures. I start from one conviction: <strong>we were wounded in relationship and in relationship we can heal</strong>.
       </p>
 
       <ul class="formation-list">
@@ -1339,21 +1336,6 @@
         <li>Mindfulness</li>
         <li>Therapeutic Theatre</li>
       </ul>
-
-      <div class="credenciales">
-        <p class="credenciales-anios"><strong>10 years</strong> accompanying processes</p>
-        <p class="credenciales-titulo">Training</p>
-        <ul class="credenciales-lista">
-          <li><span>Postgraduate Diploma in Gestalt Psychotherapy</span> · Institut Drala Gestalt <em>2016-2019</em></li>
-          <li><span>Postgraduate Diploma in NARM Somatosensory Psychotherapy</span> · Centre Besai <em>2025-2026</em></li>
-          <li><span>Postgraduate Diploma in Therapeutic Theatre</span> · Institut Integratiu <em>2019-2020</em></li>
-          <li><span>Programa SAT</span> · Claudio Naranjo <em>2019-2023</em></li>
-          <li><span>AMAR training</span> · Lluís Fusté, Institut Amar <em>2024-2025</em></li>
-          <li><span>Bioenergetics and Biodanza</span> · Sabina Salta <em>2020-2021</em></li>
-          <li><span>MBSR Mindfulness Instructor</span> · Institut Mindfulness <em>2015-2017</em></li>
-          <li><span>Degree in Psychology</span> · Universitat Oberta de Catalunya <em>Clinical Assessment and Intervention · final year</em></li>
-        </ul>
-      </div>
     </div>
   </div>
 </section>
@@ -1557,20 +1539,16 @@
       <h3>This space is for you</h3>
       <ul>
         <li>You want to understand what keeps repeating in your relationships and in the way you are in the world.</li>
-        <li>You are willing to look at your history, your patterns and your body from a relational perspective.</li>
         <li>You are looking for a process at your own pace, without quick fixes or rigid protocols.</li>
         <li>You need a safe space where you can show yourself without a façade.</li>
-        <li>You understand that this is humanistic integrative accompaniment, not clinical pharmacological treatment.</li>
       </ul>
     </div>
     <div class="for-whom-col no fade-in">
       <p class="section-label">It's not the right fit if…</p>
       <h3>Other help may serve you better</h3>
       <ul>
-        <li>You are going through an acute crisis or are at immediate risk (in that case, call <a href="tel:112" style="color:inherit;">112</a> or <a href="tel:024" style="color:inherit;">024</a>).</li>
         <li>You need a psychiatric assessment, a prescription or a clinical report.</li>
         <li>You are in a serious active addiction that requires medical attention first — in that case, I can refer you to a trusted psychiatrist during the first session.</li>
-        <li>You are specifically looking for protocol-based cognitive behavioural therapy or other specific clinical approaches.</li>
       </ul>
     </div>
   </div>
@@ -1586,6 +1564,8 @@
     margin-top: 18px; color: var(--mid); font-size: 0.9rem;
   }
   .reviews-stars { color: var(--accent); letter-spacing: 2px; font-size: 1rem; }
+  .reviews-grid.is-collapsed .review-card:nth-child(n+5) { display: none; }
+  .reviews-more { display: block; margin: 2rem auto 0; background: none; border: 1px solid currentColor; color: var(--accent); padding: 0.7rem 1.4rem; font: inherit; font-size: 0.9rem; cursor: pointer; border-radius: 2px; }
   .reviews-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 24px;
@@ -1633,7 +1613,7 @@
       </p>
     </div>
 
-    <div class="reviews-grid">
+    <div class="reviews-grid is-collapsed" id="reviewsGrid">
       <blockquote class="review-card fade-in">
         <p class="review-stars" aria-label="5 out of 5 stars">★★★★★<span class="review-src">Review on <a href="https://www.google.com/search?q=Mihai+Flaviu+Sirb+Psicoterapia+Humanista+Sant+Cugat" target="_blank" rel="noopener noreferrer">Google</a></span></p>
         <p class="review-text">I came on my mother's recommendation. My anxiety was overwhelming, and thanks to Mihai I have managed to reduce it a lot. Now I feel more confident and more in control of my life. The eight months my treatment lasted have been an enormous learning experience. I recommend him to anyone who needs support. Thank you!!</p>
@@ -1689,7 +1669,9 @@
       </blockquote>
     </div>
 
-    <p class="reviews-cta fade-in">
+        <button type="button" class="reviews-more" id="reviewsMore" aria-expanded="false" onclick="var g=document.getElementById('reviewsGrid');var c=g.classList.toggle('is-collapsed');this.setAttribute('aria-expanded',!c);this.textContent=c?'See all 9 reviews':'See less';">See all 9 reviews</button>
+
+<p class="reviews-cta fade-in">
       <a href="https://www.google.com/search?q=Mihai+Flaviu+Sirb+Psicoterapia+Humanista+Sant+Cugat" target="_blank" rel="noopener noreferrer">See the reviews on Google</a>
     </p>
   </div>
@@ -1733,46 +1715,6 @@
 </div>
 
 <!-- WRITINGS -->
-<section class="writings" id="escritos">
-  <div class="writings-hero fade-in">
-    <img src="/photo.jpg" alt="Mihai Flaviu Sirb at the Lakes of Covadonga, Asturias">
-  </div>
-  <div class="writings-inner">
-    <div class="writings-header fade-in">
-      <div>
-        <p class="section-label">Writings</p>
-        <h2 class="section-title">Reflections on<br><em>the inner path</em></h2>
-      </div>
-    </div>
-    <div class="writings-list fade-in">
-      <a class="writing-item" href="/en/blog/what-is-humanistic-psychotherapy/">
-        <span class="writing-date">July 2026</span>
-        <span class="writing-title">What is humanistic psychotherapy</span>
-        <span class="writing-tag">Psychotherapy</span>
-      </a>
-      <a class="writing-item" href="/en/blog/dodo-bird-verdict-why-psychotherapy-works/">
-        <span class="writing-date">May 2026</span>
-        <span class="writing-title">Everyone wins: the Dodo bird verdict and what science tells us about why psychotherapy works</span>
-        <span class="writing-tag">Evidence</span>
-      </a>
-      <a class="writing-item" href="/en/blog/neurobiology-regulation-attachment-schore/">
-        <span class="writing-date">April 2026</span>
-        <span class="writing-title">Learning to self-regulate: Allan Schore and the neurobiology of why we transform in relationship</span>
-        <span class="writing-tag">Neuroscience</span>
-      </a>
-      <a class="writing-item" href="/en/blog/therapeutic-theatre-trauma-body/">
-        <span class="writing-date">March 2026</span>
-        <span class="writing-title">The body on stage: therapeutic theatre, developmental trauma and the science of healing in relationship</span>
-        <span class="writing-tag">Trauma</span>
-      </a>
-      <a class="writing-item" href="/en/blog/somatic-therapy-barcelona-body-psychotherapy-trauma/">
-        <span class="writing-date">February 2026</span>
-        <span class="writing-title">Somatic therapy in Barcelona: body psychotherapy and relational trauma</span>
-        <span class="writing-tag">Somatic</span>
-      </a>
-    </div>
-  </div>
-</section>
 
 <!-- FAQ -->
 <section class="faq" id="preguntas">
@@ -1906,6 +1848,46 @@
         </svg>
       </button>
     </form>
+  </div>
+</section>
+<section class="writings" id="escritos">
+  <div class="writings-hero fade-in">
+    <img src="/photo.jpg" alt="Mihai Flaviu Sirb at the Lakes of Covadonga, Asturias">
+  </div>
+  <div class="writings-inner">
+    <div class="writings-header fade-in">
+      <div>
+        <p class="section-label">Writings</p>
+        <h2 class="section-title">Reflections on<br><em>the inner path</em></h2>
+      </div>
+    </div>
+    <div class="writings-list fade-in">
+      <a class="writing-item" href="/en/blog/what-is-humanistic-psychotherapy/">
+        <span class="writing-date">July 2026</span>
+        <span class="writing-title">What is humanistic psychotherapy</span>
+        <span class="writing-tag">Psychotherapy</span>
+      </a>
+      <a class="writing-item" href="/en/blog/dodo-bird-verdict-why-psychotherapy-works/">
+        <span class="writing-date">May 2026</span>
+        <span class="writing-title">Everyone wins: the Dodo bird verdict and what science tells us about why psychotherapy works</span>
+        <span class="writing-tag">Evidence</span>
+      </a>
+      <a class="writing-item" href="/en/blog/neurobiology-regulation-attachment-schore/">
+        <span class="writing-date">April 2026</span>
+        <span class="writing-title">Learning to self-regulate: Allan Schore and the neurobiology of why we transform in relationship</span>
+        <span class="writing-tag">Neuroscience</span>
+      </a>
+      <a class="writing-item" href="/en/blog/therapeutic-theatre-trauma-body/">
+        <span class="writing-date">March 2026</span>
+        <span class="writing-title">The body on stage: therapeutic theatre, developmental trauma and the science of healing in relationship</span>
+        <span class="writing-tag">Trauma</span>
+      </a>
+      <a class="writing-item" href="/en/blog/somatic-therapy-barcelona-body-psychotherapy-trauma/">
+        <span class="writing-date">February 2026</span>
+        <span class="writing-title">Somatic therapy in Barcelona: body psychotherapy and relational trauma</span>
+        <span class="writing-tag">Somatic</span>
+      </a>
+    </div>
   </div>
 </section>
 
